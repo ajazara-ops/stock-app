@@ -9,12 +9,12 @@ import math
 import os
 import sys
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # SSL 인증서 오류 방지
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# --- [안전장치] 값을 안전하게 변환하는 함수 ---
+# --- [안전장치] ---
 def safe_float(val, default=0.0):
     try:
         f = float(val)
@@ -22,6 +22,7 @@ def safe_float(val, default=0.0):
         return f
     except: return default
 
+# --- [1] 시장 상황 분석 ---
 def analyze_market_condition():
     print("🌍 글로벌 시장 상황 분석 중...")
     markets = {'US': {'ticker': '^GSPC', 'name': 'S&P 500'}, 'KR': {'ticker': '^KS11', 'name': 'KOSPI'}, 'VIX': {'ticker': '^VIX', 'name': '공포지수'}}
@@ -50,10 +51,10 @@ def analyze_market_condition():
                 else: status, message = "PANIC", "폭락 경고 ⛈️"
                 
             market_status[key] = {'name': info['name'], 'current': safe_float(round(current, 2)), 'change': safe_float(round(change_pct, 2)), 'status': status, 'message': message}
-            print(f"   👉 [{key}] {info['name']}: {current:.2f} ({message})")
         except: market_status[key] = {'status': 'UNKNOWN', 'change': 0.0, 'message': '분석 실패'}
     return market_status
 
+# --- [2] 종목 리스트 ---
 def get_sp500_tickers():
     try:
         url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
@@ -62,8 +63,7 @@ def get_sp500_tickers():
         table = pd.read_html(response.text)
         tickers = table[0]['Symbol'].tolist()
         return [t.replace('.', '-') for t in tickers]
-    except:
-        return ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'TSLA', 'META']
+    except: return ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'TSLA', 'META']
 
 def get_korea_tickers():
     return [
@@ -75,6 +75,7 @@ def get_korea_tickers():
         '039200.KQ', '293490.KQ', '263750.KQ', '145020.KQ', '214150.KQ', '042700.KQ', '005290.KQ', '240810.KQ', '357780.KQ'
     ]
 
+# --- [3] 뉴스 수집 ---
 def get_news_from_google_kr(ticker):
     try:
         url = f"https://news.google.com/rss/search?q={ticker.split('.')[0]}+주가&hl=ko&gl=KR&ceid=KR:ko"
@@ -91,12 +92,6 @@ def get_news_from_google_us(ticker):
         return [{'title': item.find('title').text, 'link': item.find('link').text, 'publisher': item.find('source').text} for item in root.findall('./channel/item')[:3]]
     except: return []
 
-def calculate_indicators(close):
-    delta = close.diff(); gain = (delta.where(delta > 0, 0)).rolling(14).mean(); loss = (-delta.where(delta < 0, 0)).rolling(14).mean(); rs = gain/loss; rsi = 100 - (100/(1+rs))
-    exp1 = close.ewm(span=12).mean(); exp2 = close.ewm(span=26).mean(); macd = exp1 - exp2; signal = macd.ewm(span=9).mean()
-    ma20 = close.rolling(20).mean(); std = close.rolling(20).std(); upper = ma20 + (std*2); lower = ma20 - (std*2)
-    return rsi, macd, signal, upper, lower, ma20
-
 def analyze_news_sentiment(news_list):
     analyzed = []
     pos = ['surge', 'jump', 'soar', 'gain', 'profit', 'buy', 'growth', 'record', 'upgrade', '급등', '상승', '호재', '증가', '개선', '매수', '체결', '성장', '최고']
@@ -111,10 +106,30 @@ def analyze_news_sentiment(news_list):
         analyzed.append({'title': t, 'link': n.get('link',''), 'sentiment': sent, 'publisher': n.get('publisher','News')})
     return analyzed
 
+def process_news_for_list(stock_list):
+    if not stock_list: return
+    print(f"\n📰 Top {len(stock_list)} 뉴스 수집 중...")
+    for item in stock_list:
+        ticker = item['id']; mkt = item['market']
+        print(f"   [{mkt}] {ticker}...", end=' '); raw = []
+        try:
+            if mkt == 'KR': raw = get_news_from_google_kr(ticker)
+            else: raw = get_news_from_google_us(ticker)
+        except: pass
+        print(f"{len(raw)}개"); item['news'] = analyze_news_sentiment(raw[:3])
+
+# --- [4] 지표 계산 ---
+def calculate_indicators(close):
+    delta = close.diff(); gain = (delta.where(delta > 0, 0)).rolling(14).mean(); loss = (-delta.where(delta < 0, 0)).rolling(14).mean(); rs = gain/loss; rsi = 100 - (100/(1+rs))
+    exp1 = close.ewm(span=12).mean(); exp2 = close.ewm(span=26).mean(); macd = exp1 - exp2; signal = macd.ewm(span=9).mean()
+    ma20 = close.rolling(20).mean(); std = close.rolling(20).std(); upper = ma20 + (std*2); lower = ma20 - (std*2)
+    return rsi, macd, signal, upper, lower, ma20
+
+# --- [5] 개별 종목 분석 ---
 def analyze_stock(ticker, market_type):
     try:
         stock = yf.Ticker(ticker)
-        try: hist = stock.history(period="2y") # 넉넉하게 2년
+        try: hist = stock.history(period="2y")
         except: return None
         if len(hist) < 60: return None
         
@@ -122,16 +137,13 @@ def analyze_stock(ticker, market_type):
         try: info = stock.info 
         except: pass
         
-        # 재무 필터링 (테스트 완화)
         if market_type == 'US' and info.get('operatingMargins', 0) < -0.5: return None
         
         close = hist['Close']; volume = hist['Volume']
         rsi, macd, signal, bb_upper, bb_lower, ma20 = calculate_indicators(close)
         
         cur_p = close.iloc[-1]; cur_rsi = rsi.iloc[-1]; cur_low = bb_lower.iloc[-1]; ma60 = close.rolling(60).mean().iloc[-1]
-        
-        vol_ma20 = volume.rolling(20).mean().iloc[-1]
-        cur_vol = volume.iloc[-1]
+        vol_ma20 = volume.rolling(20).mean().iloc[-1]; cur_vol = volume.iloc[-1]
         rvol = safe_float(cur_vol / vol_ma20, 1.0) if vol_ma20 > 0 else 1.0
         
         sector = info.get('sector', '기타')
@@ -141,12 +153,10 @@ def analyze_stock(ticker, market_type):
             
         if pd.isna(cur_rsi) or pd.isna(cur_p) or cur_rsi > 80: return None
         
-        score = 40; reasons = [] # 기본 점수 상향 (추천 많이 뜨게)
-        
+        score = 40; reasons = [] 
         if cur_rsi < 30: score += 30; reasons.append("RSI 과매도")
         elif cur_rsi < 45: score += 20; reasons.append("단기 과매도")
         elif cur_rsi < 60: score += 10; reasons.append("눌림목")
-        
         if cur_p <= cur_low * 1.05: score += 20; reasons.append("볼린저밴드 하단 근접")
         if not pd.isna(ma60) and cur_p >= ma60 * 0.95 and cur_p <= ma60 * 1.08: score += 15; reasons.append("60일선 지지")
         if macd.iloc[-1] > signal.iloc[-1]: score += 10
@@ -162,7 +172,7 @@ def analyze_stock(ticker, market_type):
         elif market_type == 'KR':
             score += 5; reasons.append("재무 건전성 양호")
         
-        cutoff = 25 if market_type == 'US' else 10 # 컷오프 하향
+        cutoff = 25 if market_type == 'US' else 10 
         if score < cutoff: return None
         
         name = info.get('shortName', ticker) if info else ticker
@@ -187,17 +197,98 @@ def analyze_stock(ticker, market_type):
         }
     except: return None
 
-def process_news_for_list(stock_list):
-    if not stock_list: return
-    print(f"\n📰 Top {len(stock_list)} 뉴스 수집 중...")
-    for item in stock_list:
-        ticker = item['id']; mkt = item['market']
-        print(f"   [{mkt}] {ticker}...", end=' '); raw = []
+# --- [6] 주간 종합 리포트 생성 (핵심 로직 변경) ---
+def generate_weekly_report(today_str):
+    print(f"\n📊 [Weekly] 지난 2주간({today_str} 기준)의 통합 성과 분석 시작...")
+    
+    # 1. 지난 14일간의 파일 찾기
+    history_files = []
+    end_date = datetime.strptime(today_str, "%Y-%m-%d")
+    start_date = end_date - timedelta(days=14)
+    
+    if not os.path.exists('history'): 
+        print("❌ 히스토리 폴더가 없습니다.")
+        return
+
+    for f in os.listdir('history'):
+        if f.endswith('_recommendation.json'):
+            file_date_str = f.split('_')[0]
+            try:
+                file_date = datetime.strptime(file_date_str, "%Y-%m-%d")
+                if start_date <= file_date < end_date: # 오늘 제외, 과거 14일
+                    history_files.append(f)
+            except: pass
+            
+    print(f"📂 분석 대상 파일: {len(history_files)}개 ({history_files})")
+    
+    # 2. 모든 추천 종목 수집
+    aggregated_stocks = []
+    
+    for file in history_files:
+        with open(f"history/{file}", 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            rec_date = file.split('_')[0] # 추천일
+            for stock in data.get('stocks', []):
+                # 추천 당시 가격을 'buyPrice'로 저장
+                stock['buyPrice'] = stock['currentPrice'] 
+                stock['recommendDate'] = rec_date
+                aggregated_stocks.append(stock)
+
+    print(f"🔎 총 {len(aggregated_stocks)}개의 과거 추천 내역 분석 중...")
+
+    # 3. 현재가 조회 및 수익률 계산
+    # (속도를 위해 한번에 조회하거나 개별 조회. 여기서는 정확성을 위해 개별 조회하되 에러 처리)
+    final_results = []
+    
+    for i, item in enumerate(aggregated_stocks):
+        ticker = item['id']
+        buy_price = item['buyPrice']
+        print(f"[{i+1}/{len(aggregated_stocks)}] 수익률 계산: {ticker}...", end='\r')
+        
         try:
-            if mkt == 'KR': raw = get_news_from_google_kr(ticker)
-            else: raw = get_news_from_google_us(ticker)
-        except: pass
-        print(f"{len(raw)}개"); item['news'] = analyze_news_sentiment(raw[:3])
+            # 현재가 조회 (빠르게)
+            stock_info = yf.Ticker(ticker)
+            # 오늘 장이 안 열렸으면 어제 종가 가져옴
+            todays_data = stock_info.history(period="5d")
+            if len(todays_data) > 0:
+                current_price = float(todays_data['Close'].iloc[-1])
+                
+                # 수익률 계산: (현재가 - 추천당시가격) / 추천당시가격 * 100
+                return_rate = ((current_price - buy_price) / buy_price) * 100
+                
+                # 데이터 갱신 (앱에서 보여줄 때 쓰임)
+                item['currentPrice'] = round(current_price, 2)
+                item['returnRate'] = round(return_rate, 2) # [중요] 이게 '진짜' 수익률
+                # 앱 호환성을 위해 changePercent도 이걸로 덮어씀 (선택사항)
+                # item['changePercent'] = round(return_rate, 2) 
+                
+                final_results.append(item)
+        except Exception as e:
+            pass # 데이터 조회 실패시 제외
+
+    # 4. 수익률 순으로 정렬 (상위 10개만 남기기)
+    final_results.sort(key=lambda x: x['returnRate'], reverse=True)
+    top_performers = final_results[:10]
+    
+    # 순위 다시 매기기
+    for i, item in enumerate(top_performers):
+        item['rank'] = i + 1
+        
+    # 시장 현황은 오늘 기준으로 분석
+    ms = analyze_market_condition()
+    
+    # 결과 저장 (파일명은 토요일 날짜)
+    out = {
+        "market_status": ms, 
+        "stocks": top_performers, 
+        "dominant_sectors": [], 
+        "timestamp": f"{today_str} 08:00:00 (Weekly Report)"
+    }
+    
+    with open(f"history/{today_str}_recommendation.json", 'w', encoding='utf-8') as f:
+        json.dump(out, f, indent=2, ensure_ascii=False, allow_nan=False)
+        
+    print(f"\n✅ 주간 종합 리포트 생성 완료! (상위 {len(top_performers)}개 저장)")
 
 def update_history_index():
     if not os.path.exists('history'): return
@@ -209,55 +300,48 @@ def update_history_index():
     with open('history_index.json', 'w', encoding='utf-8') as f: json.dump(hl, f, indent=2, ensure_ascii=False)
 
 def main():
-    # 실행 모드 확인 (기본값: daily)
-    # python daily_stock_scanner.py --mode weekly 처럼 실행하면 주간 모드
     mode = 'daily'
     if len(sys.argv) > 1 and sys.argv[1] == '--mode':
-        if len(sys.argv) > 2:
-            mode = sys.argv[2]
+        if len(sys.argv) > 2: mode = sys.argv[2]
             
     today_str = time.strftime("%Y-%m-%d")
     print(f"🚀 AI 주식 분석기 가동 (모드: {mode}, 날짜: {today_str})")
 
-    ms = analyze_market_condition(); final = []
-    
-    us = get_sp500_tickers(); usc = []
-    print("\n🇺🇸 미국 분석..."); 
-    for i, t in enumerate(us): 
-        print(f"[{i+1}/{len(us)}] {t}...", end='\r'); d = analyze_stock(t, 'US'); 
-        if d: usc.append(d)
-    usc.sort(key=lambda x: x['score'], reverse=True); ust = usc[:10]
-    for i, item in enumerate(ust): item['rank'] = i + 1
-    final.extend(ust)
-    
-    kr = get_korea_tickers(); krc = []
-    print("\n🇰🇷 한국 분석..."); 
-    for i, t in enumerate(kr): 
-        print(f"[{i+1}/{len(kr)}] {t}...", end='\r'); d = analyze_stock(t, 'KR'); 
-        if d: krc.append(d)
-    krc.sort(key=lambda x: x['score'], reverse=True); krt = krc[:10]
-    for i, item in enumerate(krt): item['rank'] = i + 1
-    final.extend(krt)
-    
-    process_news_for_list(ust); process_news_for_list(krt)
-    
-    all_sectors = [s['sector'] for s in final if s['sector'] != '기타']
-    dominant_sectors = [item[0] for item in Counter(all_sectors).most_common(2)]
-    
-    out = {"market_status": ms, "stocks": final, "dominant_sectors": dominant_sectors, "timestamp": f"{today_str} 16:00:00"}
-    
-    # [모드에 따른 저장 로직 분기]
-    
     if mode == 'daily':
-        # [평일] 홈 화면용 파일만 업데이트
+        # [평일] 기존 로직: 오늘 추천 종목 선정
+        ms = analyze_market_condition(); final = []
+        
+        us = get_sp500_tickers(); usc = []
+        print("\n🇺🇸 미국 분석..."); 
+        for i, t in enumerate(us): 
+            print(f"[{i+1}/{len(us)}] {t}...", end='\r'); d = analyze_stock(t, 'US'); 
+            if d: usc.append(d)
+        usc.sort(key=lambda x: x['score'], reverse=True); ust = usc[:10]
+        for i, item in enumerate(ust): item['rank'] = i + 1
+        final.extend(ust)
+        
+        kr = get_korea_tickers(); krc = []
+        print("\n🇰🇷 한국 분석..."); 
+        for i, t in enumerate(kr): 
+            print(f"[{i+1}/{len(kr)}] {t}...", end='\r'); d = analyze_stock(t, 'KR'); 
+            if d: krc.append(d)
+        krc.sort(key=lambda x: x['score'], reverse=True); krt = krc[:10]
+        for i, item in enumerate(krt): item['rank'] = i + 1
+        final.extend(krt)
+        
+        process_news_for_list(ust); process_news_for_list(krt)
+        
+        all_sectors = [s['sector'] for s in final if s['sector'] != '기타']
+        dominant_sectors = [item[0] for item in Counter(all_sectors).most_common(2)]
+        
+        out = {"market_status": ms, "stocks": final, "dominant_sectors": dominant_sectors, "timestamp": f"{today_str} 16:00:00"}
+        
         print("\n💾 [Daily Mode] 오늘의 추천 종목 갱신 중...")
         with open('todays_recommendation.json', 'w', encoding='utf-8') as f: json.dump(out, f, indent=2, ensure_ascii=False, allow_nan=False)
-        
+
     elif mode == 'weekly':
-        # [토요일] 히스토리 파일 저장 + 인덱스 업데이트
-        print("\n💾 [Weekly Mode] 주간 리포트 저장 중...")
-        if not os.path.exists('history'): os.makedirs('history')
-        with open(f"history/{today_str}_recommendation.json", 'w', encoding='utf-8') as f: json.dump(out, f, indent=2, ensure_ascii=False, allow_nan=False)
+        # [토요일] 신규 로직: 지난 2주간 데이터 취합 및 성과 분석
+        generate_weekly_report(today_str)
         update_history_index()
 
     print(f"\n✅ 완료되었습니다.")
