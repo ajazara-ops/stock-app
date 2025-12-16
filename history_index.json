@@ -1,22 +1,22 @@
 [
   {
-    "date": "2025-12-16",
-    "file": "history/2025-12-16_recommendation.json"
-  },
-  {
-    "date": "2025-12-15",
-    "file": "history/2025-12-15_recommendation.json"
-  },
-  {
-    "date": "2025-12-14",
-    "file": "history/2025-12-14_recommendation.json"
-  },
-  {
     "date": "2025-12-13",
     "file": "history/2025-12-13_recommendation.json"
   },
   {
     "date": "2025-12-12",
     "file": "history/2025-12-12_recommendation.json"
+  },
+  {
+    "date": "2025-12-05",
+    "file": "history/2025-12-05_recommendation.json"
+  },
+  {
+    "date": "2025-11-28",
+    "file": "history/2025-11-28_recommendation.json"
+  },
+  {
+    "date": "2025-11-21",
+    "file": "history/2025-11-21_recommendation.json"
   }
 ]
