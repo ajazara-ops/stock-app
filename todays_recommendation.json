@@ -16,8 +16,8 @@
     },
     "VIX": {
       "name": "공포지수",
-      "current": 17.34,
-      "change": -1.59,
+      "current": 17.25,
+      "change": -2.1,
       "status": "NEUTRAL",
       "message": "안정적 😌"
     }
@@ -1674,7 +1674,7 @@
       "buyZoneTop": 282540.0,
       "buyZoneBottom": 271460.0,
       "targetPrice": 304700.0,
-      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 거래량 폭발(1.7배) + 스토캐스틱 과매도 + 장기 상승 추세",
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 거래량 폭발(1.6배) + 스토캐스틱 과매도 + 장기 상승 추세",
       "score": 115,
       "rsi": 35.1,
       "history": [
@@ -1801,22 +1801,22 @@
       ],
       "news": [
         {
-          "title": "[분석] 외국인 지분율 24% 위협… 삼성SDI, 2조 수주에도 큰손이 떠나는 속내 - MSN",
-          "link": "https://news.google.com/rss/articles/CBMinwNBVV95cUxQOXhKdmJIOWpxY0ZiV0Y1elQyWFpLbzNUeDVTaUFLMVFzWTBGM25IaVI3aG4wdWhWakJObWVXTDJaS2dRMFJFSXR6Z2dmcVhCTFcxaTlJdWZKNlVTcnVWQWxiVE1ZQkJ1djVwc3ZUak1sN0E3WlZNUmRWWnVoTTB2Vjc2VUpUVTRFNWEtYXNLcWdVWERsWTJuM3hSbDFDb1ZqZjdEaEJSa2RTZUFmWWlHNTV0cmRKdUxMclgzWmsxeGhzYzhGMzJCb0ZNQ1M1MGpmWUFfLS1xMUlCYnVYdzl6QjZzWHpGODdtSHJsRUNtMlRFWkR1WHVnelVqQWZHQU94SUhWVjhsUlVUeS1xb2s4aVhrTUpxbDdUTW40ZGJDQk9NM0lrOTdlamZWaF9IQklEaUE5Rms2WFlRV1pBMTRvdnNkR1cxeU1QZkMtWk4tamRaM0oyRkd0WVdNLVZEWFlLbUhYd1hnc2pWRGtmbjJyRkJyWFNCcXVmM3JOSng2OVQ3MEJtbUFSdGFpMmlQb2ljVnNBT3ItYlpyU3Bhem9Z?oc=5",
-          "sentiment": "neutral",
-          "publisher": "MSN"
-        },
-        {
-          "title": "삼성SDI 주가 3% 점프…전일 숨고르기 후 반등, 32만원선 회복 - cbci.co.kr",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBzaDRyOUVGaUFTaVE3cmJIUWVDQ1JQNnREeUdWWFNteTNxVjJmTFVDV2VPcUVFNnZQNllVR0hqSFdqckliVGNuYzRfamtpdGJQRzBSYnNGSFJhWWZZcE5lWnJ2bUhqdGpF?oc=5",
+          "title": "삼성SDI 주가 11월 추이는?…10월 마지막장 수급 살펴보니 - cbci.co.kr",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Yak4zb3VJTWlmTmVCSTd2Qkhfek0ySXIxOG1rUzRxU091b1dLa0VCM1BzZDgxZ2Zxa2lZcTFsZ190U1h5SURLdlZtRnFIVEcwNnVVTXk5dGduRXowZFJMQkdDbURzQjR0?oc=5",
           "sentiment": "neutral",
           "publisher": "cbci.co.kr"
         },
         {
-          "title": "최재홍 상무, 삼성SDI 주식 36주 신규 보고 - 디지털투데이",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBpRTZwVGxvRUM3Y0FOZU05OXlzanR2MWUtUGRUa2ZOZXJhM1BFWDBQckVCZnE5UEllc3NZd2dlWnhqb0I5d213ZlpHSVZBWjRRLVBxM2xzOU9sN3pPd3VTdVZlUTQxR1pHaGp6V21lQ1F2VnM?oc=5",
+          "title": "[생생한 주식쇼 생쇼] 삼성SDI (006400) · ESS 수요 확대에 바닥 탈출 시도 - 매일경제TV",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1kb0x3dThNWDRVYk1lemVlWG9mallPbVVuWksyQ19TN3Q5cUxjSnJtaENiV1BVeml0eWpJM000Q2h4RDBzcm5tQVV1XzI0YVQ1NkRzd0RaaG5tYXU5RUVTNi1kc3ZLWFpG?oc=5",
           "sentiment": "neutral",
-          "publisher": "디지털투데이"
+          "publisher": "매일경제TV"
+        },
+        {
+          "title": "[N2 특징주] ESS 훈풍에 2차전지株 급등…삼성SDI·LG화학 나란히 강세 - 뉴스투데이",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9yQkl5bW1CempGRm1yZ0Y5cTRzaG51cWtpQ0xyS0ZCWnUydHlWY2NuRWJ3bWdwRlBVT0VQQmF3dUNiX0ZubDZJRVFYd09rMjJwaHNucU9xajNuOUotM2c?oc=5",
+          "sentiment": "positive",
+          "publisher": "뉴스투데이"
         }
       ],
       "financials": {
@@ -1825,7 +1825,7 @@
         "per": 33.59103
       },
       "sector": "Industrials",
-      "rvol": 1.69
+      "rvol": 1.64
     },
     {
       "id": "141080.KQ",
@@ -1965,9 +1965,9 @@
       ],
       "news": [
         {
-          "title": "외국계 순매수 금액 상위 20선 - 코스닥 - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVDJLbWxxc0U3d2hnR05rLUUyRHcwWUlHVDBaV2tDaU83M1cwbDFsMVZKQkRQeGZfS0tLZE9yd0FTMUZBTFV3SmY0RzVmbkZIQXl3bFFNYUtnMVlCQlFFVkdETVFOWkNkcE5vQXI1V05aTGwzMkNhNjhRQWFCemVVeHJlVdIBlwFBVV95cUxPOU5adTF0S1RtSWZTVExrYTVjNUlxYkEtZzFkd2ZTdlMxWThuSlQ0NzEwamc0ZlBqelgzM0pvUVJNY1Z3dTF1QkN0aGx1SThDRWxuVGJuTlJHVHdDMDBUSEI2VDU4UXV0RGJveHp3SEJ6a1ltclowYTRuWnZZRUFZa2hDV2xKMGJkV3lYUldkOVV2SDBWbHVr?oc=5",
-          "sentiment": "positive",
+          "title": "코스피, 3990선도 깨져… 코스닥은 장중 하락 전환 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTUk0ZWxxX0ZhejJrUTVnMDlHeGFOcndITVhaUmlsYjhrbl90UWhsV3lOTVY0UzM2Z2M0N2F6T1JISGJEX1M2bXk0YzBLT0Y1VV9vQ0hwNTNYWlFwZ0xXRFJxUnB5anNPMHhFbnNVa3dYV0VwcXZiQ1k0cWw2ejhGRlBkcGtYZVZL0gGcAUFVX3lxTE9yWVhDTm44aW5tTUo0dnJCaUg5WWQtQUMyYlFWU2xjc2dRSW8wVmtMd0NWeTgzODdKSnQ1S3hnZGdmaEpnd2UwbDBlWHNybWVDSUhkYjNlWjBNMnpHNnItdVh6dHdoWi1oNjNkMFFuektUNW01OXlpeDRIOHhFR3BFRTEtT09tbTJ1WlJINl9QRDBtek0wRU9JQWJlRA?oc=5",
+          "sentiment": "negative",
           "publisher": "Chosunbiz"
         },
         {
@@ -2129,6 +2129,12 @@
       ],
       "news": [
         {
+          "title": "\"5천억 자사주 매입 전망\"…신한지주, 17년 만에 역대 최고가[핫종목] - 뉴스1",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5NMHc3LXJuNDdkTEpldGZPY21NSGwzYUtwWmJ6U2RBMmQxeGU3ZWZFdmNjNmxuX2FNT0tsaUJUNmI5U085bUw5aldzSDRaSDh0cTIwMGNkNFIyNzQ?oc=5",
+          "sentiment": "positive",
+          "publisher": "뉴스1"
+        },
+        {
           "title": "신한지주, “이익 흐름 양호…내년에도 총주주환원율 우상향” - 다올투자증권 - PRESS9",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE52Q01fRm00NUdpTzN1X0gzaEZ1MkNPcWFwX2NONFp3VGxHNG9Jd0cyRnhzNVd1S1JWM2Vra0JFLXFOcFdOeVp0TTItd2ZmUERsSmZqekVpbkJCTEFCWjFsSXFzX0QzUQ?oc=5",
           "sentiment": "neutral",
@@ -2139,12 +2145,6 @@
           "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vVXFjMmk0ZDM3bFFzeHhKcEpiWHhoNTFJQksteXpMZGc3azBGazc1c0hWR2c4NklzTUxtS3l5a25nTWFINGhFMDVJX1NrQ2dUVHBOQUc5SXZLSnloY29NRFZ5ODNuczZpVXAxaA?oc=5",
           "sentiment": "neutral",
           "publisher": "뉴스락"
-        },
-        {
-          "title": "\"5천억 자사주 매입 전망\"…신한지주, 17년 만에 역대 최고가[핫종목] - 뉴스1",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5NMHc3LXJuNDdkTEpldGZPY21NSGwzYUtwWmJ6U2RBMmQxeGU3ZWZFdmNjNmxuX2FNT0tsaUJUNmI5U085bUw5aldzSDRaSDh0cTIwMGNkNFIyNzQ?oc=5",
-          "sentiment": "positive",
-          "publisher": "뉴스1"
         }
       ],
       "financials": {
@@ -2153,7 +2153,7 @@
         "per": 6.775579
       },
       "sector": "Financial Services",
-      "rvol": 0.74
+      "rvol": 0.93
     },
     {
       "id": "086790.KS",
@@ -2293,8 +2293,8 @@
       ],
       "news": [
         {
-          "title": "미래에셋증권, +7.46% VI 발동 - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOV3B3emdWQ3N6Z2RLUF8xUmROTHFvNTlvNTE5OGV2X0ZfTkFfU0U5aFdGQ2tIOHVLNDFydzJGSlZUU3BreHhiTnJiQUhkZnhJQXNDTHE0ZVlhZ19nWFAtOUItZHVNRW5uZ016cTFBUkJXLXFHWVY1cmFEb0tXaE9KTmlESdIBlwFBVV95cUxPRVdOdnVyT3poWHBnV3B6Mm5VTTRUMHE4Y2ZFTUFYM2pqOXItS1R4ZVplUWtZY0dSVGk1RzBzVUFVT0JkNzFPZC1rNTc0VEpicEVEd0hrak9nM0V6T29kdEJvMkE5eUltYkh2MFhGZ1dxZ0cwWm5HX2wtOTZkTDJ1eDhFT0E3aUFJYUdhckd5TXNGbWFlMEZB?oc=5",
+          "title": "우리금융지주, +0.73% 52주 신고가 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMkJyd3RFWHNveU10Y2xYNUttQ1lHX19jNFBPSmZpYWtCZFhWaGhuay11aU5EazNBUXduc25hM25CcW82aC14RlVNcXlFZlBRWWtSSHRuSmFvTEtDdFh0bE91ZW1rSFJPYmRZVjIyaDJObXpxT0lrc1ZZZlBLQlVXcjJWSdIBlwFBVV95cUxQQUtvUXgtWEFnOUkwMTdSa1NHdFQ1c0J3OHVTaWVLMUkzblAtZVQ4cU9BOUhCRXlMOFk2ODQ3endYN2VGbVNHdEZac21idk9Ic2ZqVGQyRVk1OHVtV25OVTNwMTBoZ1FVa2p4Ri0wSXdmdHRTcHFWMFBYNmRFQm51S1BxbGVfWk9XMFMyRzk4Q0pyRFVBSEk4?oc=5",
           "sentiment": "neutral",
           "publisher": "Chosunbiz"
         },
@@ -2317,7 +2317,7 @@
         "per": 5.990241
       },
       "sector": "Financial Services",
-      "rvol": 0.66
+      "rvol": 0.78
     },
     {
       "id": "034730.KS",
@@ -2469,10 +2469,10 @@
           "publisher": "PRESS9"
         },
         {
-          "title": "SK, 자회사 가치 상승·자사주 소각이 주가 트리거…목표가↑-SK - MSN",
-          "link": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxOTEljeEg0a0p5dWhpM1RJS0hjMXc2dWJuMmFCVW9VNVJvemRPT2F6NTh6RTc5LXMwMndSUFBWQXQ1dG5fa0dJQlF1VG5IT05NMmc0MzJZTnlnc2FpREJZay1FOGxySHhsUHpLQjh5em82UllKdUQ1VVdqbFZsVGhGWFRKQlJzNFZjR0xIN3JmWGg1OEV4cVgtVWxMZUxFUnhkYkdKTTVhSGlJc2NTRENGbHdLc2lHaEs0OHlSS2gydUVlZTNkZTg2bm9VOHlCSHRQUjlMYmpkV2VBejc2dm1pLWxwM0U3WDhvWFJvSS1ScGYwUjZoOTVjNXA4SWVUeUluUTNLRkJwa1NfdjU0VVBnRFVTbHJoQ0FicS1reXVuOUwtdmdYUHRrTmpreHU0UkRDbXBZT3p4VVUxeFE2WXA2bmpsaXBvRWl2VHBSZXFobFpzTElsYk9zZXM3NEZYekJISWljRENfTTBIa3M?oc=5",
-          "sentiment": "positive",
-          "publisher": "MSN"
+          "title": "주가 떨어져 담보유지비율 미달…최태원, SK㈜ 주식 추가 제공 - 연합인포맥스",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85Um1obG53enQ0aGFRanY2LUNoQUg3enBYcFdKRkUwSUNCWHFIWTFZWlV0VnIwblZHTWRURDFsSVdIMVl6YVBOekk3VS1xdExsUnhuaHRaVU9jTVpyS1Itclc4N096X0hTSDRKdS1XQlM?oc=5",
+          "sentiment": "neutral",
+          "publisher": "연합인포맥스"
         }
       ],
       "financials": {
@@ -2481,7 +2481,7 @@
         "per": 3.8365903
       },
       "sector": "Industrials",
-      "rvol": 0.5
+      "rvol": 0.53
     },
     {
       "id": "068270.KS",
@@ -2645,7 +2645,7 @@
         "per": 33.77602
       },
       "sector": "Healthcare",
-      "rvol": 0.63
+      "rvol": 0.68
     },
     {
       "id": "051910.KS",
@@ -2658,7 +2658,7 @@
       "buyZoneTop": 339660.0,
       "buyZoneBottom": 326340.0,
       "targetPrice": 366300.0,
-      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 거래량 폭발(1.6배) + 스토캐스틱 과매도 + 장기 상승 추세 + 흑자 기업",
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 거래량 폭발(1.8배) + 스토캐스틱 과매도 + 장기 상승 추세 + 흑자 기업",
       "score": 100,
       "rsi": 31.53,
       "history": [
@@ -2797,10 +2797,10 @@
           "publisher": "마켓인"
         },
         {
-          "title": "“삼성전자 내년 영업이익 100조원 육박… 16만전자 간다” - 조선일보",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcnQ3Ylp5QjFZUXNzTUk4V3NpXzJVeTBtN3pSLTJQMV84N3FtT0hpNHY4amphMzc0Q3lTUWtJa0NEV3d3cG8zOHl3a2QwY1JVMXoyRGo0RU0wZnI0SVdOTktrX2kyUDhSbDZNRWJrVkxVYW11UTQ1Q19KNXpfSWJEQtIBlAFBVV95cUxNSW5jdEJRVEhrcWxjNk56ekZOYXJMQ0NDQjBxNF90Zm5fb1paM18xUmg3bk9RRzZvaXloNTJSLXpaNExvSVo0cDNQVXdPN01XNTdPTGVYbmpLdzk0Z09SMGhUQjhHQjlnb09iYXJmcmlVM0xrSTlfcHN5VWpQWjFvaENCWWtOUXdNS0VBRjdGMjFhdTdm?oc=5",
+          "title": "[ET특징주] 행동주의 펀드 “주가 저평가” 주장에… LG화학 11%↑ - 전자신문",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA1c1YyNEtEekI5ZV8yWWd1MTJQS29oUFA0SmR5a1VUUHBOWmV0anljWkxKeElsMDRkdWpZX1pHb3R3cjVmc2VQSkZMTWFiZw?oc=5",
           "sentiment": "neutral",
-          "publisher": "조선일보"
+          "publisher": "전자신문"
         }
       ],
       "financials": {
@@ -2809,7 +2809,7 @@
         "per": 25.96108
       },
       "sector": "Basic Materials",
-      "rvol": 1.62
+      "rvol": 1.75
     },
     {
       "id": "240810.KQ",
@@ -2955,16 +2955,16 @@
           "publisher": "Investing.com 한국어"
         },
         {
+          "title": "원익IPS, -11.42% VI 발동 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdXJ6NFJpTVRfNWpzcWRmd1JJWTk2X0xMZmtUckJseVBMMDdZc2RNN01lb3hxQTg4bVhjT054TTMxTlBYQlM4U1AxR3F2ZnhTcUpLYWJjZjFYOU8xNXhBRUQwZ3NTUGtpTkI2Wm5FN2ZKRS0zczVja2tvNGM2SmItS0lVa9IBlwFBVV95cUxNT1BNa05aT1dQT2xralFlRVlJY3dhU2VzSHZKcnZ0ckF0SGJvek05OGJtLS12ekVIbmxOaXNqcGkyY1U1VC1LNHVtRXJvd1IwOGFMVDdvdU1IbTB5SlRpdU9jWGI0UHVRQzNWd2RjekxIM0lBMU5mYlR4VEUtYkE2MDcxcVkyV2dTWGN4cG1KTjFFa0RKR0Zv?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Chosunbiz"
+        },
+        {
           "title": "[분석] \"호재가 먹통이다\"… 원익IPS, P4 훈풍에도 11% 급락한 '진짜 이유' - 톱스타뉴스",
           "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5SYjBwUXpfcTdYOXFQWkc0b1N3cHlzY0hzZzljTTNnRnowbUxLY2tkd05fc0syMUZIWVNlMDZXMS0zZ20tdDE3bW1SOWpSaVpPWjc5Wld4Q3l4ajAzWEtLQnA4dE1QdUQtMXBhVUo4RnZvZzZNMkHSAXZBVV95cUxOUmIwcFF6X3E3WDlxUFpHNG9Td3B5c2NIc2c5Y00zZ0Z6MG1MS2NrZHdOX3NLMjFGSFlTZTA2VzEtM2dtLXQxN21tUjlqUmlaT1o3OVpXeEN5eGowM1hLS0JwOHRNUHVELTFwYVVKOEZ2b2c2TTJB?oc=5",
           "sentiment": "neutral",
           "publisher": "톱스타뉴스"
-        },
-        {
-          "title": "[생생한 주식쇼 생쇼] 원익IPS (240810), 반도체 밸류체인 저가 매수 기회 - 매일경제TV",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9SVlpUeVNoMWM4U1lENm1COC1QUXFyU3JleFlPZWJsbVpvcEsxVmpRc01MbEozUlhFbUdLT1JTUm05LTJsSWQ1QVphbXlMUG53NmhjSVpsdUpPV0xXdkQzMXJIcW5WTktj?oc=5",
-          "sentiment": "positive",
-          "publisher": "매일경제TV"
         }
       ],
       "financials": {
@@ -3137,7 +3137,7 @@
         "per": 16.3184
       },
       "sector": "Communication Services",
-      "rvol": 0.81
+      "rvol": 0.85
     },
     {
       "id": "015760.KS",
@@ -3289,10 +3289,10 @@
           "publisher": "톱스타뉴스"
         },
         {
-          "title": "외국인 러브콜에…한국전력, 8년 만에 신고가[핫종목] - 뉴스1",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QblRxeGZBemZmTF9PQ0JFRzd5d3JzRFJqb1Vfc3BETWtVYlpOcHk2OVBUdHAtc0hfVXhacUJyb29SWk5QeG1HMDZ6Ymd4eGJITzU3WUlXWnlndVk?oc=5",
-          "sentiment": "neutral",
-          "publisher": "뉴스1"
+          "title": "외국계 순매수 수량 상위 20선 - 코스피 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXRVdzNtM3JsRERfd25VVUJ2VjNXNVRPVEN5WjNxZW5HMEF6MjFjcDkwVnBwMGxqNnV3bnVQOXJtNEYwUldpVWpYX1ZhR2RJLTNVYkJkMzBMWVhwc3pvZDQtTDllVDBsQXF2TVV6NHcxWXRrY08yZEw4SnFkZ0NRV3JrVdIBlwFBVV95cUxNWFhsMGRNMWQyVDlhS0M2ZUFxeWZRaVBfMW92VlFjRlRXY1BqVUZ6V3g4eWpSdVBTZHdyZl9UMWUyQm1PLU5HWl92a3RUYjl4ZXhiclpZLTFKaWIwVTJVNlJwN2VjZUR3U3ROVUM4ZDBwMGJiLW5LWU83V29qT1k5SU5zamdWZU10NVFWZkF4VUptYW44TzhZ?oc=5",
+          "sentiment": "positive",
+          "publisher": "Chosunbiz"
         }
       ],
       "financials": {
@@ -3301,12 +3301,12 @@
         "per": 3.0597944
       },
       "sector": "Utilities",
-      "rvol": 1.21
+      "rvol": 1.24
     }
   ],
   "dominant_sectors": [
     "Healthcare",
     "Utilities"
   ],
-  "timestamp": "2025-12-18 16:00:00"
+  "timestamp": "2025-12-18 12:20:32"
 }
