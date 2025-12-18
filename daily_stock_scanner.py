@@ -22,6 +22,55 @@ def safe_float(val, default=0.0):
         return f
     except: return default
 
+# --- [알림 전송 함수] ---
+def send_push_notification(title, message):
+    # ✅ 사용자님의 푸시 토큰을 여기에 넣었습니다.
+    user_push_tokens = ["ExponentPushToken[kip5csOC92Ymcc_AtKjqyl]"] 
+
+    if not user_push_tokens:
+        print(f"⚠️ [알림 시뮬레이션] 전송할 토큰 없음. 메시지 내용 미리보기:\n제목: {title}\n내용: {message}")
+        return
+
+    url = "https://exp.host/--/api/v2/push/send"
+    headers = {
+        "host": "exp.host",
+        "accept": "application/json",
+        "accept-encoding": "gzip, deflate",
+        "content-type": "application/json"
+    }
+
+    print(f"📨 알림 전송 시도: {title}")
+    for token in user_push_tokens:
+        payload = {
+            "to": token,
+            "title": title,
+            "body": message,
+            "sound": "default",
+            "priority": "high"
+        }
+        try:
+            requests.post(url, headers=headers, data=json.dumps(payload))
+        except Exception as e:
+            print(f"  ❌ 전송 에러: {e}")
+
+# --- [어제 추천 종목 가져오기] ---
+def get_latest_recommendation_ids():
+    """history 폴더에서 가장 최근(오늘 제외) 파일의 종목 ID 집합을 반환"""
+    if not os.path.exists('history'): return set()
+    
+    # 날짜 역순 정렬 (최신 파일이 앞으로)
+    files = sorted([f for f in os.listdir('history') if f.endswith('_recommendation.json')], reverse=True)
+    
+    if not files: return set()
+    
+    # 가장 최근 파일 읽기
+    try:
+        with open(f"history/{files[0]}", 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            return {s['id'] for s in data.get('stocks', [])}
+    except:
+        return set()
+
 # --- [1] 시장 상황 분석 ---
 def analyze_market_condition():
     print("🌍 글로벌 시장 상황 분석 중...")
@@ -197,7 +246,7 @@ def analyze_stock(ticker, market_type):
         }
     except: return None
 
-# --- [6] 주간 종합 리포트 생성 (핵심 로직 변경) ---
+# --- [6] 주간 종합 리포트 생성 ---
 def generate_weekly_report(today_str):
     print(f"\n📊 [Weekly] 지난 2주간({today_str} 기준)의 통합 성과 분석 시작...")
     
@@ -229,7 +278,6 @@ def generate_weekly_report(today_str):
             data = json.load(f)
             rec_date = file.split('_')[0] # 추천일
             for stock in data.get('stocks', []):
-                # 추천 당시 가격을 'buyPrice'로 저장
                 stock['buyPrice'] = stock['currentPrice'] 
                 stock['recommendDate'] = rec_date
                 aggregated_stocks.append(stock)
@@ -237,7 +285,6 @@ def generate_weekly_report(today_str):
     print(f"🔎 총 {len(aggregated_stocks)}개의 과거 추천 내역 분석 중...")
 
     # 3. 현재가 조회 및 수익률 계산
-    # (속도를 위해 한번에 조회하거나 개별 조회. 여기서는 정확성을 위해 개별 조회하되 에러 처리)
     final_results = []
     
     for i, item in enumerate(aggregated_stocks):
@@ -246,38 +293,27 @@ def generate_weekly_report(today_str):
         print(f"[{i+1}/{len(aggregated_stocks)}] 수익률 계산: {ticker}...", end='\r')
         
         try:
-            # 현재가 조회 (빠르게)
             stock_info = yf.Ticker(ticker)
-            # 오늘 장이 안 열렸으면 어제 종가 가져옴
             todays_data = stock_info.history(period="5d")
             if len(todays_data) > 0:
                 current_price = float(todays_data['Close'].iloc[-1])
-                
-                # 수익률 계산: (현재가 - 추천당시가격) / 추천당시가격 * 100
                 return_rate = ((current_price - buy_price) / buy_price) * 100
                 
-                # 데이터 갱신 (앱에서 보여줄 때 쓰임)
                 item['currentPrice'] = round(current_price, 2)
-                item['returnRate'] = round(return_rate, 2) # [중요] 이게 '진짜' 수익률
-                # 앱 호환성을 위해 changePercent도 이걸로 덮어씀 (선택사항)
-                # item['changePercent'] = round(return_rate, 2) 
-                
+                item['returnRate'] = round(return_rate, 2)
                 final_results.append(item)
         except Exception as e:
-            pass # 데이터 조회 실패시 제외
+            pass 
 
-    # 4. 수익률 순으로 정렬 (상위 10개만 남기기)
+    # 4. 수익률 순으로 정렬
     final_results.sort(key=lambda x: x['returnRate'], reverse=True)
     top_performers = final_results[:10]
     
-    # 순위 다시 매기기
     for i, item in enumerate(top_performers):
         item['rank'] = i + 1
         
-    # 시장 현황은 오늘 기준으로 분석
     ms = analyze_market_condition()
     
-    # 결과 저장 (파일명은 토요일 날짜)
     out = {
         "market_status": ms, 
         "stocks": top_performers, 
@@ -308,6 +344,9 @@ def main():
     print(f"🚀 AI 주식 분석기 가동 (모드: {mode}, 날짜: {today_str})")
 
     if mode == 'daily':
+        # 1. 어제 추천 종목 리스트 가져오기 (비교용)
+        prev_stock_ids = get_latest_recommendation_ids()
+
         # [평일] 기존 로직: 오늘 추천 종목 선정
         ms = analyze_market_condition(); final = []
         
@@ -338,6 +377,22 @@ def main():
         
         print("\n💾 [Daily Mode] 오늘의 추천 종목 갱신 중...")
         with open('todays_recommendation.json', 'w', encoding='utf-8') as f: json.dump(out, f, indent=2, ensure_ascii=False, allow_nan=False)
+
+        # 2. 신규 진입 종목 필터링 및 메시지 생성
+        new_stocks = [s['symbol'] for s in final if s['id'] not in prev_stock_ids]
+        
+        noti_title = "🔔 DailyPick10 알림"
+        if new_stocks:
+            # 신규 종목이 있을 경우: 신규 종목 위주로 메시지 구성
+            highlight_stocks = ", ".join(new_stocks[:2]) # 최대 2개만 표시
+            noti_body = f"오늘의 추천 종목이 도착하였습니다! 오늘의 추천: {highlight_stocks} 등 {len(final)}건 (신규 {len(new_stocks)}건)"
+        else:
+            # 신규 종목이 없을 경우: 상위 1, 2위 종목 표시
+            top_stocks = ", ".join([s['symbol'] for s in final[:2]])
+            noti_body = f"오늘의 추천 종목이 도착하였습니다! 오늘의 추천: {top_stocks} 등 {len(final)}건 (순위 변동)"
+
+        # 3. 알림 전송
+        send_push_notification(noti_title, noti_body)
 
     elif mode == 'weekly':
         # [토요일] 신규 로직: 지난 2주간 데이터 취합 및 성과 분석
