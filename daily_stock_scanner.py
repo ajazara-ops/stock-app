@@ -26,6 +26,7 @@ def safe_float(val, default=0.0):
 
 # --- [알림 전송 함수] ---
 def send_push_notification(title, message):
+    # ✅ 사용자님의 푸시 토큰
     user_push_tokens = ["ExponentPushToken[kip5csOC92Ymcc_AtKjqyl]"] 
 
     if not user_push_tokens:
@@ -236,23 +237,31 @@ def analyze_stock(ticker, market_type):
         
         score = 0; reasons = [] 
         
+        # 1. RSI
         if cur_rsi < 30: score += 40; reasons.append("RSI 과매도(강력)")
         elif cur_rsi < 45: score += 20; reasons.append("단기 과매도")
         elif cur_rsi < 60: score += 5; reasons.append("눌림목 구간")
         
+        # 2. 볼린저 밴드
         if cur_p <= cur_low * 1.05: score += 30; reasons.append("볼린저밴드 하단 근접")
         
+        # 3. 이평선 지지
         if not pd.isna(ma60) and cur_p >= ma60 * 0.98 and cur_p <= ma60 * 1.05: score += 20; reasons.append("60일선 지지")
         
+        # 4. MACD
         if macd.iloc[-1] > signal.iloc[-1]: score += 15; reasons.append("MACD 상승신호")
         
+        # 5. 거래량
         if rvol >= 1.5: score += 20; reasons.append(f"거래량 폭발({rvol:.1f}배)")
         elif rvol >= 1.2: score += 10; reasons.append(f"거래량 증가")
         
+        # 6. 스토캐스틱
         if cur_k < 20: score += 15; reasons.append("스토캐스틱 과매도")
         
+        # 7. 장기 추세
         if not pd.isna(ma120) and cur_p >= ma120: score += 10; reasons.append("장기 상승 추세")
 
+        # 8. 펀더멘털
         op_margin = info.get('operatingMargins', 0)
         rev_growth = info.get('revenueGrowth', 0)
         per = info.get('forwardPE', info.get('trailingPE', 0))
@@ -292,71 +301,77 @@ def analyze_stock(ticker, market_type):
         }
     except: return None
 
-# --- [6] 주간 종합 리포트 생성 ---
-def generate_weekly_report(today_str):
-    print(f"\n📊 [Weekly] 지난 2주간({today_str} 기준)의 통합 성과 분석 시작...")
+# --- [6] 주간 수익률 결산 알림 (토요일 5PM) ---
+def send_weekly_summary_notification():
+    print(f"\n📢 [Weekly Summary] 주간 수익률 결산 알림 전송 시작...")
     
+    # [수정] 최근 14일간 (2주) 파일 수집
     history_files = []
-    end_date = datetime.strptime(today_str, "%Y-%m-%d")
-    start_date = end_date - timedelta(days=14)
-    
-    if not os.path.exists('history'): 
-        print("❌ 히스토리 폴더가 없습니다.")
-        return
+    today = datetime.now()
+    start_date = today - timedelta(days=14) 
+
+    if not os.path.exists('history'): return
 
     for f in os.listdir('history'):
         if f.endswith('_recommendation.json'):
             file_date_str = f.split('_')[0]
             try:
                 file_date = datetime.strptime(file_date_str, "%Y-%m-%d")
-                if start_date <= file_date < end_date: 
+                if start_date <= file_date <= today:
                     history_files.append(f)
             except: pass
-            
-    print(f"📂 분석 대상 파일: {len(history_files)}개 ({history_files})")
     
-    aggregated_stocks = []
-    for file in history_files:
+    if not history_files:
+        print("🔕 분석할 데이터가 없습니다.")
+        return
+
+    # 종목 수집 (가장 처음 추천된 시점의 가격 기준)
+    us_stocks = {}
+    kr_stocks = {}
+
+    for file in sorted(history_files): 
         with open(f"history/{file}", 'r', encoding='utf-8') as f:
             data = json.load(f)
-            rec_date = file.split('_')[0]
             for stock in data.get('stocks', []):
-                stock['buyPrice'] = stock['currentPrice'] 
-                stock['recommendDate'] = rec_date
-                aggregated_stocks.append(stock)
+                sid = stock['id']
+                market = stock['market']
+                if market == 'US' and sid not in us_stocks:
+                    stock['buyPrice'] = stock['currentPrice']
+                    us_stocks[sid] = stock
+                elif market == 'KR' and sid not in kr_stocks:
+                    stock['buyPrice'] = stock['currentPrice']
+                    kr_stocks[sid] = stock
 
-    print(f"🔎 총 {len(aggregated_stocks)}개의 과거 추천 내역 분석 중...")
-
-    final_results = []
-    for i, item in enumerate(aggregated_stocks):
-        ticker = item['id']
-        buy_price = item['buyPrice']
-        print(f"[{i+1}/{len(aggregated_stocks)}] 수익률 계산: {ticker}...", end='\r')
-        try:
-            stock_info = yf.Ticker(ticker)
-            todays_data = stock_info.history(period="5d")
-            if len(todays_data) > 0:
-                current_price = float(todays_data['Close'].iloc[-1])
-                return_rate = ((current_price - buy_price) / buy_price) * 100
-                item['currentPrice'] = round(current_price, 2)
-                item['returnRate'] = round(return_rate, 2)
-                final_results.append(item)
-        except Exception as e: pass 
-
-    final_results.sort(key=lambda x: x['returnRate'], reverse=True)
-    top_performers = final_results[:10]
-    for i, item in enumerate(top_performers): item['rank'] = i + 1
+    # Top 10 수익률 평균 계산
+    def calculate_top_avg(stock_dict):
+        results = []
+        for sid, item in stock_dict.items():
+            buy_price = item['buyPrice']
+            try:
+                stock_info = yf.Ticker(sid)
+                todays_data = stock_info.history(period="5d")
+                if len(todays_data) > 0:
+                    curr = float(todays_data['Close'].iloc[-1])
+                    ret = ((curr - buy_price) / buy_price) * 100
+                    results.append(ret)
+            except: pass
         
-    ms = analyze_market_condition()
-    out = {
-        "market_status": ms, "stocks": top_performers, "dominant_sectors": [], 
-        "timestamp": f"{today_str} 08:00:00 (Weekly Report)"
-    }
+        if not results: return 0.0
+        results.sort(reverse=True)
+        top10 = results[:10]
+        if not top10: return 0.0
+        return sum(top10) / len(top10)
+
+    print("🇺🇸 미국 주간 수익률 계산 중...")
+    us_avg = calculate_top_avg(us_stocks)
     
-    with open(f"history/{today_str}_recommendation.json", 'w', encoding='utf-8') as f:
-        json.dump(out, f, indent=2, ensure_ascii=False, allow_nan=False)
-        
-    print(f"\n✅ 주간 종합 리포트 생성 완료! (상위 {len(top_performers)}개 저장)")
+    print("🇰🇷 한국 주간 수익률 계산 중...")
+    kr_avg = calculate_top_avg(kr_stocks)
+
+    title = "📊 주간 수익률 결산"
+    body = f"지난 2주간 추천 종목 성과입니다.\n🇰🇷 한국 Top10 평균: {kr_avg:+.2f}%\n🇺🇸 미국 Top10 평균: {us_avg:+.2f}%"
+    
+    send_push_notification(title, body)
 
 def update_history_index():
     if not os.path.exists('history'): return
@@ -369,7 +384,7 @@ def update_history_index():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', type=str, default='daily', help='Execution mode: daily or weekly')
+    parser.add_argument('--mode', type=str, default='daily', help='Execution mode: daily, weekly, or weekly_summary')
     parser.add_argument('--target', type=str, default='ALL', help='Target market: US, KR, or ALL')
     args = parser.parse_args()
     
@@ -387,6 +402,7 @@ def main():
         ms = analyze_market_condition()
         final_stocks = []
         
+        # 1. 미국 주식 분석
         if args.target in ['US', 'ALL']:
             sp500 = get_sp500_tickers()
             nasdaq100 = get_nasdaq100_tickers()
@@ -405,6 +421,7 @@ def main():
             us_kept = [s for s in existing_stocks if s['market'] == 'US']
             final_stocks.extend(us_kept)
 
+        # 2. 한국 주식 분석
         if args.target in ['KR', 'ALL']:
             kr = get_korea_tickers(); krc = []
             print(f"\n🇰🇷 한국 분석 (대상: {len(kr)}개)...")
@@ -423,7 +440,6 @@ def main():
         all_sectors = [s['sector'] for s in final_stocks if s['sector'] != '기타']
         dominant_sectors = [item[0] for item in Counter(all_sectors).most_common(2)]
         
-        # [수정] 알림 메시지 생성 로직을 여기로 이동 (파일 저장 전에!)
         noti_title = "🔔 DailyPick10 알림"
         noti_body = ""
         
@@ -442,13 +458,12 @@ def main():
                 top_stocks = ", ".join([s['symbol'] for s in target_market_stocks[:2]])
                 noti_body = f"오늘의 {market_name} 추천 종목이 도착했습니다! 오늘의 추천: {top_stocks} 등 {len(target_market_stocks)}건"
 
-        # [수정] JSON에 알림 메시지도 함께 저장
         out = {
             "market_status": ms, 
             "stocks": final_stocks, 
             "dominant_sectors": dominant_sectors, 
             "timestamp": f"{today_str} {datetime.now().strftime('%H:%M:%S')}",
-            "notification": {  # 여기가 핵심입니다!
+            "notification": {
                 "title": noti_title,
                 "body": noti_body
             }
@@ -457,13 +472,18 @@ def main():
         print("\n💾 [Daily Mode] 오늘의 추천 종목 갱신 중...")
         with open('todays_recommendation.json', 'w', encoding='utf-8') as f: json.dump(out, f, indent=2, ensure_ascii=False, allow_nan=False)
 
-        # 알림 전송 (앱이 꺼져있을 때를 위함)
+        # [중요] Daily 모드일 때도 history 폴더에 스냅샷 저장 (2주 결산을 위해)
+        print(f"\n💾 [History] 히스토리 데이터 저장 중... ({today_str})")
+        with open(f"history/{today_str}_recommendation.json", 'w', encoding='utf-8') as f:
+            json.dump(out, f, indent=2, ensure_ascii=False, allow_nan=False)
+        update_history_index()
+
         if noti_body:
             send_push_notification(noti_title, noti_body)
-
-    elif args.mode == 'weekly':
-        generate_weekly_report(today_str)
-        update_history_index()
+    
+    elif args.mode == 'weekly_summary':
+        # [신규] 토요일 오후 5시 결산 알림
+        send_weekly_summary_notification()
 
     print(f"\n✅ 완료되었습니다.")
 
