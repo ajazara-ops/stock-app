@@ -364,18 +364,27 @@ def generate_weekly_report(today_str):
 def send_weekly_summary_notification():
     print(f"\n📢 [Weekly Summary] 주간 수익률 결산 알림 전송 시작...")
     
+    # [수정] 오늘(토요일) 날짜를 기준으로 과거 14일치 파일 검색
+    today_str = time.strftime("%Y-%m-%d")
     history_files = []
-    today = datetime.now()
-    start_date = today - timedelta(days=14) 
+    today_dt = datetime.strptime(today_str, "%Y-%m-%d")
+    start_date = today_dt - timedelta(days=14) 
 
     if not os.path.exists('history'): return
+
+    # [수정] 파일이 없으면 생성하는 로직 추가
+    report_file_path = f"history/{today_str}_recommendation.json"
+    if not os.path.exists(report_file_path):
+        print(f"⚠️ [Weekly Summary] 오늘자({today_str}) 리포트가 없어서 자동 생성합니다...")
+        generate_weekly_report(today_str)
+        update_history_index()
 
     for f in os.listdir('history'):
         if f.endswith('_recommendation.json'):
             file_date_str = f.split('_')[0]
             try:
                 file_date = datetime.strptime(file_date_str, "%Y-%m-%d")
-                if start_date <= file_date <= today:
+                if start_date <= file_date <= today_dt:
                     history_files.append(f)
             except: pass
     
@@ -424,7 +433,6 @@ def send_weekly_summary_notification():
     print("🇰🇷 한국 주간 수익률 계산 중...")
     kr_avg = calculate_top_avg(kr_stocks)
 
-    # [수정] 수치 제거하고 안내 메시지로 변경
     title = "📊 주간 수익률 결산 도착"
     body = "지난 2주간의 추천 종목 성과 분석이 완료되었습니다.\n지금 앱에서 한국/미국 Top 10 수익률을 확인해보세요!"
     
@@ -545,6 +553,7 @@ def main():
     
     elif args.mode == 'weekly_summary':
         # [신규] 토요일 오후 5시 결산 알림
+        # 알림 보내기 전, 오늘 파일이 없으면 강제 생성 (안전장치)
         send_weekly_summary_notification()
 
     print(f"\n✅ 완료되었습니다.")
