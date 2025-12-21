@@ -1,4 +1,10 @@
 [
- 
-
+  {
+    "date": "2025-12-20",
+    "file": "weekly_reports/2025-12-20_weekly.json"
+  },
+  {
+    "date": "2025-12-13",
+    "file": "weekly_reports/2025-12-13_weekly.json"
+  }
 ]
