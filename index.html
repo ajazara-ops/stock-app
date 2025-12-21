@@ -7,6 +7,8 @@
     <meta property="og:title" content="DailyPick10 - AI 주식 추천">
     <meta property="og:description" content="매일 아침/저녁, AI가 분석한 Top 10 종목을 받아보세요.">
     <meta property="og:image" content="./assets/images/icon.png">
+    <!-- [New] 변경될 주소 미리 적용 (저장소 이름을 dailypick10으로 변경 시) -->
+    <meta property="og:url" content="https://ajazara-ops.github.io/dailypick10/">
     <title>DailyPick10 - AI 스마트 스윙 투자</title>
     
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -29,6 +31,12 @@
         .modal-enter-active { opacity: 1; transform: scale(1); transition: opacity 300ms, transform 300ms; }
         .modal-exit { opacity: 1; transform: scale(1); }
         .modal-exit-active { opacity: 0; transform: scale(0.9); transition: opacity 300ms, transform 300ms; }
+        
+        /* Custom Scrollbar for Modal */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
     </style>
 </head>
 <body>
