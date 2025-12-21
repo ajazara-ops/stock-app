@@ -100,10 +100,11 @@ def analyze_market_condition(target_date=None):
             ticker = yf.Ticker(info['ticker'])
             hist = ticker.history(period="2y") 
             
+            # [수정] 시간 정보 제거 후 날짜 문자열로 비교 (가장 정확함)
+            # 기존에는 datetime 비교 시 00:00:00이라 당일 장마감 데이터가 잘리는 버그가 있었음
             if target_date:
-                target_dt = datetime.strptime(target_date, "%Y-%m-%d")
                 hist.index = hist.index.tz_localize(None) 
-                hist = hist[hist.index <= target_dt]
+                hist = hist[hist.index.strftime('%Y-%m-%d') <= target_date]
 
             if len(hist) < 2:
                 market_status[key] = {'status': 'UNKNOWN', 'change': 0.0, 'current': 0.0, 'message': '데이터 없음'}
@@ -127,6 +128,7 @@ def analyze_market_condition(target_date=None):
                 
             market_status[key] = {'name': info['name'], 'current': safe_float(round(current, 2)), 'change': safe_float(round(change_pct, 2)), 'status': status, 'message': message}
         except Exception as e: 
+            print(f"⚠️ {key} 지수 분석 실패: {e}")
             market_status[key] = {'status': 'UNKNOWN', 'change': 0.0, 'message': '분석 실패'}
     return market_status
 
@@ -242,11 +244,10 @@ def analyze_stock(ticker, market_type, target_date=None):
         try: hist = stock.history(period="2y")
         except: return None
         
-        # [수정] 과거 시점 분석을 위한 데이터 슬라이싱
+        # [수정] 날짜 문자열로 비교하여 당일 장 마감 데이터 포함하도록 수정
         if target_date:
-            target_dt = datetime.strptime(target_date, "%Y-%m-%d")
             hist.index = hist.index.tz_localize(None)
-            hist = hist[hist.index <= target_dt]
+            hist = hist[hist.index.strftime('%Y-%m-%d') <= target_date]
 
         if len(hist) < 120: return None
         
@@ -369,7 +370,6 @@ def generate_weekly_report(target_date_str):
     print(f"🔎 총 {len(aggregated_stocks)}개의 과거 추천 내역 수익률 계산 중...")
 
     final_results = []
-    # [수정] 10개마다 1초 딜레이 추가하여 API 과부하 방지
     for i, item in enumerate(aggregated_stocks):
         if i % 10 == 0: time.sleep(1)
         
@@ -378,8 +378,6 @@ def generate_weekly_report(target_date_str):
         try:
             stock_info = yf.Ticker(ticker)
             target_dt = datetime.strptime(target_date_str, "%Y-%m-%d")
-            
-            # [수정] 데이터 조회 기간 6개월로 확대 (끊김 방지)
             hist = stock_info.history(period="6mo")
             
             if hist.empty:
@@ -387,13 +385,12 @@ def generate_weekly_report(target_date_str):
                 continue
 
             hist.index = hist.index.tz_localize(None)
-            hist_until_target = hist[hist.index <= target_dt]
+            hist_until_target = hist[hist.index.strftime('%Y-%m-%d') <= target_date_str] # [수정] 날짜 문자열로 비교
             
             if not hist_until_target.empty:
                 current_price = float(hist_until_target['Close'].iloc[-1])
                 return_rate = ((current_price - buy_price) / buy_price) * 100
                 
-                # 아이템 복사 후 값 업데이트
                 new_item = item.copy()
                 new_item['currentPrice'] = round(current_price, 2)
                 new_item['returnRate'] = round(return_rate, 2)
@@ -405,7 +402,6 @@ def generate_weekly_report(target_date_str):
             print(f"❌ {ticker} 수익률 계산 에러: {e}")
             pass 
 
-    # [수정] 한국/미국 각각 Top 10 선정 후 합치기
     us_results = [s for s in final_results if s['market'] == 'US']
     kr_results = [s for s in final_results if s['market'] == 'KR']
 
@@ -415,7 +411,6 @@ def generate_weekly_report(target_date_str):
     us_top10 = us_results[:10]
     kr_top10 = kr_results[:10]
 
-    # 랭킹 부여 (각 시장별로 1~10위)
     for i, item in enumerate(us_top10): item['rank'] = i + 1
     for i, item in enumerate(kr_top10): item['rank'] = i + 1
 
@@ -508,7 +503,6 @@ def run_backfill(start_date, end_date):
         target_str = current_dt.strftime("%Y-%m-%d")
         print(f"\n📅 [Backfill] 처리 중: {target_str}")
         
-        # 1. 데일리 스캔
         ms = analyze_market_condition(target_date=target_str)
         final_stocks = []
         
