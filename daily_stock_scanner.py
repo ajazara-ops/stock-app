@@ -100,9 +100,8 @@ def analyze_market_condition(target_date=None):
             ticker = yf.Ticker(info['ticker'])
             hist = ticker.history(period="2y") 
             
-            # [수정] 시간 정보 제거 후 날짜 문자열로 비교 (가장 정확함)
-            # 기존에는 datetime 비교 시 00:00:00이라 당일 장마감 데이터가 잘리는 버그가 있었음
             if target_date:
+                # [수정] 날짜 문자열로 비교하여 당일 장 마감 데이터 포함하도록 수정
                 hist.index = hist.index.tz_localize(None) 
                 hist = hist[hist.index.strftime('%Y-%m-%d') <= target_date]
 
@@ -244,10 +243,10 @@ def analyze_stock(ticker, market_type, target_date=None):
         try: hist = stock.history(period="2y")
         except: return None
         
-        # [수정] 날짜 문자열로 비교하여 당일 장 마감 데이터 포함하도록 수정
         if target_date:
+            target_dt = datetime.strptime(target_date, "%Y-%m-%d")
             hist.index = hist.index.tz_localize(None)
-            hist = hist[hist.index.strftime('%Y-%m-%d') <= target_date]
+            hist = hist[hist.index <= target_dt]
 
         if len(hist) < 120: return None
         
@@ -503,6 +502,7 @@ def run_backfill(start_date, end_date):
         target_str = current_dt.strftime("%Y-%m-%d")
         print(f"\n📅 [Backfill] 처리 중: {target_str}")
         
+        # 1. 데일리 스캔
         ms = analyze_market_condition(target_date=target_str)
         final_stocks = []
         
@@ -567,7 +567,8 @@ def main():
                 existing_stocks = json.load(f).get('stocks', [])
         except: pass
 
-        ms = analyze_market_condition()
+        # [수정] 지수 분석 시에도 기준 날짜를 적용하여 정확도 향상
+        ms = analyze_market_condition(target_date=today_str)
         final_stocks = []
         
         if args.target in ['US', 'ALL']:
@@ -584,7 +585,6 @@ def main():
             process_news_for_list(ust)
             final_stocks.extend(ust)
         else:
-            print("\n🇺🇸 미국 데이터는 기존 내용을 유지합니다.")
             us_kept = [s for s in existing_stocks if s['market'] == 'US']
             final_stocks.extend(us_kept)
 
@@ -599,7 +599,6 @@ def main():
             process_news_for_list(krt)
             final_stocks.extend(krt)
         else:
-            print("\n🇰🇷 한국 데이터는 기존 내용을 유지합니다.")
             kr_kept = [s for s in existing_stocks if s['market'] == 'KR']
             final_stocks.extend(kr_kept)
         
