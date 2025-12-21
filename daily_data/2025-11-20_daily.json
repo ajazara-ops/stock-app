@@ -1,0 +1,2936 @@
+{
+  "market_status": {
+    "US": {
+      "name": "S&P 500",
+      "current": 6538.76,
+      "change": -1.56,
+      "status": "PANIC",
+      "message": "폭락 경고 ⛈️"
+    },
+    "KR": {
+      "name": "KOSPI",
+      "current": 4004.85,
+      "change": 1.92,
+      "status": "VERY_GOOD",
+      "message": "강한 상승 🔥"
+    },
+    "VIX": {
+      "name": "공포지수",
+      "current": 26.42,
+      "change": 11.67,
+      "status": "BAD",
+      "message": "공포 구간 😨"
+    }
+  },
+  "stocks": [
+    {
+      "id": "NVDA",
+      "rank": 1,
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "market": "US",
+      "currentPrice": 180.63,
+      "changePercent": -3.15,
+      "buyZoneTop": 184.24,
+      "buyZoneBottom": 177.02,
+      "targetPrice": 198.69,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 거래량 폭발(1.6배) + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 145,
+      "rsi": 34.57,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 186.25,
+          "bb_upper": 191.81,
+          "bb_lower": 177.5
+        },
+        {
+          "time": "10-27",
+          "price": 191.48,
+          "bb_upper": 192.77,
+          "bb_lower": 177.5
+        },
+        {
+          "time": "10-28",
+          "price": 201.02,
+          "bb_upper": 196.29,
+          "bb_lower": 175.43
+        },
+        {
+          "time": "10-29",
+          "price": 207.03,
+          "bb_upper": 200.94,
+          "bb_lower": 172.76
+        },
+        {
+          "time": "10-30",
+          "price": 202.88,
+          "bb_upper": 203.35,
+          "bb_lower": 171.74
+        },
+        {
+          "time": "10-31",
+          "price": 202.48,
+          "bb_upper": 205.45,
+          "bb_lower": 171.14
+        },
+        {
+          "time": "11-03",
+          "price": 206.87,
+          "bb_upper": 208.35,
+          "bb_lower": 170.37
+        },
+        {
+          "time": "11-04",
+          "price": 198.68,
+          "bb_upper": 209.36,
+          "bb_lower": 170.73
+        },
+        {
+          "time": "11-05",
+          "price": 195.2,
+          "bb_upper": 209.79,
+          "bb_lower": 170.9
+        },
+        {
+          "time": "11-06",
+          "price": 188.07,
+          "bb_upper": 209.56,
+          "bb_lower": 170.68
+        },
+        {
+          "time": "11-07",
+          "price": 188.14,
+          "bb_upper": 209.56,
+          "bb_lower": 171.18
+        },
+        {
+          "time": "11-10",
+          "price": 199.04,
+          "bb_upper": 210.45,
+          "bb_lower": 171.37
+        },
+        {
+          "time": "11-11",
+          "price": 193.15,
+          "bb_upper": 210.44,
+          "bb_lower": 172.69
+        },
+        {
+          "time": "11-12",
+          "price": 193.79,
+          "bb_upper": 210.32,
+          "bb_lower": 174.2
+        },
+        {
+          "time": "11-13",
+          "price": 186.85,
+          "bb_upper": 210.09,
+          "bb_lower": 174.94
+        },
+        {
+          "time": "11-14",
+          "price": 190.16,
+          "bb_upper": 209.93,
+          "bb_lower": 175.79
+        },
+        {
+          "time": "11-17",
+          "price": 186.59,
+          "bb_upper": 209.72,
+          "bb_lower": 176.4
+        },
+        {
+          "time": "11-18",
+          "price": 181.35,
+          "bb_upper": 209.7,
+          "bb_lower": 176.44
+        },
+        {
+          "time": "11-19",
+          "price": 186.51,
+          "bb_upper": 209.22,
+          "bb_lower": 177.55
+        },
+        {
+          "time": "11-20",
+          "price": 180.63,
+          "bb_upper": 209.38,
+          "bb_lower": 177.24
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.63168997,
+        "rev_growth": 0.625,
+        "per": 24.15835
+      },
+      "sector": "Technology",
+      "rvol": 1.64
+    },
+    {
+      "id": "TEL",
+      "rank": 2,
+      "symbol": "TEL",
+      "name": "TE Connectivity plc",
+      "market": "US",
+      "currentPrice": 214.49,
+      "changePercent": -7.96,
+      "buyZoneTop": 218.78,
+      "buyZoneBottom": 210.2,
+      "targetPrice": 235.94,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(1.9배) + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 145,
+      "rsi": 22.53,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 235.65,
+          "bb_upper": 233.72,
+          "bb_lower": 213.31
+        },
+        {
+          "time": "10-27",
+          "price": 236.74,
+          "bb_upper": 235.88,
+          "bb_lower": 213.05
+        },
+        {
+          "time": "10-28",
+          "price": 236.54,
+          "bb_upper": 237.67,
+          "bb_lower": 212.96
+        },
+        {
+          "time": "10-29",
+          "price": 240.76,
+          "bb_upper": 240.28,
+          "bb_lower": 212.26
+        },
+        {
+          "time": "10-30",
+          "price": 243.45,
+          "bb_upper": 243.12,
+          "bb_lower": 211.65
+        },
+        {
+          "time": "10-31",
+          "price": 247.01,
+          "bb_upper": 246.37,
+          "bb_lower": 211.02
+        },
+        {
+          "time": "11-03",
+          "price": 246.87,
+          "bb_upper": 249.1,
+          "bb_lower": 210.68
+        },
+        {
+          "time": "11-04",
+          "price": 243.55,
+          "bb_upper": 250.73,
+          "bb_lower": 211.2
+        },
+        {
+          "time": "11-05",
+          "price": 249.0,
+          "bb_upper": 253.26,
+          "bb_lower": 211.13
+        },
+        {
+          "time": "11-06",
+          "price": 242.5,
+          "bb_upper": 254.22,
+          "bb_lower": 212.17
+        },
+        {
+          "time": "11-07",
+          "price": 242.42,
+          "bb_upper": 254.05,
+          "bb_lower": 215.13
+        },
+        {
+          "time": "11-10",
+          "price": 247.76,
+          "bb_upper": 254.93,
+          "bb_lower": 217.08
+        },
+        {
+          "time": "11-11",
+          "price": 247.16,
+          "bb_upper": 255.42,
+          "bb_lower": 219.24
+        },
+        {
+          "time": "11-12",
+          "price": 246.32,
+          "bb_upper": 255.64,
+          "bb_lower": 221.39
+        },
+        {
+          "time": "11-13",
+          "price": 236.28,
+          "bb_upper": 254.91,
+          "bb_lower": 223.32
+        },
+        {
+          "time": "11-14",
+          "price": 237.33,
+          "bb_upper": 253.73,
+          "bb_lower": 225.94
+        },
+        {
+          "time": "11-17",
+          "price": 234.21,
+          "bb_upper": 252.84,
+          "bb_lower": 227.66
+        },
+        {
+          "time": "11-18",
+          "price": 231.54,
+          "bb_upper": 252.41,
+          "bb_lower": 228.42
+        },
+        {
+          "time": "11-19",
+          "price": 233.04,
+          "bb_upper": 251.94,
+          "bb_lower": 229.28
+        },
+        {
+          "time": "11-20",
+          "price": 214.49,
+          "bb_upper": 255.72,
+          "bb_lower": 223.54
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.19773,
+        "rev_growth": 0.167,
+        "per": 19.153189
+      },
+      "sector": "Technology",
+      "rvol": 1.91
+    },
+    {
+      "id": "AME",
+      "rank": 3,
+      "symbol": "AME",
+      "name": "AMETEK, Inc.",
+      "market": "US",
+      "currentPrice": 189.72,
+      "changePercent": -0.81,
+      "buyZoneTop": 193.52,
+      "buyZoneBottom": 185.93,
+      "targetPrice": 208.7,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 145,
+      "rsi": 17.97,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 186.85,
+          "bb_upper": 189.98,
+          "bb_lower": 179.75
+        },
+        {
+          "time": "10-27",
+          "price": 186.46,
+          "bb_upper": 189.97,
+          "bb_lower": 179.75
+        },
+        {
+          "time": "10-28",
+          "price": 184.81,
+          "bb_upper": 189.64,
+          "bb_lower": 179.79
+        },
+        {
+          "time": "10-29",
+          "price": 183.9,
+          "bb_upper": 189.36,
+          "bb_lower": 179.75
+        },
+        {
+          "time": "10-30",
+          "price": 198.01,
+          "bb_upper": 192.86,
+          "bb_lower": 177.46
+        },
+        {
+          "time": "10-31",
+          "price": 201.8,
+          "bb_upper": 196.73,
+          "bb_lower": 175.43
+        },
+        {
+          "time": "11-03",
+          "price": 198.4,
+          "bb_upper": 198.71,
+          "bb_lower": 175.02
+        },
+        {
+          "time": "11-04",
+          "price": 197.75,
+          "bb_upper": 200.16,
+          "bb_lower": 175.23
+        },
+        {
+          "time": "11-05",
+          "price": 197.75,
+          "bb_upper": 201.46,
+          "bb_lower": 175.41
+        },
+        {
+          "time": "11-06",
+          "price": 196.94,
+          "bb_upper": 202.42,
+          "bb_lower": 175.84
+        },
+        {
+          "time": "11-07",
+          "price": 195.98,
+          "bb_upper": 202.71,
+          "bb_lower": 177.26
+        },
+        {
+          "time": "11-10",
+          "price": 197.7,
+          "bb_upper": 203.35,
+          "bb_lower": 178.19
+        },
+        {
+          "time": "11-11",
+          "price": 197.33,
+          "bb_upper": 204.01,
+          "bb_lower": 178.71
+        },
+        {
+          "time": "11-12",
+          "price": 196.48,
+          "bb_upper": 204.44,
+          "bb_lower": 179.38
+        },
+        {
+          "time": "11-13",
+          "price": 193.85,
+          "bb_upper": 204.41,
+          "bb_lower": 180.38
+        },
+        {
+          "time": "11-14",
+          "price": 193.06,
+          "bb_upper": 204.31,
+          "bb_lower": 181.26
+        },
+        {
+          "time": "11-17",
+          "price": 190.89,
+          "bb_upper": 204.23,
+          "bb_lower": 181.73
+        },
+        {
+          "time": "11-18",
+          "price": 189.6,
+          "bb_upper": 204.18,
+          "bb_lower": 181.93
+        },
+        {
+          "time": "11-19",
+          "price": 191.27,
+          "bb_upper": 203.83,
+          "bb_lower": 182.94
+        },
+        {
+          "time": "11-20",
+          "price": 189.72,
+          "bb_upper": 203.81,
+          "bb_lower": 183.05
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.25787002,
+        "rev_growth": 0.108,
+        "per": 25.53641
+      },
+      "sector": "Industrials",
+      "rvol": 1.01
+    },
+    {
+      "id": "ETN",
+      "rank": 4,
+      "symbol": "ETN",
+      "name": "Eaton Corporation, PLC",
+      "market": "US",
+      "currentPrice": 328.19,
+      "changePercent": -5.05,
+      "buyZoneTop": 334.75,
+      "buyZoneBottom": 321.63,
+      "targetPrice": 361.01,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(1.6배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 135,
+      "rsi": 25.32,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 376.29,
+          "bb_upper": 383.28,
+          "bb_lower": 364.74
+        },
+        {
+          "time": "10-27",
+          "price": 379.74,
+          "bb_upper": 383.65,
+          "bb_lower": 365.62
+        },
+        {
+          "time": "10-28",
+          "price": 376.01,
+          "bb_upper": 383.76,
+          "bb_lower": 365.69
+        },
+        {
+          "time": "10-29",
+          "price": 387.75,
+          "bb_upper": 386.15,
+          "bb_lower": 364.69
+        },
+        {
+          "time": "10-30",
+          "price": 383.09,
+          "bb_upper": 386.99,
+          "bb_lower": 364.48
+        },
+        {
+          "time": "10-31",
+          "price": 381.56,
+          "bb_upper": 387.63,
+          "bb_lower": 364.65
+        },
+        {
+          "time": "11-03",
+          "price": 386.57,
+          "bb_upper": 388.77,
+          "bb_lower": 364.17
+        },
+        {
+          "time": "11-04",
+          "price": 377.72,
+          "bb_upper": 388.84,
+          "bb_lower": 364.78
+        },
+        {
+          "time": "11-05",
+          "price": 385.44,
+          "bb_upper": 389.88,
+          "bb_lower": 364.61
+        },
+        {
+          "time": "11-06",
+          "price": 377.4,
+          "bb_upper": 389.89,
+          "bb_lower": 364.62
+        },
+        {
+          "time": "11-07",
+          "price": 373.77,
+          "bb_upper": 389.65,
+          "bb_lower": 365.33
+        },
+        {
+          "time": "11-10",
+          "price": 379.57,
+          "bb_upper": 389.85,
+          "bb_lower": 365.55
+        },
+        {
+          "time": "11-11",
+          "price": 367.91,
+          "bb_upper": 390.22,
+          "bb_lower": 364.53
+        },
+        {
+          "time": "11-12",
+          "price": 369.4,
+          "bb_upper": 389.91,
+          "bb_lower": 363.62
+        },
+        {
+          "time": "11-13",
+          "price": 354.07,
+          "bb_upper": 392.3,
+          "bb_lower": 359.07
+        },
+        {
+          "time": "11-14",
+          "price": 352.39,
+          "bb_upper": 394.25,
+          "bb_lower": 355.03
+        },
+        {
+          "time": "11-17",
+          "price": 342.75,
+          "bb_upper": 397.06,
+          "bb_lower": 348.73
+        },
+        {
+          "time": "11-18",
+          "price": 338.29,
+          "bb_upper": 399.82,
+          "bb_lower": 342.45
+        },
+        {
+          "time": "11-19",
+          "price": 345.65,
+          "bb_upper": 400.95,
+          "bb_lower": 339.83
+        },
+        {
+          "time": "11-20",
+          "price": 328.19,
+          "bb_upper": 404.06,
+          "bb_lower": 332.3
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.19791001,
+        "rev_growth": 0.101,
+        "per": 23.21957
+      },
+      "sector": "Industrials",
+      "rvol": 1.57
+    },
+    {
+      "id": "WFC",
+      "rank": 5,
+      "symbol": "WFC",
+      "name": "Wells Fargo & Company",
+      "market": "US",
+      "currentPrice": 82.4,
+      "changePercent": -2.09,
+      "buyZoneTop": 84.05,
+      "buyZoneBottom": 80.75,
+      "targetPrice": 90.64,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 저평가(PER)",
+      "score": 135,
+      "rsi": 25.19,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 85.96,
+          "bb_upper": 87.46,
+          "bb_lower": 76.91
+        },
+        {
+          "time": "10-27",
+          "price": 86.55,
+          "bb_upper": 87.86,
+          "bb_lower": 76.74
+        },
+        {
+          "time": "10-28",
+          "price": 86.45,
+          "bb_upper": 88.3,
+          "bb_lower": 76.61
+        },
+        {
+          "time": "10-29",
+          "price": 85.55,
+          "bb_upper": 88.64,
+          "bb_lower": 76.78
+        },
+        {
+          "time": "10-30",
+          "price": 85.54,
+          "bb_upper": 88.9,
+          "bb_lower": 77.06
+        },
+        {
+          "time": "10-31",
+          "price": 86.52,
+          "bb_upper": 89.27,
+          "bb_lower": 77.32
+        },
+        {
+          "time": "11-03",
+          "price": 86.84,
+          "bb_upper": 89.62,
+          "bb_lower": 77.63
+        },
+        {
+          "time": "11-04",
+          "price": 86.67,
+          "bb_upper": 89.9,
+          "bb_lower": 77.95
+        },
+        {
+          "time": "11-05",
+          "price": 86.5,
+          "bb_upper": 89.95,
+          "bb_lower": 78.62
+        },
+        {
+          "time": "11-06",
+          "price": 85.59,
+          "bb_upper": 89.8,
+          "bb_lower": 79.37
+        },
+        {
+          "time": "11-07",
+          "price": 86.04,
+          "bb_upper": 88.95,
+          "bb_lower": 81.11
+        },
+        {
+          "time": "11-10",
+          "price": 86.1,
+          "bb_upper": 87.87,
+          "bb_lower": 82.95
+        },
+        {
+          "time": "11-11",
+          "price": 86.19,
+          "bb_upper": 87.92,
+          "bb_lower": 83.11
+        },
+        {
+          "time": "11-12",
+          "price": 86.26,
+          "bb_upper": 87.94,
+          "bb_lower": 83.11
+        },
+        {
+          "time": "11-13",
+          "price": 84.7,
+          "bb_upper": 87.86,
+          "bb_lower": 83.31
+        },
+        {
+          "time": "11-14",
+          "price": 85.05,
+          "bb_upper": 87.59,
+          "bb_lower": 83.8
+        },
+        {
+          "time": "11-17",
+          "price": 83.42,
+          "bb_upper": 87.74,
+          "bb_lower": 83.43
+        },
+        {
+          "time": "11-18",
+          "price": 83.86,
+          "bb_upper": 87.78,
+          "bb_lower": 83.35
+        },
+        {
+          "time": "11-19",
+          "price": 84.16,
+          "bb_upper": 87.69,
+          "bb_lower": 83.51
+        },
+        {
+          "time": "11-20",
+          "price": 82.4,
+          "bb_upper": 87.96,
+          "bb_lower": 83.07
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.33717,
+        "rev_growth": 0.075,
+        "per": 13.410849
+      },
+      "sector": "Financial Services",
+      "rvol": 0.84
+    },
+    {
+      "id": "ETR",
+      "rank": 6,
+      "symbol": "ETR",
+      "name": "Entergy Corporation",
+      "market": "US",
+      "currentPrice": 93.35,
+      "changePercent": -0.72,
+      "buyZoneTop": 95.22,
+      "buyZoneBottom": 91.48,
+      "targetPrice": 102.68,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 거래량 증가 + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 135,
+      "rsi": 38.25,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 95.94,
+          "bb_upper": 97.57,
+          "bb_lower": 92.42
+        },
+        {
+          "time": "10-27",
+          "price": 96.71,
+          "bb_upper": 97.67,
+          "bb_lower": 92.7
+        },
+        {
+          "time": "10-28",
+          "price": 94.39,
+          "bb_upper": 97.48,
+          "bb_lower": 93.07
+        },
+        {
+          "time": "10-29",
+          "price": 94.83,
+          "bb_upper": 97.26,
+          "bb_lower": 93.5
+        },
+        {
+          "time": "10-30",
+          "price": 95.41,
+          "bb_upper": 97.0,
+          "bb_lower": 94.01
+        },
+        {
+          "time": "10-31",
+          "price": 95.45,
+          "bb_upper": 96.99,
+          "bb_lower": 94.08
+        },
+        {
+          "time": "11-03",
+          "price": 96.23,
+          "bb_upper": 96.87,
+          "bb_lower": 94.15
+        },
+        {
+          "time": "11-04",
+          "price": 95.59,
+          "bb_upper": 96.88,
+          "bb_lower": 94.16
+        },
+        {
+          "time": "11-05",
+          "price": 95.64,
+          "bb_upper": 96.84,
+          "bb_lower": 94.16
+        },
+        {
+          "time": "11-06",
+          "price": 95.07,
+          "bb_upper": 96.84,
+          "bb_lower": 94.17
+        },
+        {
+          "time": "11-07",
+          "price": 96.55,
+          "bb_upper": 96.94,
+          "bb_lower": 94.26
+        },
+        {
+          "time": "11-10",
+          "price": 96.47,
+          "bb_upper": 97.04,
+          "bb_lower": 94.29
+        },
+        {
+          "time": "11-11",
+          "price": 96.23,
+          "bb_upper": 97.07,
+          "bb_lower": 94.29
+        },
+        {
+          "time": "11-12",
+          "price": 95.9,
+          "bb_upper": 96.87,
+          "bb_lower": 94.38
+        },
+        {
+          "time": "11-13",
+          "price": 94.42,
+          "bb_upper": 96.93,
+          "bb_lower": 94.22
+        },
+        {
+          "time": "11-14",
+          "price": 95.05,
+          "bb_upper": 96.94,
+          "bb_lower": 94.2
+        },
+        {
+          "time": "11-17",
+          "price": 95.54,
+          "bb_upper": 96.89,
+          "bb_lower": 94.19
+        },
+        {
+          "time": "11-18",
+          "price": 94.44,
+          "bb_upper": 96.93,
+          "bb_lower": 94.09
+        },
+        {
+          "time": "11-19",
+          "price": 94.03,
+          "bb_upper": 97.01,
+          "bb_lower": 93.88
+        },
+        {
+          "time": "11-20",
+          "price": 93.35,
+          "bb_upper": 97.18,
+          "bb_lower": 93.54
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.30055,
+        "rev_growth": 0.125,
+        "per": 20.808224
+      },
+      "sector": "Utilities",
+      "rvol": 1.37
+    },
+    {
+      "id": "MSTR",
+      "rank": 7,
+      "symbol": "MSTR",
+      "name": "Strategy Inc",
+      "market": "US",
+      "currentPrice": 177.13,
+      "changePercent": -5.02,
+      "buyZoneTop": 180.67,
+      "buyZoneBottom": 173.59,
+      "targetPrice": 194.84,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(1.9배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 135,
+      "rsi": 17.15,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 289.08,
+          "bb_upper": 362.71,
+          "bb_lower": 264.78
+        },
+        {
+          "time": "10-27",
+          "price": 295.63,
+          "bb_upper": 361.43,
+          "bb_lower": 262.98
+        },
+        {
+          "time": "10-28",
+          "price": 284.64,
+          "bb_upper": 360.79,
+          "bb_lower": 259.86
+        },
+        {
+          "time": "10-29",
+          "price": 275.36,
+          "bb_upper": 358.13,
+          "bb_lower": 256.22
+        },
+        {
+          "time": "10-30",
+          "price": 254.57,
+          "bb_upper": 353.76,
+          "bb_lower": 250.82
+        },
+        {
+          "time": "10-31",
+          "price": 269.51,
+          "bb_upper": 346.05,
+          "bb_lower": 250.31
+        },
+        {
+          "time": "11-03",
+          "price": 264.67,
+          "bb_upper": 333.89,
+          "bb_lower": 252.97
+        },
+        {
+          "time": "11-04",
+          "price": 246.99,
+          "bb_upper": 331.35,
+          "bb_lower": 247.36
+        },
+        {
+          "time": "11-05",
+          "price": 255.0,
+          "bb_upper": 325.45,
+          "bb_lower": 245.69
+        },
+        {
+          "time": "11-06",
+          "price": 237.2,
+          "bb_upper": 323.32,
+          "bb_lower": 239.51
+        },
+        {
+          "time": "11-07",
+          "price": 241.93,
+          "bb_upper": 322.18,
+          "bb_lower": 234.37
+        },
+        {
+          "time": "11-10",
+          "price": 238.88,
+          "bb_upper": 318.05,
+          "bb_lower": 230.84
+        },
+        {
+          "time": "11-11",
+          "price": 231.35,
+          "bb_upper": 316.77,
+          "bb_lower": 225.18
+        },
+        {
+          "time": "11-12",
+          "price": 224.61,
+          "bb_upper": 315.9,
+          "bb_lower": 218.84
+        },
+        {
+          "time": "11-13",
+          "price": 208.54,
+          "bb_upper": 318.07,
+          "bb_lower": 209.14
+        },
+        {
+          "time": "11-14",
+          "price": 199.75,
+          "bb_upper": 319.05,
+          "bb_lower": 199.15
+        },
+        {
+          "time": "11-17",
+          "price": 195.42,
+          "bb_upper": 317.63,
+          "bb_lower": 190.45
+        },
+        {
+          "time": "11-18",
+          "price": 206.8,
+          "bb_upper": 312.02,
+          "bb_lower": 186.55
+        },
+        {
+          "time": "11-19",
+          "price": 186.5,
+          "bb_upper": 311.37,
+          "bb_lower": 177.76
+        },
+        {
+          "time": "11-20",
+          "price": 177.13,
+          "bb_upper": 309.57,
+          "bb_lower": 168.78
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 30.23399,
+        "rev_growth": 0.109,
+        "per": 3.3591943
+      },
+      "sector": "Technology",
+      "rvol": 1.86
+    },
+    {
+      "id": "SYF",
+      "rank": 8,
+      "symbol": "SYF",
+      "name": "Synchrony Financial",
+      "market": "US",
+      "currentPrice": 72.25,
+      "changePercent": -0.41,
+      "buyZoneTop": 73.7,
+      "buyZoneBottom": 70.8,
+      "targetPrice": 79.48,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 거래량 폭발(1.5배) + 장기 상승 추세 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 130,
+      "rsi": 43.43,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 74.53,
+          "bb_upper": 74.55,
+          "bb_lower": 68.1
+        },
+        {
+          "time": "10-27",
+          "price": 74.65,
+          "bb_upper": 74.88,
+          "bb_lower": 67.93
+        },
+        {
+          "time": "10-28",
+          "price": 74.41,
+          "bb_upper": 75.3,
+          "bb_lower": 67.88
+        },
+        {
+          "time": "10-29",
+          "price": 72.91,
+          "bb_upper": 75.38,
+          "bb_lower": 68.13
+        },
+        {
+          "time": "10-30",
+          "price": 73.29,
+          "bb_upper": 75.51,
+          "bb_lower": 68.34
+        },
+        {
+          "time": "10-31",
+          "price": 74.08,
+          "bb_upper": 75.76,
+          "bb_lower": 68.4
+        },
+        {
+          "time": "11-03",
+          "price": 73.71,
+          "bb_upper": 75.93,
+          "bb_lower": 68.5
+        },
+        {
+          "time": "11-04",
+          "price": 73.0,
+          "bb_upper": 75.98,
+          "bb_lower": 68.68
+        },
+        {
+          "time": "11-05",
+          "price": 74.37,
+          "bb_upper": 76.19,
+          "bb_lower": 68.84
+        },
+        {
+          "time": "11-06",
+          "price": 73.55,
+          "bb_upper": 76.25,
+          "bb_lower": 69.06
+        },
+        {
+          "time": "11-07",
+          "price": 73.19,
+          "bb_upper": 75.69,
+          "bb_lower": 70.17
+        },
+        {
+          "time": "11-10",
+          "price": 74.7,
+          "bb_upper": 75.62,
+          "bb_lower": 70.72
+        },
+        {
+          "time": "11-11",
+          "price": 74.42,
+          "bb_upper": 75.76,
+          "bb_lower": 70.77
+        },
+        {
+          "time": "11-12",
+          "price": 75.49,
+          "bb_upper": 76.05,
+          "bb_lower": 70.83
+        },
+        {
+          "time": "11-13",
+          "price": 73.79,
+          "bb_upper": 75.66,
+          "bb_lower": 71.6
+        },
+        {
+          "time": "11-14",
+          "price": 73.09,
+          "bb_upper": 75.44,
+          "bb_lower": 72.01
+        },
+        {
+          "time": "11-17",
+          "price": 70.47,
+          "bb_upper": 75.77,
+          "bb_lower": 71.53
+        },
+        {
+          "time": "11-18",
+          "price": 71.22,
+          "bb_upper": 75.91,
+          "bb_lower": 71.15
+        },
+        {
+          "time": "11-19",
+          "price": 72.55,
+          "bb_upper": 75.91,
+          "bb_lower": 71.13
+        },
+        {
+          "time": "11-20",
+          "price": 72.25,
+          "bb_upper": 75.93,
+          "bb_lower": 71.04
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.53381,
+        "rev_growth": 0.207,
+        "per": 9.106914
+      },
+      "sector": "Financial Services",
+      "rvol": 1.53
+    },
+    {
+      "id": "UBER",
+      "rank": 9,
+      "symbol": "UBER",
+      "name": "Uber Technologies, Inc.",
+      "market": "US",
+      "currentPrice": 83.36,
+      "changePercent": -6.89,
+      "buyZoneTop": 85.03,
+      "buyZoneBottom": 81.69,
+      "targetPrice": 91.7,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(2.2배) + 스토캐스틱 과매도 + 고성장주 + 저평가(PER)",
+      "score": 125,
+      "rsi": 23.49,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 94.07,
+          "bb_upper": 100.45,
+          "bb_lower": 90.47
+        },
+        {
+          "time": "10-27",
+          "price": 96.42,
+          "bb_upper": 99.94,
+          "bb_lower": 90.67
+        },
+        {
+          "time": "10-28",
+          "price": 95.43,
+          "bb_upper": 99.64,
+          "bb_lower": 90.72
+        },
+        {
+          "time": "10-29",
+          "price": 95.76,
+          "bb_upper": 99.55,
+          "bb_lower": 90.72
+        },
+        {
+          "time": "10-30",
+          "price": 96.49,
+          "bb_upper": 99.54,
+          "bb_lower": 90.72
+        },
+        {
+          "time": "10-31",
+          "price": 96.5,
+          "bb_upper": 99.53,
+          "bb_lower": 90.72
+        },
+        {
+          "time": "11-03",
+          "price": 99.72,
+          "bb_upper": 99.42,
+          "bb_lower": 90.79
+        },
+        {
+          "time": "11-04",
+          "price": 94.67,
+          "bb_upper": 99.08,
+          "bb_lower": 90.82
+        },
+        {
+          "time": "11-05",
+          "price": 92.75,
+          "bb_upper": 98.32,
+          "bb_lower": 90.93
+        },
+        {
+          "time": "11-06",
+          "price": 92.12,
+          "bb_upper": 98.22,
+          "bb_lower": 90.63
+        },
+        {
+          "time": "11-07",
+          "price": 91.99,
+          "bb_upper": 98.28,
+          "bb_lower": 90.43
+        },
+        {
+          "time": "11-10",
+          "price": 94.1,
+          "bb_upper": 98.28,
+          "bb_lower": 90.43
+        },
+        {
+          "time": "11-11",
+          "price": 93.6,
+          "bb_upper": 98.27,
+          "bb_lower": 90.38
+        },
+        {
+          "time": "11-12",
+          "price": 93.57,
+          "bb_upper": 98.23,
+          "bb_lower": 90.32
+        },
+        {
+          "time": "11-13",
+          "price": 91.78,
+          "bb_upper": 98.28,
+          "bb_lower": 90.2
+        },
+        {
+          "time": "11-14",
+          "price": 91.62,
+          "bb_upper": 98.32,
+          "bb_lower": 90.09
+        },
+        {
+          "time": "11-17",
+          "price": 92.11,
+          "bb_upper": 98.34,
+          "bb_lower": 89.91
+        },
+        {
+          "time": "11-18",
+          "price": 90.86,
+          "bb_upper": 98.46,
+          "bb_lower": 89.58
+        },
+        {
+          "time": "11-19",
+          "price": 89.53,
+          "bb_upper": 98.7,
+          "bb_lower": 89.07
+        },
+        {
+          "time": "11-20",
+          "price": 83.36,
+          "bb_upper": 100.04,
+          "bb_lower": 86.61
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.082650006,
+        "rev_growth": 0.204,
+        "per": 18.670797
+      },
+      "sector": "Technology",
+      "rvol": 2.18
+    },
+    {
+      "id": "KLAC",
+      "rank": 10,
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
+      "market": "US",
+      "currentPrice": 1102.45,
+      "changePercent": -5.57,
+      "buyZoneTop": 1124.5,
+      "buyZoneBottom": 1080.4,
+      "targetPrice": 1212.69,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 125,
+      "rsi": 35.05,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 1180.84,
+          "bb_upper": 1197.34,
+          "bb_lower": 992.52
+        },
+        {
+          "time": "10-27",
+          "price": 1213.09,
+          "bb_upper": 1216.33,
+          "bb_lower": 988.6
+        },
+        {
+          "time": "10-28",
+          "price": 1204.02,
+          "bb_upper": 1230.59,
+          "bb_lower": 987.06
+        },
+        {
+          "time": "10-29",
+          "price": 1233.21,
+          "bb_upper": 1247.91,
+          "bb_lower": 980.36
+        },
+        {
+          "time": "10-30",
+          "price": 1212.38,
+          "bb_upper": 1258.44,
+          "bb_lower": 977.34
+        },
+        {
+          "time": "10-31",
+          "price": 1206.72,
+          "bb_upper": 1268.93,
+          "bb_lower": 977.55
+        },
+        {
+          "time": "11-03",
+          "price": 1217.1,
+          "bb_upper": 1278.76,
+          "bb_lower": 975.65
+        },
+        {
+          "time": "11-04",
+          "price": 1191.49,
+          "bb_upper": 1285.29,
+          "bb_lower": 979.98
+        },
+        {
+          "time": "11-05",
+          "price": 1225.04,
+          "bb_upper": 1294.89,
+          "bb_lower": 986.8
+        },
+        {
+          "time": "11-06",
+          "price": 1204.38,
+          "bb_upper": 1299.02,
+          "bb_lower": 997.94
+        },
+        {
+          "time": "11-07",
+          "price": 1191.37,
+          "bb_upper": 1288.17,
+          "bb_lower": 1029.82
+        },
+        {
+          "time": "11-10",
+          "price": 1215.91,
+          "bb_upper": 1283.08,
+          "bb_lower": 1054.17
+        },
+        {
+          "time": "11-11",
+          "price": 1188.91,
+          "bb_upper": 1269.05,
+          "bb_lower": 1084.69
+        },
+        {
+          "time": "11-12",
+          "price": 1196.96,
+          "bb_upper": 1264.2,
+          "bb_lower": 1100.72
+        },
+        {
+          "time": "11-13",
+          "price": 1159.77,
+          "bb_upper": 1257.77,
+          "bb_lower": 1113.43
+        },
+        {
+          "time": "11-14",
+          "price": 1132.42,
+          "bb_upper": 1253.48,
+          "bb_lower": 1120.48
+        },
+        {
+          "time": "11-17",
+          "price": 1133.7,
+          "bb_upper": 1254.99,
+          "bb_lower": 1117.24
+        },
+        {
+          "time": "11-18",
+          "price": 1123.09,
+          "bb_upper": 1257.29,
+          "bb_lower": 1112.7
+        },
+        {
+          "time": "11-19",
+          "price": 1167.46,
+          "bb_upper": 1252.18,
+          "bb_lower": 1123.31
+        },
+        {
+          "time": "11-20",
+          "price": 1102.45,
+          "bb_upper": 1258.87,
+          "bb_lower": 1111.16
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.41661,
+        "rev_growth": 0.13,
+        "per": 29.577606
+      },
+      "sector": "Technology",
+      "rvol": 1.06
+    },
+    {
+      "id": "006800.KS",
+      "rank": 1,
+      "symbol": "006800",
+      "name": "MIRAE ASSET SEC",
+      "market": "KR",
+      "currentPrice": 22250.0,
+      "changePercent": 0.45,
+      "buyZoneTop": 22695.0,
+      "buyZoneBottom": 21805.0,
+      "targetPrice": 24475.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세 + 적정 PER + 흑자 기업",
+      "score": 105,
+      "rsi": 33.05,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 24300.0,
+          "bb_upper": 24755.78,
+          "bb_lower": 19279.22
+        },
+        {
+          "time": "10-27",
+          "price": 25800.0,
+          "bb_upper": 25419.68,
+          "bb_lower": 18980.32
+        },
+        {
+          "time": "10-28",
+          "price": 25950.0,
+          "bb_upper": 26028.15,
+          "bb_lower": 18836.85
+        },
+        {
+          "time": "10-29",
+          "price": 25850.0,
+          "bb_upper": 26481.53,
+          "bb_lower": 18918.47
+        },
+        {
+          "time": "10-30",
+          "price": 25700.0,
+          "bb_upper": 26810.17,
+          "bb_lower": 19119.83
+        },
+        {
+          "time": "10-31",
+          "price": 26300.0,
+          "bb_upper": 27200.62,
+          "bb_lower": 19299.38
+        },
+        {
+          "time": "11-03",
+          "price": 27500.0,
+          "bb_upper": 27856.59,
+          "bb_lower": 19193.41
+        },
+        {
+          "time": "11-04",
+          "price": 25650.0,
+          "bb_upper": 28043.8,
+          "bb_lower": 19436.2
+        },
+        {
+          "time": "11-05",
+          "price": 24750.0,
+          "bb_upper": 28051.69,
+          "bb_lower": 19803.31
+        },
+        {
+          "time": "11-06",
+          "price": 23650.0,
+          "bb_upper": 28017.56,
+          "bb_lower": 20032.44
+        },
+        {
+          "time": "11-07",
+          "price": 23100.0,
+          "bb_upper": 27981.25,
+          "bb_lower": 20183.75
+        },
+        {
+          "time": "11-10",
+          "price": 23900.0,
+          "bb_upper": 27898.92,
+          "bb_lower": 20516.08
+        },
+        {
+          "time": "11-11",
+          "price": 22950.0,
+          "bb_upper": 27656.55,
+          "bb_lower": 20998.45
+        },
+        {
+          "time": "11-12",
+          "price": 24550.0,
+          "bb_upper": 27523.67,
+          "bb_lower": 21441.33
+        },
+        {
+          "time": "11-13",
+          "price": 24550.0,
+          "bb_upper": 27445.13,
+          "bb_lower": 21754.87
+        },
+        {
+          "time": "11-14",
+          "price": 23400.0,
+          "bb_upper": 27223.0,
+          "bb_lower": 22162.0
+        },
+        {
+          "time": "11-17",
+          "price": 23050.0,
+          "bb_upper": 27200.71,
+          "bb_lower": 21964.29
+        },
+        {
+          "time": "11-18",
+          "price": 21900.0,
+          "bb_upper": 27350.14,
+          "bb_lower": 21604.86
+        },
+        {
+          "time": "11-19",
+          "price": 22150.0,
+          "bb_upper": 27439.57,
+          "bb_lower": 21355.43
+        },
+        {
+          "time": "11-20",
+          "price": 22250.0,
+          "bb_upper": 27489.61,
+          "bb_lower": 21235.39
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.2603,
+        "rev_growth": 0.424,
+        "per": 11.366643
+      },
+      "sector": "Financial Services",
+      "rvol": 0.56
+    },
+    {
+      "id": "096770.KS",
+      "rank": 2,
+      "symbol": "096770",
+      "name": "SK Innovation",
+      "market": "KR",
+      "currentPrice": 116900.0,
+      "changePercent": 0.26,
+      "buyZoneTop": 119238.0,
+      "buyZoneBottom": 114562.0,
+      "targetPrice": 128590.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세 + 흑자 기업",
+      "score": 100,
+      "rsi": 32.86,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 134800.0,
+          "bb_upper": 131350.15,
+          "bb_lower": 89119.85
+        },
+        {
+          "time": "10-27",
+          "price": 131300.0,
+          "bb_upper": 134478.19,
+          "bb_lower": 88701.81
+        },
+        {
+          "time": "10-28",
+          "price": 132000.0,
+          "bb_upper": 137292.45,
+          "bb_lower": 88727.55
+        },
+        {
+          "time": "10-29",
+          "price": 137000.0,
+          "bb_upper": 140706.06,
+          "bb_lower": 88783.94
+        },
+        {
+          "time": "10-30",
+          "price": 134600.0,
+          "bb_upper": 143140.95,
+          "bb_lower": 89449.05
+        },
+        {
+          "time": "10-31",
+          "price": 128900.0,
+          "bb_upper": 144093.55,
+          "bb_lower": 91276.45
+        },
+        {
+          "time": "11-03",
+          "price": 126500.0,
+          "bb_upper": 144479.46,
+          "bb_lower": 93380.54
+        },
+        {
+          "time": "11-04",
+          "price": 126500.0,
+          "bb_upper": 144441.88,
+          "bb_lower": 96018.12
+        },
+        {
+          "time": "11-05",
+          "price": 120900.0,
+          "bb_upper": 143520.84,
+          "bb_lower": 99039.16
+        },
+        {
+          "time": "11-06",
+          "price": 120800.0,
+          "bb_upper": 142945.01,
+          "bb_lower": 101204.99
+        },
+        {
+          "time": "11-07",
+          "price": 115900.0,
+          "bb_upper": 141831.04,
+          "bb_lower": 103608.96
+        },
+        {
+          "time": "11-10",
+          "price": 120500.0,
+          "bb_upper": 140563.44,
+          "bb_lower": 106526.56
+        },
+        {
+          "time": "11-11",
+          "price": 122300.0,
+          "bb_upper": 139312.9,
+          "bb_lower": 109387.1
+        },
+        {
+          "time": "11-12",
+          "price": 126500.0,
+          "bb_upper": 138048.47,
+          "bb_lower": 112531.53
+        },
+        {
+          "time": "11-13",
+          "price": 126300.0,
+          "bb_upper": 137792.8,
+          "bb_lower": 113817.2
+        },
+        {
+          "time": "11-14",
+          "price": 122700.0,
+          "bb_upper": 137401.9,
+          "bb_lower": 114818.1
+        },
+        {
+          "time": "11-17",
+          "price": 122300.0,
+          "bb_upper": 137238.13,
+          "bb_lower": 115291.87
+        },
+        {
+          "time": "11-18",
+          "price": 116000.0,
+          "bb_upper": 137716.14,
+          "bb_lower": 113943.86
+        },
+        {
+          "time": "11-19",
+          "price": 116600.0,
+          "bb_upper": 137921.92,
+          "bb_lower": 112768.08
+        },
+        {
+          "time": "11-20",
+          "price": 116900.0,
+          "bb_upper": 138096.44,
+          "bb_lower": 111833.56
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.0195,
+        "rev_growth": 0.163,
+        "per": 272.08316
+      },
+      "sector": "Energy",
+      "rvol": 0.42
+    },
+    {
+      "id": "064760.KQ",
+      "rank": 3,
+      "symbol": "064760",
+      "name": "TCK",
+      "market": "KR",
+      "currentPrice": 155200.0,
+      "changePercent": -0.77,
+      "buyZoneTop": 158304.0,
+      "buyZoneBottom": 152096.0,
+      "targetPrice": 170720.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세",
+      "score": 95,
+      "rsi": 43.65,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 174100.0,
+          "bb_upper": 193066.99,
+          "bb_lower": 155453.01
+        },
+        {
+          "time": "10-27",
+          "price": 172900.0,
+          "bb_upper": 192696.25,
+          "bb_lower": 156943.75
+        },
+        {
+          "time": "10-28",
+          "price": 169800.0,
+          "bb_upper": 192081.66,
+          "bb_lower": 158458.34
+        },
+        {
+          "time": "10-29",
+          "price": 168900.0,
+          "bb_upper": 191900.79,
+          "bb_lower": 158979.21
+        },
+        {
+          "time": "10-30",
+          "price": 168500.0,
+          "bb_upper": 191299.85,
+          "bb_lower": 160260.15
+        },
+        {
+          "time": "10-31",
+          "price": 166000.0,
+          "bb_upper": 189839.69,
+          "bb_lower": 162630.31
+        },
+        {
+          "time": "11-03",
+          "price": 161500.0,
+          "bb_upper": 190487.61,
+          "bb_lower": 161492.39
+        },
+        {
+          "time": "11-04",
+          "price": 166400.0,
+          "bb_upper": 190678.12,
+          "bb_lower": 160441.88
+        },
+        {
+          "time": "11-05",
+          "price": 158400.0,
+          "bb_upper": 191326.77,
+          "bb_lower": 157693.23
+        },
+        {
+          "time": "11-06",
+          "price": 159600.0,
+          "bb_upper": 189534.37,
+          "bb_lower": 156495.63
+        },
+        {
+          "time": "11-07",
+          "price": 152700.0,
+          "bb_upper": 188893.38,
+          "bb_lower": 153746.62
+        },
+        {
+          "time": "11-10",
+          "price": 166300.0,
+          "bb_upper": 187143.59,
+          "bb_lower": 153756.41
+        },
+        {
+          "time": "11-11",
+          "price": 171600.0,
+          "bb_upper": 185732.88,
+          "bb_lower": 154127.12
+        },
+        {
+          "time": "11-12",
+          "price": 163400.0,
+          "bb_upper": 184310.12,
+          "bb_lower": 153839.88
+        },
+        {
+          "time": "11-13",
+          "price": 170000.0,
+          "bb_upper": 182251.89,
+          "bb_lower": 154618.11
+        },
+        {
+          "time": "11-14",
+          "price": 158900.0,
+          "bb_upper": 180691.74,
+          "bb_lower": 154068.26
+        },
+        {
+          "time": "11-17",
+          "price": 162300.0,
+          "bb_upper": 178947.89,
+          "bb_lower": 154182.11
+        },
+        {
+          "time": "11-18",
+          "price": 154300.0,
+          "bb_upper": 178435.92,
+          "bb_lower": 152644.08
+        },
+        {
+          "time": "11-19",
+          "price": 156400.0,
+          "bb_upper": 177269.9,
+          "bb_lower": 151930.1
+        },
+        {
+          "time": "11-20",
+          "price": 155200.0,
+          "bb_upper": 176924.6,
+          "bb_lower": 150795.4
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.0,
+        "rev_growth": 0.0,
+        "per": 0.0
+      },
+      "sector": "기타",
+      "rvol": 0.41
+    },
+    {
+      "id": "000270.KS",
+      "rank": 4,
+      "symbol": "000270",
+      "name": "KIA CORP.",
+      "market": "KR",
+      "currentPrice": 113400.0,
+      "changePercent": -0.96,
+      "buyZoneTop": 115668.0,
+      "buyZoneBottom": 111132.0,
+      "targetPrice": 124740.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 장기 상승 추세 + 적정 PER + 흑자 기업",
+      "score": 90,
+      "rsi": 37.64,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 114900.0,
+          "bb_upper": 119129.56,
+          "bb_lower": 93450.44
+        },
+        {
+          "time": "10-27",
+          "price": 114800.0,
+          "bb_upper": 120136.96,
+          "bb_lower": 93733.04
+        },
+        {
+          "time": "10-28",
+          "price": 113600.0,
+          "bb_upper": 120847.22,
+          "bb_lower": 94102.78
+        },
+        {
+          "time": "10-29",
+          "price": 115800.0,
+          "bb_upper": 121806.84,
+          "bb_lower": 94423.16
+        },
+        {
+          "time": "10-30",
+          "price": 116200.0,
+          "bb_upper": 122653.71,
+          "bb_lower": 94996.29
+        },
+        {
+          "time": "10-31",
+          "price": 119900.0,
+          "bb_upper": 123856.67,
+          "bb_lower": 95763.33
+        },
+        {
+          "time": "11-03",
+          "price": 117700.0,
+          "bb_upper": 124440.44,
+          "bb_lower": 96879.56
+        },
+        {
+          "time": "11-04",
+          "price": 114400.0,
+          "bb_upper": 124382.84,
+          "bb_lower": 98307.16
+        },
+        {
+          "time": "11-05",
+          "price": 111000.0,
+          "bb_upper": 123888.53,
+          "bb_lower": 99841.47
+        },
+        {
+          "time": "11-06",
+          "price": 112000.0,
+          "bb_upper": 123724.96,
+          "bb_lower": 100785.04
+        },
+        {
+          "time": "11-07",
+          "price": 110100.0,
+          "bb_upper": 122878.39,
+          "bb_lower": 102581.61
+        },
+        {
+          "time": "11-10",
+          "price": 113700.0,
+          "bb_upper": 121906.44,
+          "bb_lower": 104813.56
+        },
+        {
+          "time": "11-11",
+          "price": 116000.0,
+          "bb_upper": 120945.94,
+          "bb_lower": 107124.06
+        },
+        {
+          "time": "11-12",
+          "price": 118600.0,
+          "bb_upper": 120046.52,
+          "bb_lower": 109503.48
+        },
+        {
+          "time": "11-13",
+          "price": 118000.0,
+          "bb_upper": 120302.67,
+          "bb_lower": 109917.33
+        },
+        {
+          "time": "11-14",
+          "price": 117000.0,
+          "bb_upper": 120410.26,
+          "bb_lower": 110299.74
+        },
+        {
+          "time": "11-17",
+          "price": 117400.0,
+          "bb_upper": 120617.98,
+          "bb_lower": 110382.02
+        },
+        {
+          "time": "11-18",
+          "price": 114500.0,
+          "bb_upper": 120569.93,
+          "bb_lower": 110300.07
+        },
+        {
+          "time": "11-19",
+          "price": 114500.0,
+          "bb_upper": 120246.98,
+          "bb_lower": 110263.02
+        },
+        {
+          "time": "11-20",
+          "price": 113400.0,
+          "bb_upper": 120235.01,
+          "bb_lower": 110114.99
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.050970003,
+        "rev_growth": 0.082,
+        "per": 5.4955087
+      },
+      "sector": "Consumer Cyclical",
+      "rvol": 0.61
+    },
+    {
+      "id": "357780.KQ",
+      "rank": 5,
+      "symbol": "357780",
+      "name": "Soulbrain",
+      "market": "KR",
+      "currentPrice": 248500.0,
+      "changePercent": 1.84,
+      "buyZoneTop": 253470.0,
+      "buyZoneBottom": 243530.0,
+      "targetPrice": 273350.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 스토캐스틱 과매도 + 장기 상승 추세 + 적정 PER + 흑자 기업",
+      "score": 85,
+      "rsi": 32.31,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 276000.0,
+          "bb_upper": 296123.44,
+          "bb_lower": 273976.56
+        },
+        {
+          "time": "10-27",
+          "price": 275000.0,
+          "bb_upper": 296393.47,
+          "bb_lower": 272556.53
+        },
+        {
+          "time": "10-28",
+          "price": 277500.0,
+          "bb_upper": 296492.19,
+          "bb_lower": 271857.81
+        },
+        {
+          "time": "10-29",
+          "price": 291500.0,
+          "bb_upper": 296871.48,
+          "bb_lower": 271728.52
+        },
+        {
+          "time": "10-30",
+          "price": 285000.0,
+          "bb_upper": 295796.93,
+          "bb_lower": 272003.07
+        },
+        {
+          "time": "10-31",
+          "price": 283000.0,
+          "bb_upper": 295563.72,
+          "bb_lower": 271886.28
+        },
+        {
+          "time": "11-03",
+          "price": 283000.0,
+          "bb_upper": 295143.56,
+          "bb_lower": 271806.44
+        },
+        {
+          "time": "11-04",
+          "price": 282500.0,
+          "bb_upper": 294605.68,
+          "bb_lower": 271744.32
+        },
+        {
+          "time": "11-05",
+          "price": 271000.0,
+          "bb_upper": 294206.87,
+          "bb_lower": 270143.13
+        },
+        {
+          "time": "11-06",
+          "price": 268000.0,
+          "bb_upper": 294507.69,
+          "bb_lower": 267892.31
+        },
+        {
+          "time": "11-07",
+          "price": 259000.0,
+          "bb_upper": 295864.12,
+          "bb_lower": 263585.88
+        },
+        {
+          "time": "11-10",
+          "price": 268500.0,
+          "bb_upper": 294457.05,
+          "bb_lower": 262692.95
+        },
+        {
+          "time": "11-11",
+          "price": 281000.0,
+          "bb_upper": 294207.7,
+          "bb_lower": 262692.3
+        },
+        {
+          "time": "11-12",
+          "price": 275000.0,
+          "bb_upper": 292862.38,
+          "bb_lower": 262687.62
+        },
+        {
+          "time": "11-13",
+          "price": 277500.0,
+          "bb_upper": 291549.43,
+          "bb_lower": 262950.57
+        },
+        {
+          "time": "11-14",
+          "price": 268000.0,
+          "bb_upper": 291169.83,
+          "bb_lower": 261880.17
+        },
+        {
+          "time": "11-17",
+          "price": 270500.0,
+          "bb_upper": 290978.23,
+          "bb_lower": 261271.77
+        },
+        {
+          "time": "11-18",
+          "price": 251000.0,
+          "bb_upper": 293097.94,
+          "bb_lower": 256202.06
+        },
+        {
+          "time": "11-19",
+          "price": 244000.0,
+          "bb_upper": 295965.37,
+          "bb_lower": 250084.63
+        },
+        {
+          "time": "11-20",
+          "price": 248500.0,
+          "bb_upper": 297196.65,
+          "bb_lower": 246353.35
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.14262,
+        "rev_growth": 0.096,
+        "per": 11.802185
+      },
+      "sector": "Basic Materials",
+      "rvol": 0.37
+    },
+    {
+      "id": "373220.KS",
+      "rank": 6,
+      "symbol": "373220",
+      "name": "LG Energy Solution",
+      "market": "KR",
+      "currentPrice": 441000.0,
+      "changePercent": 0.8,
+      "buyZoneTop": 449820.0,
+      "buyZoneBottom": 432180.0,
+      "targetPrice": 485100.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 스토캐스틱 과매도 + 장기 상승 추세 + 흑자 기업",
+      "score": 80,
+      "rsi": 33.67,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 492000.0,
+          "bb_upper": 481334.5,
+          "bb_lower": 300565.5
+        },
+        {
+          "time": "10-27",
+          "price": 495000.0,
+          "bb_upper": 497515.99,
+          "bb_lower": 298984.01
+        },
+        {
+          "time": "10-28",
+          "price": 510000.0,
+          "bb_upper": 514887.01,
+          "bb_lower": 296912.99
+        },
+        {
+          "time": "10-29",
+          "price": 514000.0,
+          "bb_upper": 529709.58,
+          "bb_lower": 298690.42
+        },
+        {
+          "time": "10-30",
+          "price": 486500.0,
+          "bb_upper": 537470.42,
+          "bb_lower": 303429.58
+        },
+        {
+          "time": "10-31",
+          "price": 473000.0,
+          "bb_upper": 540836.41,
+          "bb_lower": 312463.59
+        },
+        {
+          "time": "11-03",
+          "price": 475500.0,
+          "bb_upper": 543258.86,
+          "bb_lower": 322441.14
+        },
+        {
+          "time": "11-04",
+          "price": 473000.0,
+          "bb_upper": 543192.73,
+          "bb_lower": 335057.27
+        },
+        {
+          "time": "11-05",
+          "price": 464000.0,
+          "bb_upper": 540081.99,
+          "bb_lower": 349818.01
+        },
+        {
+          "time": "11-06",
+          "price": 470000.0,
+          "bb_upper": 541691.37,
+          "bb_lower": 355308.63
+        },
+        {
+          "time": "11-07",
+          "price": 463500.0,
+          "bb_upper": 537070.07,
+          "bb_lower": 370329.93
+        },
+        {
+          "time": "11-10",
+          "price": 465500.0,
+          "bb_upper": 529787.19,
+          "bb_lower": 388162.81
+        },
+        {
+          "time": "11-11",
+          "price": 473000.0,
+          "bb_upper": 525198.92,
+          "bb_lower": 401551.08
+        },
+        {
+          "time": "11-12",
+          "price": 475500.0,
+          "bb_upper": 518080.43,
+          "bb_lower": 417569.57
+        },
+        {
+          "time": "11-13",
+          "price": 484500.0,
+          "bb_upper": 516517.02,
+          "bb_lower": 425532.98
+        },
+        {
+          "time": "11-14",
+          "price": 463000.0,
+          "bb_upper": 514731.7,
+          "bb_lower": 430218.3
+        },
+        {
+          "time": "11-17",
+          "price": 463000.0,
+          "bb_upper": 512187.9,
+          "bb_lower": 435812.1
+        },
+        {
+          "time": "11-18",
+          "price": 443000.0,
+          "bb_upper": 511341.09,
+          "bb_lower": 437258.91
+        },
+        {
+          "time": "11-19",
+          "price": 437500.0,
+          "bb_upper": 513093.01,
+          "bb_lower": 433806.99
+        },
+        {
+          "time": "11-20",
+          "price": 441000.0,
+          "bb_upper": 513757.99,
+          "bb_lower": 432492.01
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.04137,
+        "rev_growth": -0.171,
+        "per": 76.806435
+      },
+      "sector": "Industrials",
+      "rvol": 0.37
+    },
+    {
+      "id": "032830.KS",
+      "rank": 7,
+      "symbol": "032830",
+      "name": "SAMSUNG LIFE",
+      "market": "KR",
+      "currentPrice": 147500.0,
+      "changePercent": -0.47,
+      "buyZoneTop": 150450.0,
+      "buyZoneBottom": 144550.0,
+      "targetPrice": 162250.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 스토캐스틱 과매도 + 장기 상승 추세 + 적정 PER",
+      "score": 80,
+      "rsi": 43.41,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 162600.0,
+          "bb_upper": 166613.44,
+          "bb_lower": 149966.56
+        },
+        {
+          "time": "10-27",
+          "price": 162000.0,
+          "bb_upper": 166994.48,
+          "bb_lower": 150205.52
+        },
+        {
+          "time": "10-28",
+          "price": 160100.0,
+          "bb_upper": 167131.23,
+          "bb_lower": 150318.77
+        },
+        {
+          "time": "10-29",
+          "price": 159600.0,
+          "bb_upper": 166999.01,
+          "bb_lower": 151130.99
+        },
+        {
+          "time": "10-30",
+          "price": 157400.0,
+          "bb_upper": 166239.81,
+          "bb_lower": 152610.19
+        },
+        {
+          "time": "10-31",
+          "price": 154300.0,
+          "bb_upper": 165888.94,
+          "bb_lower": 153191.06
+        },
+        {
+          "time": "11-03",
+          "price": 152100.0,
+          "bb_upper": 166313.25,
+          "bb_lower": 152446.75
+        },
+        {
+          "time": "11-04",
+          "price": 151100.0,
+          "bb_upper": 166886.89,
+          "bb_lower": 151323.11
+        },
+        {
+          "time": "11-05",
+          "price": 150000.0,
+          "bb_upper": 167473.22,
+          "bb_lower": 150226.78
+        },
+        {
+          "time": "11-06",
+          "price": 156000.0,
+          "bb_upper": 167291.94,
+          "bb_lower": 149948.06
+        },
+        {
+          "time": "11-07",
+          "price": 152000.0,
+          "bb_upper": 167349.85,
+          "bb_lower": 149090.15
+        },
+        {
+          "time": "11-10",
+          "price": 158900.0,
+          "bb_upper": 167428.84,
+          "bb_lower": 149191.16
+        },
+        {
+          "time": "11-11",
+          "price": 159400.0,
+          "bb_upper": 166109.07,
+          "bb_lower": 149750.93
+        },
+        {
+          "time": "11-12",
+          "price": 167000.0,
+          "bb_upper": 167121.82,
+          "bb_lower": 149218.18
+        },
+        {
+          "time": "11-13",
+          "price": 168400.0,
+          "bb_upper": 168271.4,
+          "bb_lower": 148598.6
+        },
+        {
+          "time": "11-14",
+          "price": 153600.0,
+          "bb_upper": 168326.96,
+          "bb_lower": 148233.04
+        },
+        {
+          "time": "11-17",
+          "price": 153600.0,
+          "bb_upper": 168209.08,
+          "bb_lower": 147740.92
+        },
+        {
+          "time": "11-18",
+          "price": 148700.0,
+          "bb_upper": 168422.58,
+          "bb_lower": 146427.42
+        },
+        {
+          "time": "11-19",
+          "price": 148200.0,
+          "bb_upper": 168538.27,
+          "bb_lower": 145171.73
+        },
+        {
+          "time": "11-20",
+          "price": 147500.0,
+          "bb_upper": 168244.73,
+          "bb_lower": 144005.27
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": -0.01184,
+        "rev_growth": 0.0,
+        "per": 11.40995
+      },
+      "sector": "Financial Services",
+      "rvol": 0.48
+    },
+    {
+      "id": "247540.KQ",
+      "rank": 8,
+      "symbol": "247540",
+      "name": "ECOPROBM",
+      "market": "KR",
+      "currentPrice": 145200.0,
+      "changePercent": 1.18,
+      "buyZoneTop": 148104.0,
+      "buyZoneBottom": 142296.0,
+      "targetPrice": 159720.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 스토캐스틱 과매도 + 장기 상승 추세 + 흑자 기업",
+      "score": 80,
+      "rsi": 36.3,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 172600.0,
+          "bb_upper": 175958.71,
+          "bb_lower": 88551.29
+        },
+        {
+          "time": "10-27",
+          "price": 172900.0,
+          "bb_upper": 181728.44,
+          "bb_lower": 88261.56
+        },
+        {
+          "time": "10-28",
+          "price": 174100.0,
+          "bb_upper": 186935.56,
+          "bb_lower": 88594.44
+        },
+        {
+          "time": "10-29",
+          "price": 171700.0,
+          "bb_upper": 190783.47,
+          "bb_lower": 90396.53
+        },
+        {
+          "time": "10-30",
+          "price": 162600.0,
+          "bb_upper": 192867.8,
+          "bb_lower": 92532.2
+        },
+        {
+          "time": "10-31",
+          "price": 160000.0,
+          "bb_upper": 193916.68,
+          "bb_lower": 95973.32
+        },
+        {
+          "time": "11-03",
+          "price": 164900.0,
+          "bb_upper": 195090.69,
+          "bb_lower": 99749.31
+        },
+        {
+          "time": "11-04",
+          "price": 161800.0,
+          "bb_upper": 195043.43,
+          "bb_lower": 104676.57
+        },
+        {
+          "time": "11-05",
+          "price": 157900.0,
+          "bb_upper": 193853.59,
+          "bb_lower": 110396.41
+        },
+        {
+          "time": "11-06",
+          "price": 158000.0,
+          "bb_upper": 192420.49,
+          "bb_lower": 115999.51
+        },
+        {
+          "time": "11-07",
+          "price": 151100.0,
+          "bb_upper": 188959.34,
+          "bb_lower": 123340.66
+        },
+        {
+          "time": "11-10",
+          "price": 153800.0,
+          "bb_upper": 185415.38,
+          "bb_lower": 130484.62
+        },
+        {
+          "time": "11-11",
+          "price": 153600.0,
+          "bb_upper": 181849.46,
+          "bb_lower": 137040.54
+        },
+        {
+          "time": "11-12",
+          "price": 155300.0,
+          "bb_upper": 176734.54,
+          "bb_lower": 145165.46
+        },
+        {
+          "time": "11-13",
+          "price": 160000.0,
+          "bb_upper": 175159.17,
+          "bb_lower": 148440.83
+        },
+        {
+          "time": "11-14",
+          "price": 150600.0,
+          "bb_upper": 175548.94,
+          "bb_lower": 147011.06
+        },
+        {
+          "time": "11-17",
+          "price": 154400.0,
+          "bb_upper": 175579.49,
+          "bb_lower": 146390.51
+        },
+        {
+          "time": "11-18",
+          "price": 145000.0,
+          "bb_upper": 176498.97,
+          "bb_lower": 143991.03
+        },
+        {
+          "time": "11-19",
+          "price": 143500.0,
+          "bb_upper": 176854.53,
+          "bb_lower": 141465.47
+        },
+        {
+          "time": "11-20",
+          "price": 145200.0,
+          "bb_upper": 177211.38,
+          "bb_lower": 139688.62
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.08076,
+        "rev_growth": 0.198,
+        "per": 335.6437
+      },
+      "sector": "Industrials",
+      "rvol": 0.29
+    },
+    {
+      "id": "240810.KQ",
+      "rank": 9,
+      "symbol": "240810",
+      "name": "WONIK IPS",
+      "market": "KR",
+      "currentPrice": 60900.0,
+      "changePercent": -0.33,
+      "buyZoneTop": 62118.0,
+      "buyZoneBottom": 59682.0,
+      "targetPrice": 66990.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 스토캐스틱 과매도 + 장기 상승 추세 + 흑자 기업",
+      "score": 80,
+      "rsi": 44.41,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 61500.0,
+          "bb_upper": 63179.15,
+          "bb_lower": 41485.85
+        },
+        {
+          "time": "10-27",
+          "price": 62800.0,
+          "bb_upper": 64603.25,
+          "bb_lower": 41661.75
+        },
+        {
+          "time": "10-28",
+          "price": 60800.0,
+          "bb_upper": 65291.0,
+          "bb_lower": 42479.0
+        },
+        {
+          "time": "10-29",
+          "price": 65800.0,
+          "bb_upper": 66812.86,
+          "bb_lower": 42947.14
+        },
+        {
+          "time": "10-30",
+          "price": 65000.0,
+          "bb_upper": 67740.67,
+          "bb_lower": 43974.33
+        },
+        {
+          "time": "10-31",
+          "price": 64200.0,
+          "bb_upper": 67968.8,
+          "bb_lower": 45736.2
+        },
+        {
+          "time": "11-03",
+          "price": 65000.0,
+          "bb_upper": 68173.05,
+          "bb_lower": 47466.95
+        },
+        {
+          "time": "11-04",
+          "price": 68500.0,
+          "bb_upper": 68978.96,
+          "bb_lower": 48811.04
+        },
+        {
+          "time": "11-05",
+          "price": 67600.0,
+          "bb_upper": 69525.17,
+          "bb_lower": 50104.83
+        },
+        {
+          "time": "11-06",
+          "price": 71700.0,
+          "bb_upper": 71501.81,
+          "bb_lower": 49628.19
+        },
+        {
+          "time": "11-07",
+          "price": 66500.0,
+          "bb_upper": 72148.73,
+          "bb_lower": 49931.27
+        },
+        {
+          "time": "11-10",
+          "price": 69900.0,
+          "bb_upper": 73296.25,
+          "bb_lower": 50063.75
+        },
+        {
+          "time": "11-11",
+          "price": 70800.0,
+          "bb_upper": 74206.17,
+          "bb_lower": 50853.83
+        },
+        {
+          "time": "11-12",
+          "price": 70100.0,
+          "bb_upper": 74832.29,
+          "bb_lower": 51767.71
+        },
+        {
+          "time": "11-13",
+          "price": 69000.0,
+          "bb_upper": 75078.0,
+          "bb_lower": 52942.0
+        },
+        {
+          "time": "11-14",
+          "price": 65800.0,
+          "bb_upper": 74630.69,
+          "bb_lower": 54569.31
+        },
+        {
+          "time": "11-17",
+          "price": 66200.0,
+          "bb_upper": 74201.29,
+          "bb_lower": 56078.71
+        },
+        {
+          "time": "11-18",
+          "price": 62100.0,
+          "bb_upper": 73513.61,
+          "bb_lower": 57406.39
+        },
+        {
+          "time": "11-19",
+          "price": 61100.0,
+          "bb_upper": 73064.03,
+          "bb_lower": 58225.97
+        },
+        {
+          "time": "11-20",
+          "price": 60900.0,
+          "bb_upper": 72763.13,
+          "bb_lower": 58766.87
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.102589995,
+        "rev_growth": 0.454,
+        "per": 22.82853
+      },
+      "sector": "Technology",
+      "rvol": 0.82
+    },
+    {
+      "id": "005380.KS",
+      "rank": 10,
+      "symbol": "005380",
+      "name": "HyundaiMtr",
+      "market": "KR",
+      "currentPrice": 259495.22,
+      "changePercent": -0.76,
+      "buyZoneTop": 264685.12,
+      "buyZoneBottom": 254305.31,
+      "targetPrice": 285444.74,
+      "aiReason": "RSI 과매도(강력) + 스토캐스틱 과매도 + 장기 상승 추세 + 적정 PER + 흑자 기업",
+      "score": 75,
+      "rsi": 28.12,
+      "history": [
+        {
+          "time": "10-24",
+          "price": 250086.05,
+          "bb_upper": 260213.01,
+          "bb_lower": 194250.28
+        },
+        {
+          "time": "10-27",
+          "price": 252066.92,
+          "bb_upper": 263345.27,
+          "bb_lower": 194733.12
+        },
+        {
+          "time": "10-28",
+          "price": 248105.16,
+          "bb_upper": 265415.78,
+          "bb_lower": 195782.5
+        },
+        {
+          "time": "10-29",
+          "price": 255533.47,
+          "bb_upper": 268348.98,
+          "bb_lower": 196860.58
+        },
+        {
+          "time": "10-30",
+          "price": 262466.53,
+          "bb_upper": 272073.42,
+          "bb_lower": 197890.25
+        },
+        {
+          "time": "10-31",
+          "price": 287227.53,
+          "bb_upper": 280966.38,
+          "bb_lower": 196475.12
+        },
+        {
+          "time": "11-03",
+          "price": 288713.19,
+          "bb_upper": 288449.83,
+          "bb_lower": 196568.53
+        },
+        {
+          "time": "11-04",
+          "price": 273361.38,
+          "bb_upper": 291230.1,
+          "bb_lower": 199829.94
+        },
+        {
+          "time": "11-05",
+          "price": 265933.09,
+          "bb_upper": 292090.25,
+          "bb_lower": 204219.12
+        },
+        {
+          "time": "11-06",
+          "price": 266428.31,
+          "bb_upper": 292807.98,
+          "bb_lower": 208354.55
+        },
+        {
+          "time": "11-07",
+          "price": 261476.09,
+          "bb_upper": 291865.49,
+          "bb_lower": 213952.1
+        },
+        {
+          "time": "11-10",
+          "price": 267913.97,
+          "bb_upper": 290933.41,
+          "bb_lower": 220034.47
+        },
+        {
+          "time": "11-11",
+          "price": 266428.31,
+          "bb_upper": 289507.3,
+          "bb_lower": 226016.61
+        },
+        {
+          "time": "11-12",
+          "price": 272866.16,
+          "bb_upper": 287704.15,
+          "bb_lower": 232970.04
+        },
+        {
+          "time": "11-13",
+          "price": 275837.47,
+          "bb_upper": 288526.49,
+          "bb_lower": 235762.81
+        },
+        {
+          "time": "11-14",
+          "price": 269894.84,
+          "bb_upper": 288154.2,
+          "bb_lower": 239056.9
+        },
+        {
+          "time": "11-17",
+          "price": 268904.41,
+          "bb_upper": 287895.32,
+          "bb_lower": 241643.3
+        },
+        {
+          "time": "11-18",
+          "price": 261971.31,
+          "bb_upper": 287784.05,
+          "bb_lower": 242546.92
+        },
+        {
+          "time": "11-19",
+          "price": 261476.09,
+          "bb_upper": 287786.98,
+          "bb_lower": 242841.14
+        },
+        {
+          "time": "11-20",
+          "price": 259495.22,
+          "bb_upper": 287235.46,
+          "bb_lower": 244383.09
+        }
+      ],
+      "news": [],
+      "financials": {
+        "op_margin": 0.05431,
+        "rev_growth": 0.088,
+        "per": 5.9856663
+      },
+      "sector": "Consumer Cyclical",
+      "rvol": 0.49
+    }
+  ],
+  "dominant_sectors": [
+    "Technology",
+    "Industrials"
+  ],
+  "timestamp": "2025-11-20 16:00:00",
+  "notification": {
+    "title": "🔔 DailyPick10 알림",
+    "body": "오늘의 추천: NVDA, TEL 등 (신규 20건)"
+  }
+}
