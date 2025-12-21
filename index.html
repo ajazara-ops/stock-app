@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DailyPick10 - AI가 매일 찾아주는 급등 예상 종목. 미국/한국 주식 스윙 투자 필수 앱.">
+    <meta name="description" content="DailyPick10 - AI가 매일 찾아주는 상승 예상 종목. 미국/한국 주식 스윙 투자 필수 앱.">
     <meta property="og:title" content="DailyPick10 - AI 주식 추천">
     <meta property="og:description" content="매일 아침/저녁, AI가 분석한 Top 10 종목을 받아보세요.">
     <meta property="og:image" content="./assets/images/icon.png">
-    <!-- [New] 변경될 주소 미리 적용 (저장소 이름을 dailypick10으로 변경 시) -->
     <meta property="og:url" content="https://ajazara-ops.github.io/dailypick10/">
     <title>DailyPick10 - AI 스마트 스윙 투자</title>
     
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.1.12/Recharts.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -32,11 +33,9 @@
         .modal-exit { opacity: 1; transform: scale(1); }
         .modal-exit-active { opacity: 0; transform: scale(0.9); transition: opacity 300ms, transform 300ms; }
         
-        /* Custom Scrollbar for Modal & List */
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 3px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
     </style>
 </head>
 <body>
@@ -44,67 +43,12 @@
 
     <script type="text/babel">
         const { useState, useEffect } = React;
+        // Recharts 컴포넌트 추가 (BarChart, Bar 등)
+        const { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } = Recharts;
 
-        // --- 약관 내용 (앱과 동일) ---
-        const TERMS_CONTENT = `
-제1조 (목적)
-본 약관은 DailyPick10(이하 "회사")이 제공하는 주식 정보 서비스(이하 "서비스")의 이용조건 및 절차, 이용자와 회사의 권리, 의무, 책임사항을 규정함을 목적으로 합니다.
-
-제2조 (면책조항)
-1. 본 서비스에서 제공하는 모든 주식 정보, AI 분석 점수, 추천 종목 등은 투자 참고용 자료이며, 투자의 최종 책임은 이용자 본인에게 있습니다.
-2. 회사는 서비스 이용으로 인해 발생한 투자 손실에 대해 법적 책임을 지지 않습니다.
-3. 천재지변 또는 이에 준하는 불가항력으로 인해 서비스를 제공할 수 없는 경우 회사는 책임이 면제됩니다.
-
-제3조 (서비스 이용 및 변경)
-1. 회원은 회사가 정한 가입 양식에 따라 정보를 기입한 후 본 약관에 동의함으로써 회원가입을 신청합니다.
-2. 회사는 운영상, 기술상의 필요에 따라 제공하고 있는 서비스의 전부 또는 일부를 수정, 중단, 변경할 수 있습니다.
-
-제4조 (회원의 의무)
-1. 회원은 관계 법령, 본 약관의 규정, 이용안내 등을 준수해야 합니다.
-2. 회원은 서비스 이용 권한을 타인에게 양도, 증여할 수 없습니다.
-3. 서비스 내의 데이터를 무단으로 수집하거나 상업적으로 이용하는 행위를 금지합니다.
-
-제5조 (유료 서비스)
-1. 프리미엄 멤버십은 구글 플레이 스토어 또는 애플 앱스토어의 인앱 결제 정책을 따릅니다.
-2. 환불 및 결제 취소는 해당 스토어의 규정에 따릅니다.
-
-제6조 (준거법 및 관할)
-본 약관은 대한민국 법률에 따라 규율되며, 서비스와 관련하여 발생한 분쟁은 회사의 본점 소재지를 관할하는 법원을 전속 관할로 합니다.
-
-(시행일) 본 약관은 2024년 1월 1일부터 시행합니다.
-`;
-
-        const PRIVACY_CONTENT = `
-1. 개인정보의 수집 및 이용 목적
-회사는 회원가입, 원활한 고객상담, 서비스 제공을 위해 최소한의 개인정보를 수집하고 있습니다.
-- 회원 식별 및 가입 의사 확인
-- 유료 서비스 제공 및 결제 내역 관리
-- 서비스 이용 기록 분석을 통한 품질 개선
-
-2. 수집하는 개인정보의 항목
-- 필수항목: 이메일 주소, 비밀번호(암호화 저장), 로그인 ID(UID)
-- 선택항목: 광고 식별자(ADID/IDFA)
-- 자동수집: 접속 로그, 쿠키, 기기 정보
-
-3. 개인정보의 제3자 제공 및 위탁
-회사는 원칙적으로 이용자의 동의 없이 개인정보를 외부에 제공하지 않습니다. 단, 서비스 제공을 위해 아래와 같은 외부 전문 업체에 위탁하여 운영하고 있습니다.
-- Google Firebase: 회원 인증, 데이터 저장, 푸시 알림 발송
-- Google AdMob: 맞춤형 광고 제공
-- RevenueCat: 인앱 결제 관리
-
-4. 개인정보의 보유 및 이용 기간
-회원 탈퇴 시 수집된 개인정보는 지체 없이 파기합니다. 단, 관계 법령에 의하여 보존할 필요가 있는 경우 해당 기간 동안 보관합니다.
-- 소비자의 불만 또는 분쟁처리에 관한 기록: 3년
-
-5. 이용자의 권리
-이용자는 언제든지 자신의 개인정보를 조회하거나 수정할 수 있으며, 회원 탈퇴를 통해 개인정보 이용 동의를 철회할 수 있습니다. 설정 메뉴의 '회원 탈퇴' 기능을 이용하거나 고객센터로 요청하시면 즉시 조치됩니다.
-
-6. 개인정보 보호책임자 및 문의
-서비스 이용 중 발생하는 모든 개인정보보호 관련 민원은 아래의 이메일로 신고하실 수 있습니다.
-- 이메일: dailypick10.help@gmail.com (임시)
-
-(시행일) 본 방침은 2024년 1월 1일부터 시행합니다.
-`;
+        // --- 약관 내용 ---
+        const TERMS_CONTENT = `제1조 (목적)\n본 약관은 DailyPick10(이하 "회사")이 제공하는 주식 정보 서비스(이하 "서비스")의 이용조건 및 절차, 이용자와 회사의 권리, 의무, 책임사항을 규정함을 목적으로 합니다.\n\n(중략)\n\n제6조 (준거법 및 관할)\n본 약관은 대한민국 법률에 따라 규율되며, 서비스와 관련하여 발생한 분쟁은 회사의 본점 소재지를 관할하는 법원을 전속 관할로 합니다.`;
+        const PRIVACY_CONTENT = `1. 개인정보의 수집 및 이용 목적\n회사는 회원가입, 원활한 고객상담, 서비스 제공을 위해 최소한의 개인정보를 수집하고 있습니다.\n\n(중략)\n\n6. 개인정보 보호책임자 및 문의\n이메일: dailypick10.help@gmail.com`;
 
         // 아이콘 (Heroicons)
         const Icon = ({ name, size = 24, className }) => {
@@ -141,78 +85,88 @@
                 <div className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
                     <a href="#features" className="hover:text-white transition-colors">주요 기능</a>
                     <a href="#preview" className="hover:text-white transition-colors">오늘의 추천</a>
-                    <a href="#how-it-works" className="hover:text-white transition-colors">작동 원리</a>
+                    <a href="#performance" className="hover:text-white transition-colors">성과 리포트</a>
                     <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
                 </div>
             </nav>
         );
 
-        // --- [약관 모달] ---
         const TermsModal = ({ visible, title, content, onClose }) => {
             if (!visible) return null;
-            
             return (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 animate-in">
-                    {/* Backdrop */}
                     <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose}></div>
-                    
-                    {/* Modal Content */}
                     <div className="relative bg-gray-900 rounded-2xl w-full max-w-2xl border border-gray-700 shadow-2xl flex flex-col max-h-[80vh]">
                         <div className="flex items-center justify-between p-6 border-b border-gray-800">
                             <h3 className="text-xl font-bold text-white">{title}</h3>
-                            <button onClick={onClose} className="p-2 hover:bg-gray-800 rounded-full transition-colors">
-                                <Icon name="x" size={20} className="text-gray-400" />
-                            </button>
+                            <button onClick={onClose} className="p-2 hover:bg-gray-800 rounded-full transition-colors"><Icon name="x" size={20} className="text-gray-400" /></button>
                         </div>
                         <div className="p-6 overflow-y-auto custom-scrollbar">
-                            <pre className="whitespace-pre-wrap font-sans text-sm text-gray-300 leading-relaxed">
-                                {content}
-                            </pre>
+                            <pre className="whitespace-pre-wrap font-sans text-sm text-gray-300 leading-relaxed">{content}</pre>
                         </div>
                         <div className="p-4 border-t border-gray-800 flex justify-end">
-                            <button onClick={onClose} className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors">
-                                닫기
-                            </button>
+                            <button onClick={onClose} className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors">닫기</button>
                         </div>
                     </div>
                 </div>
             );
         };
 
-        const HowItWorks = () => (
-            <section id="how-it-works" className="w-full py-24 px-6 bg-slate-900/50 border-t border-slate-800">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-white mb-4">어떻게 수익을 내나요?</h2>
-                        <p className="text-gray-400">복잡한 과정 없이, 딱 3단계로 끝나는 스마트한 투자</p>
+        // [New] 성과 리포트 미리보기 컴포넌트
+        const PerformancePreview = () => {
+            // 예시 데이터 (실제 데이터처럼 보이게 구성)
+            const data = [
+                { name: 'NVDA', return: 15.4 },
+                { name: 'IONQ', return: 12.8 },
+                { name: 'PLTR', return: 10.2 },
+                { name: 'TSLA', return: 8.5 },
+                { name: 'AAPL', return: 6.1 },
+            ];
+
+            return (
+                <section id="performance" className="w-full max-w-4xl px-4 mb-24 mx-auto">
+                    <div className="text-center mb-10">
+                        <h2 className="text-3xl font-bold text-white mb-4">투명한 성과 공개</h2>
+                        <p className="text-gray-400">매주 토요일, AI가 추천한 종목들의 실제 수익률 리포트를 제공합니다.</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                        <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 -z-10"></div>
-                        <div className="flex flex-col items-center text-center group">
-                            <div className="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center border-4 border-gray-900 mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                                <Icon name="chart" size={40} className="text-blue-400" />
+                    
+                    <div className="glass-panel rounded-3xl p-1 shadow-2xl bg-gray-800/30">
+                         <div className="bg-gray-900/80 rounded-2xl p-6 border border-gray-800">
+                            <div className="flex justify-between items-center mb-6">
+                                <div>
+                                     <h3 className="font-bold text-gray-100 flex items-center gap-2 text-lg">
+                                        <span className="bg-blue-500/20 text-blue-400 p-1 rounded-lg"><Icon name="chart" size={18} /></span> 
+                                        주간 수익률 Top 5 (예시)
+                                    </h3>
+                                </div>
+                                <span className="text-xs font-bold text-green-400 bg-green-900/30 px-2 py-1 rounded border border-green-800">평균 +10.6%</span>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-gray-100">1. AI 시장 분석</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">장 마감 후 AI가 전체 종목의 RSI, 거래량, 수급을 분석하여 상승 시그널을 포착합니다.</p>
-                        </div>
-                        <div className="flex flex-col items-center text-center group">
-                            <div className="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center border-4 border-gray-900 mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                                <Icon name="bolt" size={40} className="text-yellow-400" />
+
+                            <div className="h-64 w-full">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <BarChart data={data} layout="vertical" margin={{ top: 5, right: 30, left: 40, bottom: 5 }}>
+                                        <XAxis type="number" hide />
+                                        <YAxis type="category" dataKey="name" stroke="#9ca3af" tick={{fontSize: 12}} width={40} />
+                                        <Tooltip 
+                                            contentStyle={{ backgroundColor: '#1f2937', borderColor: '#374151', color: '#f3f4f6', borderRadius: '8px' }}
+                                            itemStyle={{ color: '#60a5fa' }}
+                                            cursor={{fill: 'rgba(255, 255, 255, 0.05)'}}
+                                            formatter={(value) => [`+${value}%`, '수익률']}
+                                        />
+                                        <Bar dataKey="return" radius={[0, 4, 4, 0]} barSize={20}>
+                                            {data.map((entry, index) => (
+                                                <Cell key={`cell-${index}`} fill={index < 3 ? '#ef4444' : '#3b82f6'} />
+                                            ))}
+                                        </Bar>
+                                    </BarChart>
+                                </ResponsiveContainer>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-gray-100">2. Top 10 알림</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">가장 상승 확률이 높은 10개 종목을 엄선해 매일 아침/저녁 푸시 알림으로 배달해 드립니다.</p>
-                        </div>
-                        <div className="flex flex-col items-center text-center group">
-                            <div className="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center border-4 border-gray-900 mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                                <Icon name="check" size={40} className="text-green-400" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-3 text-gray-100">3. 수익 실현</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">제시된 매수가/목표가를 참고해 투자하고, 2주 뒤 투명하게 공개되는 성과 리포트로 검증하세요.</p>
-                        </div>
+                            <p className="text-center text-xs text-gray-500 mt-4">* 앱에서 지난 2주간의 상세 백테스팅 결과를 확인하실 수 있습니다.</p>
+                         </div>
                     </div>
-                </div>
-            </section>
-        );
+                </section>
+            );
+        };
 
         const FAQ = () => (
             <section id="faq" className="w-full py-24 px-6 border-t border-slate-800">
@@ -221,15 +175,11 @@
                     <div className="space-y-4">
                         <div className="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:bg-gray-800/60 transition-colors">
                             <h3 className="font-bold text-lg mb-2 text-indigo-300">Q. 정말 무료인가요?</h3>
-                            <p className="text-gray-400 leading-relaxed">네, 앱 다운로드와 오늘의 추천 종목 확인은 모두 무료입니다. 서버 운영을 위해 일부 광고가 포함되어 있으며, 광고 제거 및 프리미엄 기능을 원하시면 구독하실 수 있습니다.</p>
+                            <p className="text-gray-400 leading-relaxed">네, 앱 다운로드와 오늘의 추천 종목 확인은 모두 무료입니다.</p>
                         </div>
                         <div className="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:bg-gray-800/60 transition-colors">
-                            <h3 className="font-bold text-lg mb-2 text-indigo-300">Q. 미국 주식도 추천해주나요?</h3>
-                            <p className="text-gray-400 leading-relaxed">물론입니다. 한국 주식(코스피/코스닥)뿐만 아니라 미국 주식(S&P500, 나스닥) 추천 종목도 매일 아침 8시에 제공됩니다.</p>
-                        </div>
-                        <div className="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:bg-gray-800/60 transition-colors">
-                            <h3 className="font-bold text-lg mb-2 text-indigo-300">Q. AI 분석은 믿을 수 있나요?</h3>
-                            <p className="text-gray-400 leading-relaxed">DailyPick10은 기술적 분석(RSI, 볼린저밴드 등)과 기본적 분석(재무제표)을 결합한 알고리즘을 사용합니다. 또한, 앱 내 '성과 리포트' 메뉴에서 과거 추천 종목들의 실제 수익률을 투명하게 공개하고 있습니다.</p>
+                            <h3 className="font-bold text-lg mb-2 text-indigo-300">Q. 어떤 주식을 추천하나요?</h3>
+                            <p className="text-gray-400 leading-relaxed">한국(코스피/코스닥) 및 미국(S&P500/나스닥) 우량주 중, 기술적 지표상 저점 반등 구간에 있는 종목을 선별합니다.</p>
                         </div>
                     </div>
                 </div>
@@ -238,8 +188,6 @@
 
         const App = () => {
             const [topStocks, setTopStocks] = useState([]);
-            const [marketStatus, setMarketStatus] = useState(null);
-            // [New] 모달 상태
             const [modalOpen, setModalOpen] = useState(false);
             const [modalContent, setModalContent] = useState({ title: '', content: '' });
 
@@ -248,10 +196,9 @@
                     .then(res => res.json())
                     .then(data => {
                         const allStocks = data.stocks || [];
-                        // [수정] 상위 3개 제한을 풀고 전체 리스트(점수순 정렬)를 가져옴
-                        const sorted = allStocks.sort((a, b) => (b.score || 0) - (a.score || 0));
+                        // [수정] 다시 Top 3개만 보여주도록 변경
+                        const sorted = allStocks.sort((a, b) => (b.score || 0) - (a.score || 0)).slice(0, 3);
                         setTopStocks(sorted);
-                        setMarketStatus(data.market_status);
                     })
                     .catch(err => console.error(err));
             }, []);
@@ -285,7 +232,7 @@
                         </div>
                         <h1 className="text-5xl sm:text-7xl font-extrabold mb-8 tracking-tight leading-tight text-white">
                             매일 아침, <br/>
-                            <span className="gradient-text">급등 예상 종목</span>을 배달합니다
+                            <span className="gradient-text">상승 예상 종목</span>을 배달합니다
                         </h1>
                         <p className="text-gray-400 text-lg sm:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                             복잡한 차트 분석은 AI에게 맡기세요.<br/>
@@ -299,9 +246,8 @@
                         </div>
                     </header>
 
-                    {/* Preview Section (전체 리스트로 확장) */}
+                    {/* Preview Section (Top 3 Only) */}
                     <section id="preview" className="w-full max-w-md px-4 mb-24 relative z-10">
-                        {/* Background Glow */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-indigo-500/10 blur-[100px] -z-10 rounded-full"></div>
                         
                         <div className="glass-panel rounded-3xl p-2 shadow-2xl border border-white/10 bg-gray-800/50">
@@ -310,19 +256,18 @@
                                     <div>
                                         <h3 className="font-bold text-gray-100 flex items-center gap-2 text-lg">
                                             <span className="bg-yellow-500/20 text-yellow-500 p-1 rounded-lg"><Icon name="bolt" size={18} /></span> 
-                                            오늘의 추천 Top {topStocks.length}
+                                            오늘의 추천 Top 3
                                         </h3>
                                         <p className="text-xs text-gray-500 mt-1 pl-1">AI 알고리즘 분석 결과 ({new Date().toLocaleDateString()})</p>
                                     </div>
                                 </div>
                                 
                                 {topStocks.length > 0 ? (
-                                    // [수정] 스크롤 가능한 리스트 컨테이너
-                                    <div className="space-y-3 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
+                                    <div className="space-y-3">
                                         {topStocks.map((stock, idx) => (
                                             <div key={idx} className="bg-gray-800 p-4 rounded-xl border border-gray-700/50 flex justify-between items-center hover:bg-gray-750 transition-colors">
                                                 <div className="flex items-center gap-4">
-                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow-lg ${idx < 3 ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 text-black' : 'bg-gray-700 text-gray-300'}`}>
+                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow-lg ${idx===0 ? 'bg-gradient-to-br from-yellow-400 to-yellow-600 text-black' : 'bg-gray-700 text-gray-300'}`}>
                                                         {idx + 1}
                                                     </div>
                                                     <div>
@@ -342,13 +287,9 @@
                                                 </div>
                                             </div>
                                         ))}
-                                        
-                                        <div className="pt-4 pb-2 text-center">
-                                            <a href={googlePlayUrl} target="_blank" className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
-                                                <span>더 자세한 분석 보기</span>
-                                                <Icon name="arrowRight" size={14} />
-                                            </a>
-                                        </div>
+                                        <a href={googlePlayUrl} target="_blank" className="block text-center mt-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-xl text-sm text-gray-400 hover:text-white transition-all border border-gray-700 border-dashed">
+                                            + 나머지 추천 종목 앱에서 확인하기
+                                        </a>
                                     </div>
                                 ) : (
                                     <div className="py-12 text-center">
@@ -359,44 +300,12 @@
                             </div>
                         </div>
                     </section>
+                    
+                    {/* [New] 성과 리포트 예시 섹션 */}
+                    <PerformancePreview />
 
-                    {/* Features Section */}
-                    <section id="features" className="w-full bg-gray-900 py-24 px-6 border-t border-slate-800">
-                        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div className="p-8 rounded-3xl bg-gray-800/40 border border-gray-700/50 hover:bg-gray-800/60 transition-colors group">
-                                <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
-                                    <Icon name="chart" size={32} />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 text-white">기술적 분석 자동화</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">
-                                    RSI 과매도, 볼린저밴드 하단, 골든크로스, 거래량 급증 등 검증된 8가지 지표를 AI가 매일매일 자동으로 분석합니다.
-                                </p>
-                            </div>
-                            <div className="p-8 rounded-3xl bg-gray-800/40 border border-gray-700/50 hover:bg-gray-800/60 transition-colors group">
-                                <div className="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 transition-transform">
-                                    <Icon name="check" size={32} />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 text-white">투명한 성과 공개</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">
-                                    과거에 추천했던 종목들이 2주 뒤 실제로 얼마나 올랐는지 수익률을 숨김없이 공개합니다. 앱의 실력을 직접 검증해보세요.
-                                </p>
-                            </div>
-                            <div className="p-8 rounded-3xl bg-gray-800/40 border border-gray-700/50 hover:bg-gray-800/60 transition-colors group">
-                                <div className="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
-                                    <Icon name="bolt" size={32} />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 text-white">놓치지 않는 타이밍</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">
-                                    미국장은 아침 8시, 한국장은 저녁 6시. 장 시작 전과 마감 후에 분석 완료 알림을 보내드려 매매 타이밍을 놓치지 않게 돕습니다.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <HowItWorks />
                     <FAQ />
 
-                    {/* Footer */}
                     <footer className="w-full py-12 text-center text-gray-500 text-sm bg-gray-900 border-t border-gray-800">
                         <div className="flex items-center justify-center gap-2 mb-4 opacity-70">
                              <Icon name="swing" size={24} className="text-gray-500" />
