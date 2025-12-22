@@ -23,6 +23,7 @@ WEEKLY_REPORT_DIR = 'weekly_reports'
 # --- [안전장치] ---
 def safe_float(val, default=0.0):
     try:
+        if val is None or val == "" or str(val).strip() == "-": return default
         f = float(val)
         if math.isnan(f) or math.isinf(f): return default
         return f
@@ -30,7 +31,6 @@ def safe_float(val, default=0.0):
 
 # --- [알림 전송 함수] ---
 def send_push_notification(title, message):
-    # ✅ 사용자님의 푸시 토큰
     user_push_tokens = ["ExponentPushToken[kip5csOC92Ymcc_AtKjqyl]"] 
 
     if not user_push_tokens:
@@ -101,7 +101,6 @@ def analyze_market_condition(target_date=None):
             hist = ticker.history(period="2y") 
             
             if target_date:
-                # [수정] 날짜 문자열로 비교하여 당일 장 마감 데이터 포함하도록 수정
                 hist.index = hist.index.tz_localize(None) 
                 hist = hist[hist.index.strftime('%Y-%m-%d') <= target_date]
 
@@ -182,6 +181,63 @@ def get_korea_tickers():
         return ['005930.KS', '000660.KS', '373220.KS', '005380.KS', '000270.KS', '068270.KS', '005490.KS', '035420.KS']
     return tickers
 
+# --- [신규] 네이버 금융 재무 데이터 크롤링 ---
+def get_kr_fundamental(ticker):
+    """네이버 금융에서 PER, PBR, 영업이익률 등을 크롤링합니다."""
+    try:
+        code = ticker.split('.')[0] # 005930.KS -> 005930
+        url = f"https://finance.naver.com/item/main.naver?code={code}"
+        
+        # 네이버 금융은 EUC-KR 사용
+        dfs = pd.read_html(url, encoding='euc-kr')
+        
+        # '기업실적분석' 테이블 찾기 (보통 3번째나 4번째)
+        fin_df = None
+        for df in dfs:
+            # 첫 번째 컬럼에 '영업이익률'이라는 텍스트가 있는지 확인
+            if df.shape[1] > 1 and '영업이익률' in str(df.iloc[:, 0].values):
+                fin_df = df
+                break
+        
+        if fin_df is None: return None
+
+        # 테이블 정리: Index 설정
+        fin_df.set_index(fin_df.columns[0], inplace=True)
+        
+        # 최근 데이터 컬럼 찾기 (최근 연간 or 최근 분기 중 실적 있는 곳)
+        # 보통 오른쪽 끝에서 두번째나 세번째가 최근 결산/추정치임. 
+        # 가장 오른쪽은 추정치(E)일 수 있으니 값이 있는 가장 오른쪽 데이터를 가져옴.
+        
+        # 간단하게 '최근 분기 실적' 중 값이 있는 마지막 컬럼 사용
+        target_col = fin_df.columns[-1] # 기본적으로 가장 오른쪽 (최신)
+
+        def get_val(row_name):
+            try:
+                # 행 이름이 포함된 줄 찾기 (partial match)
+                rows = fin_df[fin_df.index.str.contains(row_name, na=False)]
+                if len(rows) > 0:
+                    val = rows.iloc[0][target_col]
+                    return safe_float(val, None) # 0.0 대신 None 반환
+                return None
+            except: return None
+
+        op_margin = get_val('영업이익률')
+        per = get_val('PER')
+        pbr = get_val('PBR')
+        
+        # 매출액 증가율 같은건 계산이 필요하거나 다른 행에 있음 (여기선 생략)
+        
+        return {
+            "op_margin": op_margin / 100.0 if op_margin else None, # %단위 -> 소수점
+            "per": per,
+            "pbr": pbr,
+            "rev_growth": None # 네이버 메인 표에는 성장률 직접 표기 안됨
+        }
+
+    except Exception as e:
+        # print(f"⚠️ {ticker} 네이버 재무 크롤링 실패: {e}")
+        return None
+
 # --- [3] 뉴스 수집 ---
 def get_news_from_google_kr(ticker):
     try:
@@ -246,7 +302,7 @@ def analyze_stock(ticker, market_type, target_date=None):
         if target_date:
             target_dt = datetime.strptime(target_date, "%Y-%m-%d")
             hist.index = hist.index.tz_localize(None)
-            hist = hist[hist.index <= target_dt]
+            hist = hist[hist.index.strftime('%Y-%m-%d') <= target_date]
 
         if len(hist) < 120: return None
         
@@ -254,7 +310,23 @@ def analyze_stock(ticker, market_type, target_date=None):
         try: info = stock.info 
         except: pass
         
-        if market_type == 'US' and info.get('operatingMargins', 0) < -0.5: return None
+        # [수정] 기본 재무정보 초기화
+        op_margin = info.get('operatingMargins')
+        rev_growth = info.get('revenueGrowth')
+        per = info.get('forwardPE') or info.get('trailingPE')
+        pbr = info.get('priceToBook')
+
+        # [신규] 한국 주식이면 네이버 금융 데이터로 덮어쓰기
+        if market_type == 'KR':
+            kr_fund = get_kr_fundamental(ticker)
+            if kr_fund:
+                op_margin = kr_fund['op_margin']
+                per = kr_fund['per']
+                pbr = kr_fund['pbr']
+                # rev_growth는 네이버 단순 크롤링으론 어려우니 info 값 유지 혹은 None
+        
+        # 미국 주식 필터링 (한국은 데이터 없어도 통과 후 점수만 0점 처리)
+        if market_type == 'US' and op_margin is not None and op_margin < -0.5: return None
         
         close = hist['Close']; volume = hist['Volume']; high = hist['High']; low = hist['Low']
         rsi, macd, signal, bb_upper, bb_lower, ma20, stoch_k, stoch_d = calculate_indicators(close, high, low)
@@ -275,36 +347,28 @@ def analyze_stock(ticker, market_type, target_date=None):
         
         score = 0; reasons = [] 
         
+        # Technical Score
         if cur_rsi < 30: score += 40; reasons.append("RSI 과매도(강력)")
         elif cur_rsi < 45: score += 20; reasons.append("단기 과매도")
         elif cur_rsi < 60: score += 5; reasons.append("눌림목 구간")
         
         if cur_p <= cur_low * 1.05: score += 30; reasons.append("볼린저밴드 하단 근접")
-        
         if not pd.isna(ma60) and cur_p >= ma60 * 0.98 and cur_p <= ma60 * 1.05: score += 20; reasons.append("60일선 지지")
-        
         if macd.iloc[-1] > signal.iloc[-1]: score += 15; reasons.append("MACD 상승신호")
-        
         if rvol >= 1.5: score += 20; reasons.append(f"거래량 폭발({rvol:.1f}배)")
         elif rvol >= 1.2: score += 10; reasons.append(f"거래량 증가")
-        
         if cur_k < 20: score += 15; reasons.append("스토캐스틱 과매도")
-        
         if not pd.isna(ma120) and cur_p >= ma120: score += 10; reasons.append("장기 상승 추세")
 
-        op_margin = info.get('operatingMargins', 0)
-        rev_growth = info.get('revenueGrowth', 0)
-        per = info.get('forwardPE', info.get('trailingPE', 0))
-        pbr = info.get('priceToBook', 0)
-
+        # Fundamental Score
         if market_type == 'US':
-            if op_margin > 0.15: score += 10; reasons.append("이익률 우수")
-            if rev_growth > 0.10: score += 10; reasons.append("고성장주")
-            if per > 0 and per < 30: score += 10; reasons.append("저평가(PER)")
+            if op_margin and op_margin > 0.15: score += 10; reasons.append("이익률 우수")
+            if rev_growth and rev_growth > 0.10: score += 10; reasons.append("고성장주")
+            if per and per > 0 and per < 30: score += 10; reasons.append("저평가(PER)")
         elif market_type == 'KR':
-            if per > 0 and per < 20: score += 5; reasons.append("적정 PER")
-            if pbr > 0 and pbr < 1.5: score += 5; reasons.append("저PBR")
-            if op_margin > 0: score += 5; reasons.append("흑자 기업")
+            if per and per > 0 and per < 20: score += 5; reasons.append("적정 PER")
+            if pbr and pbr > 0 and pbr < 1.5: score += 5; reasons.append("저PBR")
+            if op_margin and op_margin > 0: score += 5; reasons.append("흑자 기업")
         
         cutoff = 40 
         if score < cutoff: return None
@@ -319,6 +383,7 @@ def analyze_stock(ticker, market_type, target_date=None):
             b_l = round(float(bb_lower.loc[d]), 2) if not math.isnan(bb_lower.loc[d]) else None
             hist_data.append({"time": d.strftime("%m-%d"), "price": p, "bb_upper": b_u, "bb_lower": b_l})
 
+        # [수정] None 값 허용 (safe_float 안 거침)
         return {
             "id": ticker, "rank": 0, "symbol": ticker.replace('.KS','').replace('.KQ',''), "name": name, "market": market_type,
             "currentPrice": price_val,
@@ -326,7 +391,11 @@ def analyze_stock(ticker, market_type, target_date=None):
             "buyZoneTop": safe_float(round(cur_p * 1.02, 2), price_val), "buyZoneBottom": safe_float(round(cur_p * 0.98, 2), price_val),
             "targetPrice": safe_float(round(cur_p * 1.1, 2), price_val), "aiReason": " + ".join(reasons),
             "score": int(score), "rsi": safe_float(round(cur_rsi, 2)), "history": hist_data, "news": [],
-            "financials": {"op_margin": safe_float(info.get('operatingMargins', 0)), "rev_growth": safe_float(info.get('revenueGrowth', 0)), "per": safe_float(info.get('forwardPE', 0))},
+            "financials": {
+                "op_margin": op_margin, 
+                "rev_growth": rev_growth, 
+                "per": per
+            },
             "sector": sector, "rvol": safe_float(round(rvol, 2))
         }
     except: return None
@@ -384,7 +453,7 @@ def generate_weekly_report(target_date_str):
                 continue
 
             hist.index = hist.index.tz_localize(None)
-            hist_until_target = hist[hist.index.strftime('%Y-%m-%d') <= target_date_str] # [수정] 날짜 문자열로 비교
+            hist_until_target = hist[hist.index.strftime('%Y-%m-%d') <= target_date_str] 
             
             if not hist_until_target.empty:
                 current_price = float(hist_until_target['Close'].iloc[-1])
@@ -502,7 +571,6 @@ def run_backfill(start_date, end_date):
         target_str = current_dt.strftime("%Y-%m-%d")
         print(f"\n📅 [Backfill] 처리 중: {target_str}")
         
-        # 1. 데일리 스캔
         ms = analyze_market_condition(target_date=target_str)
         final_stocks = []
         
