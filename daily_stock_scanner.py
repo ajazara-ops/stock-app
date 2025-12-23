@@ -31,6 +31,7 @@ def safe_float(val, default=0.0):
 
 # --- [알림 전송 함수] ---
 def send_push_notification(title, message):
+    # ✅ 사용자님의 푸시 토큰
     user_push_tokens = ["ExponentPushToken[kip5csOC92Ymcc_AtKjqyl]"] 
 
     if not user_push_tokens:
@@ -191,33 +192,24 @@ def get_kr_fundamental(ticker):
         # 네이버 금융은 EUC-KR 사용
         dfs = pd.read_html(url, encoding='euc-kr')
         
-        # '기업실적분석' 테이블 찾기 (보통 3번째나 4번째)
+        # '기업실적분석' 테이블 찾기
         fin_df = None
         for df in dfs:
-            # 첫 번째 컬럼에 '영업이익률'이라는 텍스트가 있는지 확인
             if df.shape[1] > 1 and '영업이익률' in str(df.iloc[:, 0].values):
                 fin_df = df
                 break
         
         if fin_df is None: return None
 
-        # 테이블 정리: Index 설정
         fin_df.set_index(fin_df.columns[0], inplace=True)
-        
-        # 최근 데이터 컬럼 찾기 (최근 연간 or 최근 분기 중 실적 있는 곳)
-        # 보통 오른쪽 끝에서 두번째나 세번째가 최근 결산/추정치임. 
-        # 가장 오른쪽은 추정치(E)일 수 있으니 값이 있는 가장 오른쪽 데이터를 가져옴.
-        
-        # 간단하게 '최근 분기 실적' 중 값이 있는 마지막 컬럼 사용
-        target_col = fin_df.columns[-1] # 기본적으로 가장 오른쪽 (최신)
+        target_col = fin_df.columns[-1] 
 
         def get_val(row_name):
             try:
-                # 행 이름이 포함된 줄 찾기 (partial match)
                 rows = fin_df[fin_df.index.str.contains(row_name, na=False)]
                 if len(rows) > 0:
                     val = rows.iloc[0][target_col]
-                    return safe_float(val, None) # 0.0 대신 None 반환
+                    return safe_float(val, None) 
                 return None
             except: return None
 
@@ -225,17 +217,14 @@ def get_kr_fundamental(ticker):
         per = get_val('PER')
         pbr = get_val('PBR')
         
-        # 매출액 증가율 같은건 계산이 필요하거나 다른 행에 있음 (여기선 생략)
-        
         return {
-            "op_margin": op_margin / 100.0 if op_margin else None, # %단위 -> 소수점
+            "op_margin": op_margin / 100.0 if op_margin else None, 
             "per": per,
             "pbr": pbr,
-            "rev_growth": None # 네이버 메인 표에는 성장률 직접 표기 안됨
+            "rev_growth": None 
         }
 
     except Exception as e:
-        # print(f"⚠️ {ticker} 네이버 재무 크롤링 실패: {e}")
         return None
 
 # --- [3] 뉴스 수집 ---
@@ -310,22 +299,18 @@ def analyze_stock(ticker, market_type, target_date=None):
         try: info = stock.info 
         except: pass
         
-        # [수정] 기본 재무정보 초기화
         op_margin = info.get('operatingMargins')
         rev_growth = info.get('revenueGrowth')
         per = info.get('forwardPE') or info.get('trailingPE')
         pbr = info.get('priceToBook')
 
-        # [신규] 한국 주식이면 네이버 금융 데이터로 덮어쓰기
         if market_type == 'KR':
             kr_fund = get_kr_fundamental(ticker)
             if kr_fund:
                 op_margin = kr_fund['op_margin']
                 per = kr_fund['per']
                 pbr = kr_fund['pbr']
-                # rev_growth는 네이버 단순 크롤링으론 어려우니 info 값 유지 혹은 None
         
-        # 미국 주식 필터링 (한국은 데이터 없어도 통과 후 점수만 0점 처리)
         if market_type == 'US' and op_margin is not None and op_margin < -0.5: return None
         
         close = hist['Close']; volume = hist['Volume']; high = hist['High']; low = hist['Low']
@@ -383,7 +368,6 @@ def analyze_stock(ticker, market_type, target_date=None):
             b_l = round(float(bb_lower.loc[d]), 2) if not math.isnan(bb_lower.loc[d]) else None
             hist_data.append({"time": d.strftime("%m-%d"), "price": p, "bb_upper": b_u, "bb_lower": b_l})
 
-        # [수정] None 값 허용 (safe_float 안 거침)
         return {
             "id": ticker, "rank": 0, "symbol": ticker.replace('.KS','').replace('.KQ',''), "name": name, "market": market_type,
             "currentPrice": price_val,
@@ -502,7 +486,8 @@ def generate_weekly_report(target_date_str):
 def send_weekly_summary_notification():
     print(f"\n📢 [Weekly Summary] 주간 수익률 결산 알림 전송 시작...")
     
-    today_str = time.strftime("%Y-%m-%d")
+    # [수정] 한국 시간 기준 오늘 날짜 가져오기
+    today_str = (datetime.utcnow() + timedelta(hours=9)).strftime("%Y-%m-%d")
     report_file_path = f"{WEEKLY_REPORT_DIR}/{today_str}_weekly.json"
     
     if not os.path.exists(report_file_path):
@@ -621,7 +606,12 @@ def main():
     parser.add_argument('--end', type=str, default=None, help='Backfill end date (YYYY-MM-DD)')
     args = parser.parse_args()
     
-    today_str = args.date if args.date else time.strftime("%Y-%m-%d")
+    # [수정] 한국 시간 기준 날짜 설정 (UTC+9)
+    if args.date:
+        today_str = args.date
+    else:
+        today_str = (datetime.utcnow() + timedelta(hours=9)).strftime("%Y-%m-%d")
+        
     print(f"🚀 AI 주식 분석기 가동 (모드: {args.mode}, 타겟: {args.target}, 날짜: {today_str})")
 
     if args.mode == 'daily':
@@ -635,7 +625,6 @@ def main():
                 existing_stocks = json.load(f).get('stocks', [])
         except: pass
 
-        # [수정] 지수 분석 시에도 기준 날짜를 적용하여 정확도 향상
         ms = analyze_market_condition(target_date=today_str)
         final_stocks = []
         
@@ -653,6 +642,7 @@ def main():
             process_news_for_list(ust)
             final_stocks.extend(ust)
         else:
+            print("\n🇺🇸 미국 데이터는 기존 내용을 유지합니다.")
             us_kept = [s for s in existing_stocks if s['market'] == 'US']
             final_stocks.extend(us_kept)
 
@@ -667,6 +657,7 @@ def main():
             process_news_for_list(krt)
             final_stocks.extend(krt)
         else:
+            print("\n🇰🇷 한국 데이터는 기존 내용을 유지합니다.")
             kr_kept = [s for s in existing_stocks if s['market'] == 'KR']
             final_stocks.extend(kr_kept)
         
