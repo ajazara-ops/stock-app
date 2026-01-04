@@ -32,7 +32,7 @@ def safe_float(val, default=0.0):
 # --- [알림 전송 함수] ---
 def send_push_notification(title, message):
     # ✅ 사용자님의 푸시 토큰 (이 부분이 앱 로그의 토큰과 일치해야 합니다!)
-    user_push_tokens = ["ExponentPushToken[kip5csOC92Ymcc_AtKjqyl]"] 
+    user_push_tokens = ["ExponentPushToken[A1pSo_HgzWn_M2-94c5Pr2]"] 
 
     if not user_push_tokens:
         print(f"⚠️ [알림 시뮬레이션] 전송할 토큰 없음.\n제목: {title}\n내용: {message}")
