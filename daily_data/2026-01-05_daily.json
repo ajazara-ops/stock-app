@@ -16,8 +16,8 @@
     },
     "VIX": {
       "name": "공포지수",
-      "current": 15.22,
-      "change": 4.89,
+      "current": 15.21,
+      "change": 4.82,
       "status": "NEUTRAL",
       "message": "안정적 😌"
     }
@@ -2299,16 +2299,16 @@
           "publisher": "simplywall.st"
         },
         {
+          "title": "[뉴스락 주식네비 10월 29일] 신한지주(055550), 속이 꽉 찬 좋은 실적 - 뉴스락",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vVXFjMmk0ZDM3bFFzeHhKcEpiWHhoNTFJQksteXpMZGc3azBGazc1c0hWR2c4NklzTUxtS3l5a25nTWFINGhFMDVJX1NrQ2dUVHBOQUc5SXZLSnloY29NRFZ5ODNuczZpVXAxaA?oc=5",
+          "sentiment": "neutral",
+          "publisher": "뉴스락"
+        },
+        {
           "title": "\"5천억 자사주 매입 전망\"…신한지주, 17년 만에 역대 최고가[핫종목] - 뉴스1",
           "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5NMHc3LXJuNDdkTEpldGZPY21NSGwzYUtwWmJ6U2RBMmQxeGU3ZWZFdmNjNmxuX2FNT0tsaUJUNmI5U085bUw5aldzSDRaSDh0cTIwMGNkNFIyNzQ?oc=5",
           "sentiment": "positive",
           "publisher": "뉴스1"
-        },
-        {
-          "title": "신한지주, 증권사 목표가 상향에 강세…3.1% - 매일경제",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBBMUNRR1hlNFh1OFQ5VXhrN1R4WVRweTBKQVhDb2p2Y3R4WGx4M0hPbTQtS18xUlNlemZ2VU9DZ1gxVzJld1pObGtscnJYUWhwdWc?oc=5",
-          "sentiment": "neutral",
-          "publisher": "매일경제"
         }
       ],
       "financials": {
@@ -2463,16 +2463,16 @@
           "publisher": "Investing.com 한국어"
         },
         {
-          "title": "“포스코, HMM 인수 시 재무 리스크·시너지 부족 우려” - 뉴스투데이",
-          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBzZHlHNUhET0V4WFVXZkFzSk9RN1JhczJyZVh3dTBGOUREWjZPUU5SUDZEU3lvRDVCX1ZkUENqc0kyblBYMUozZzBUOUJVdEVSRXhzTnJfOWtuYWNGb3c?oc=5",
-          "sentiment": "negative",
-          "publisher": "뉴스투데이"
-        },
-        {
           "title": "\"리스크 털어\"…증권사들 포스코홀딩스 목표가 잇달아↑ - 연합뉴스",
           "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5YN2drRk5qNnF1OU5BQjZwXzlzZHVTYjc4aHp6V2tGOXBnOGdIUUZ6M3p6ZWJSYVQ5NDlETnIwQVVCeEI1cG96X25zR1V1WHdtVXBqdjJwNkY3b1XSAWBBVV95cUxOMDFKSGVfU1RKVEUtQzdkdkVHQjJqOW5OMTB2Q0U4S3FfamxkbVlsZk5hX1BBZ0t6QjM0NDNfaEkzYXBteURqQkZzcHlrTE5UclFUVEFZRFA2UGQxb18wX3U?oc=5",
           "sentiment": "neutral",
           "publisher": "연합뉴스"
+        },
+        {
+          "title": "POSCO홀딩스 주가 5% 도약…금일 이슈는? - cbci.co.kr",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1GWGZ2c1FMUzFyMnVtMWNYRFFpT2xKeGV5MnFtcERfRl9HbUV4blljZ2ZaSEZCUnVwRHRETFppRlkxZFZmSTJBc2h6Wk1ON3JmaDZBbjF5aFJjemlYZHVuZDkyLW9GUUNn?oc=5",
+          "sentiment": "neutral",
+          "publisher": "cbci.co.kr"
         }
       ],
       "financials": {
@@ -2809,7 +2809,7 @@
         "per": 0.0
       },
       "sector": "기타",
-      "rvol": 0.43
+      "rvol": 0.42
     },
     {
       "id": "108490.KQ",
@@ -2973,7 +2973,7 @@
         "per": 0.0
       },
       "sector": "Technology",
-      "rvol": 0.4
+      "rvol": 0.39
     },
     {
       "id": "009540.KS",
@@ -3308,9 +3308,9 @@
     "Technology",
     "Industrials"
   ],
-  "timestamp": "2026-01-05 09:56:24",
+  "timestamp": "2026-01-05 10:18:38",
   "notification": {
     "title": "🔔 DailyPick10 알림",
-    "body": "오늘의 한국 추천: 011200, 086280 등 (신규 7건)"
+    "body": "오늘의 한국 추천: 011200, 003670 등 (순위 변동)"
   }
 }
