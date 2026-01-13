@@ -15,6 +15,7 @@
     "android": {
       "package": "com.ajazara.dailypick10",
       "googleServicesFile": "./google-services.json",
+      "versionCode": 23, 
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -45,14 +46,18 @@
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-7936612612148990~1957086010",
-          "iosAppId": "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"
+          "iosAppId": "ca-app-pub-7936612612148990~1957086010"
         }
       ],
       [
         "expo-build-properties",
         {
           "android": {
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": true,
+            "kotlinVersion": "1.9.23",
+            "gradleProperties": {
+                "org.gradle.jvmargs": "-Xmx4096m -XX:MaxMetaspaceSize=1024m"
+            }
           }
         }
       ],
