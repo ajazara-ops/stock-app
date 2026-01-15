@@ -16,8 +16,8 @@
     },
     "VIX": {
       "name": "공포지수",
-      "current": 16.22,
-      "change": -3.16,
+      "current": 16.16,
+      "change": -3.52,
       "status": "NEUTRAL",
       "message": "안정적 😌"
     }
@@ -1971,16 +1971,16 @@
           "publisher": "데일리바이트(DAILY BYTE)"
         },
         {
-          "title": "KT&G, 안정적 이익과 주주환원-신한 - MSN",
-          "link": "https://news.google.com/rss/articles/CBMijwNBVV95cUxPb2tvVzgwcE1NM0lVYklDc0k3amxPaTJsVkhaNXZGcHd3TGZkM1RMQlhRUzcwN21oMHgxUXplMlhkVVpoRGxzREprRk9SbkZLTGh1YzJKelY4aVZrekxXM1ZMVGxxVzhTMEl5TXlHRG1mUEdMazEwZFR0X0xabnduMzB3YmtVWXRQd1R4SUxZdnR0V0g1c0g2V05wa2ViS2Zwb2xGUFJHRmg0OHdSSEE4RWdHcjZQdThQcFhiR2pBMURlQ0s5U0E3ZjhUa19kZTlPYjdpWHhsMGZWcFlFNy1Yd21oQ2Z0c1lxZnM4UUFXUGJsT1lxcjVxSXFPQWpCWGE1MzhzQ1dqRk1KdUZCa2s3T0x1UmFjZHd1cWZwd1NMM1JHcTJmWmhWdm1PNWFLSHY0bnMzNE5VSjUyYXdqczBVNU93VEh3NnhZdGJGb1UwS0ZBZWNjWUR4Xy04WFVfTkxwajRUdmJJVUZDS05xYUJXZHRwbGVhSlBnajVIUXBkcU4taDVoOHkyY0l0ejh0Tkk?oc=5",
-          "sentiment": "neutral",
-          "publisher": "MSN"
-        },
-        {
           "title": "과거 담뱃값 올랐을 때 보니… “KT&G 주가 우상향” - 조선비즈 - Chosunbiz",
           "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPc1hhdzFPb3l3X01Sa2V1Z2dhT2d1QnhVRFdjTV9zU2xESFYxSW1YNGhVRVI3SmpFbEE2Uzd5dlJUbms4bk4zNW1WalRHLVdIMXc1dU91VUNuTEVpVi1BelhWZm53Mk5vNjhPeVRoemgtUjVDUmw3MW5wb21rUWVocWpEbGdRWlFI0gGcAUFVX3lxTE8waG5HVDhzTlpVV3ZQTnhrZHdsZzRMZGZqakNFVkpGeFdUWmo2bDNCdk1jWU1sa3Q4VG1Hb0hua2NSS2w5UHFFRjRxUHZ4X2JQcDFES2Roa0JJZDF0cjRxcEdJSTZwa2Vud2ZZeVJjeWNtNXlLUUJzWHpiYlRWZXNrRXFCMkFlenYtNktxNzl5eVduU1FaNGg2c1JhUw?oc=5",
           "sentiment": "neutral",
           "publisher": "Chosunbiz"
+        },
+        {
+          "title": "KT&G, 신시장 진출과 강해진 주주환원…목표가 17%↑-유안타 - 마켓인",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ZSFhVYVRQNlRscXRtTkJIUVRPdEZlR2t5S1JEd0FyOXNONVdWdFFzYTlUbVRER0pjZjJncU84b3JoaXRzTmx2Z3dWSDQ5Z19YNGhNX2RzQ3NlS3pkeFVJNXpaUDgwSHFEc3gyT3IzWFE5S2c?oc=5",
+          "sentiment": "neutral",
+          "publisher": "마켓인"
         }
       ],
       "financials": {
@@ -2469,10 +2469,10 @@
           "publisher": "Investing.com 한국어"
         },
         {
-          "title": "지금 NAVER 주식회사 (KRX:035420) 매수를 고려해야 할까? - simplywall.st",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOX05YLTZvQ1EzR3ZFelR2VmZnaEM0VTVvZ2RnTll3MVhNTzlYenBSTHV5WFV6SHJyRWFQQ1pLSXpMRGFpUEljNF93bF80NHMtVUdXOEhiTXVZSi1mYm10RFV0a2xrOF9Oem9rQmNLZTBnWmI3SENfYjh2Q240N2lHNHNDR0UyNVIyT2xWQjFJeGVzQdIBlwFBVV95cUxPMDR5b05uR1BKY2JhbmxMTTF1MngzNVl1RWlGNVVoa3RlbGpPRHgwX20xTXExMUt4aXlJNzh5VWZlU0M5LXhDQ2NTMTR5ZndMTU94dWExWTlwRDVxaE5Cb2U5bGRTLWg0RGM2eTg3dzREM2NUWk0zMFUyWTdteVlpNDQ4a3FETUY5RkNRVFdhZjUyZUh3VFRV?oc=5",
-          "sentiment": "positive",
-          "publisher": "simplywall.st"
+          "title": "'두나무 합병 공식화' 네이버 주가 2%대 강세[핫종목] - 뉴스1",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBSUTJWSUJPcmppN3JJX3BhVkwza2ZMR2t4UXJkVV9wc1luakxJT2tMbTBiRDBFODdZeTJJX0J1ZVJjUGRyVzNzMUxNcWRieUFBZjNQQ3o5YXNPMG8?oc=5",
+          "sentiment": "neutral",
+          "publisher": "뉴스1"
         }
       ],
       "financials": {
@@ -2973,7 +2973,7 @@
         "per": 89.22
       },
       "sector": "Communication Services",
-      "rvol": 0.46
+      "rvol": 0.47
     },
     {
       "id": "087010.KQ",
@@ -3301,14 +3301,14 @@
         "per": 70.49
       },
       "sector": "Healthcare",
-      "rvol": 1.32
+      "rvol": 1.29
     }
   ],
   "dominant_sectors": [
     "Financial Services",
     "Communication Services"
   ],
-  "timestamp": "2026-01-15 10:48:11",
+  "timestamp": "2026-01-15 11:08:41",
   "notification": {
     "title": "🔔 DailyPick10 알림",
     "body": "오늘의 한국 추천: 000810, 033780 등 (순위 변동)"
