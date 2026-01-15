@@ -9,8 +9,8 @@
     },
     "KR": {
       "name": "KOSPI",
-      "current": 4741.4,
-      "change": 0.39,
+      "current": 4747.14,
+      "change": 0.51,
       "status": "GOOD",
       "message": "상승세 📈"
     },
@@ -326,7 +326,7 @@
       "news": [
         {
           "title": "Netflix Stock Pops on Report It Might Amend Warner Bros Bid to All Cash - Barron's",
-          "link": "https://news.google.com/rss/articles/CBMigANBVV95cUxQamNhdzFYeDFacTByUlFDQzVBekpCYVBwSG5LS2pZbzNqdjNLTld2SURPQ1pmTURxZG54YkZyaVBXM2ZJQXFWa1FRcTQ5T2lqMGFlUkhhMUp3NTZnY0JqWjZadDlXbUpOb0VlNlJaRXA4TWxXMVFfSDFGdXpYMTV6Qy1rNlZ2N1FCc2tBQ05lV2pEc1l1T0xMd29LdlFsb0pHT2RvVURnV1F5RmRuLW9vMEx1UVI3M1lVU2JkMnNudG54Qi1IU2ZPWGNYQ2lOa29oanJEeUkyZ3BDVXNjVUhjVldFV1VMLXJWRlIxWlVSdkd2TnFOY1A4dk5aZVFpN2ZzbjNGTi1HVlJkVVBuMzllMDdZWFQxSVVySHhzcmxBaXFSODBzMWVidGI0YU9DN2FObVVnVkFaSGg1NFZBTXhqZEdXeG9qU1B2ZWNzOWxVOFFkbFJQWk9KUWJtR2pobFFOLVgxN3hUaGNvLWJDZ3haUWYzaVI0V0U1dnNFRmFlQWI?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMigANBVV95cUxQT3JWVnJyVlZMX0JWQ1RkSUMyUWdKd2RlenZvaWJweGk2YVdhUDcyQ01KX3B3MThZdE1lWWx3ZXU4YU03S2lSUWNaeFEwWDFYd2tHckUzWUhMUkE5QkY1Ti1uazRPT240Q2JzUkt2d1lIdngzakd0Ynh2d1h2ZDZHNjZsSDJQVktQa2NoSTNsSG9LREtYTjBsRm1NN2pFd1NEQmJYcHNIa25SeDZnZkVXOUN5YXVLTXphc1ktZ0ptOWZ2bjdVdW01MEE0SU5rei1MQWRIOUdNajBJSnN4LUNzVHlReUFJci1VQVdsTElKblJsXzdaVnZEYmFBTUFlNlF2ajJ6d05yWTVDUHpVVHNjalE1dGlBSTVOUExfUWpabGtGYmlhMWFFZGNXcC1kU0hGU0g4S1Z4ZFV4UEVDOUZWZ09KYUdieUpmYVFEY3JHajJrMXNxNUNUOGw3ZENyOXB1aHlkbkhuQ0kwNFdKSHJhTDdzekQtSTZLc3BNNE05WnM?oc=5",
           "sentiment": "neutral",
           "publisher": "Barron's"
         },
@@ -352,8 +352,172 @@
       "rvol": 1.31
     },
     {
-      "id": "APP",
+      "id": "EQT",
       "rank": 3,
+      "symbol": "EQT",
+      "name": "EQT Corporation",
+      "market": "US",
+      "currentPrice": 50.26,
+      "changePercent": -2.58,
+      "buyZoneTop": 51.27,
+      "buyZoneBottom": 49.25,
+      "targetPrice": 55.29,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(1.6배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 135,
+      "rsi": 28.99,
+      "history": [
+        {
+          "time": "12-16",
+          "price": 53.32,
+          "bb_upper": 62.27,
+          "bb_lower": 53.81
+        },
+        {
+          "time": "12-17",
+          "price": 54.36,
+          "bb_upper": 62.34,
+          "bb_lower": 53.3
+        },
+        {
+          "time": "12-18",
+          "price": 53.76,
+          "bb_upper": 62.4,
+          "bb_lower": 52.73
+        },
+        {
+          "time": "12-19",
+          "price": 53.87,
+          "bb_upper": 62.53,
+          "bb_lower": 52.35
+        },
+        {
+          "time": "12-22",
+          "price": 53.5,
+          "bb_upper": 62.65,
+          "bb_lower": 51.88
+        },
+        {
+          "time": "12-23",
+          "price": 54.52,
+          "bb_upper": 62.63,
+          "bb_lower": 51.59
+        },
+        {
+          "time": "12-24",
+          "price": 53.89,
+          "bb_upper": 62.67,
+          "bb_lower": 51.27
+        },
+        {
+          "time": "12-26",
+          "price": 53.93,
+          "bb_upper": 62.49,
+          "bb_lower": 50.94
+        },
+        {
+          "time": "12-29",
+          "price": 54.54,
+          "bb_upper": 61.9,
+          "bb_lower": 50.9
+        },
+        {
+          "time": "12-30",
+          "price": 54.63,
+          "bb_upper": 61.3,
+          "bb_lower": 50.91
+        },
+        {
+          "time": "12-31",
+          "price": 53.6,
+          "bb_upper": 61.02,
+          "bb_lower": 50.68
+        },
+        {
+          "time": "01-02",
+          "price": 53.46,
+          "bb_upper": 60.09,
+          "bb_lower": 50.85
+        },
+        {
+          "time": "01-05",
+          "price": 53.35,
+          "bb_upper": 59.3,
+          "bb_lower": 50.96
+        },
+        {
+          "time": "01-06",
+          "price": 53.41,
+          "bb_upper": 58.08,
+          "bb_lower": 51.46
+        },
+        {
+          "time": "01-07",
+          "price": 54.49,
+          "bb_upper": 57.32,
+          "bb_lower": 51.8
+        },
+        {
+          "time": "01-08",
+          "price": 52.2,
+          "bb_upper": 56.5,
+          "bb_lower": 51.99
+        },
+        {
+          "time": "01-09",
+          "price": 51.09,
+          "bb_upper": 56.14,
+          "bb_lower": 51.73
+        },
+        {
+          "time": "01-12",
+          "price": 52.15,
+          "bb_upper": 55.84,
+          "bb_lower": 51.64
+        },
+        {
+          "time": "01-13",
+          "price": 51.59,
+          "bb_upper": 55.67,
+          "bb_lower": 51.42
+        },
+        {
+          "time": "01-14",
+          "price": 50.26,
+          "bb_upper": 55.74,
+          "bb_lower": 50.85
+        }
+      ],
+      "news": [
+        {
+          "title": "Bernstein Raises EQT Corporation (EQT) PT to $73 Maintaining Outperform Rating - Finviz",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUjVzOXJFZWVFQk9IUUxYdlE3bnhHc1pWbzFzeEh5dEUxU0RtWTJlRmRDc2VHMjE4RDhQaDBUYm54SGwyZGYxSGhwX2Vjb0NTajZydnVvTE12bjRIOHRPTGlNcW52VURhNF9uQng0LU0tcmFFaTBsdk1jUTE3TDNCd1BtajVocmFsbDZTNDJzQTR6RkJSVjM2TXE1NkZ5OHFwOS1NMTJDNUV6UQ?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Finviz"
+        },
+        {
+          "title": "Here's Why EQT Corporation (EQT) is a Strong Growth Stock - Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYUxyaFRISHI4eGtaVFVTWjNBNkVDazhwQk5ROTNZR3puLVZGWlR0OFhwVkxnZDc3Z3FxemkzRDJWNW9tbVpkc3puWE41U1JKaV9fSG8wTDd6M3g0QmNlUEE0V2xHZUJvX1pNWkZrX05RbnpGeEhBTTZ1RVd2aXRWdA?oc=5",
+          "sentiment": "positive",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "Here Is Why the Hold Strategy Is Apt for EQT Stock Right Now - Zacks Investment Research",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOa3dZZmR6dTRZcHZJT09kZTFneXhHUUZ5ejQ4UkI1SHZpMG1vY2NnUTV5NGhUNkVuVjFjS3dHSVRiVFJjS1BBN20ta1ZKRk52Uy1mLTBnQkVWUmo3XzdON1FaejFWQXdrQnpjR2FiQ2YyN2dtc3ZUX3dqeVNSWERZbXdDWUE4ZVphakk4OG45VV9CTnhIM2dWaC1ZY1FMaEdKbEw4?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Zacks Investment Research"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.34897,
+        "rev_growth": 0.514,
+        "per": 11.622582
+      },
+      "sector": "Energy",
+      "rvol": 1.62
+    },
+    {
+      "id": "APP",
+      "rank": 4,
       "symbol": "APP",
       "name": "Applovin Corporation",
       "market": "US",
@@ -516,8 +680,172 @@
       "rvol": 2.3
     },
     {
+      "id": "INTU",
+      "rank": 5,
+      "symbol": "INTU",
+      "name": "Intuit Inc.",
+      "market": "US",
+      "currentPrice": 566.6,
+      "changePercent": -6.39,
+      "buyZoneTop": 577.93,
+      "buyZoneBottom": 555.27,
+      "targetPrice": 623.26,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(2.6배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
+      "score": 135,
+      "rsi": 16.28,
+      "history": [
+        {
+          "time": "12-16",
+          "price": 668.12,
+          "bb_upper": 680.36,
+          "bb_lower": 623.48
+        },
+        {
+          "time": "12-17",
+          "price": 659.57,
+          "bb_upper": 681.06,
+          "bb_lower": 623.88
+        },
+        {
+          "time": "12-18",
+          "price": 667.65,
+          "bb_upper": 682.71,
+          "bb_lower": 624.05
+        },
+        {
+          "time": "12-19",
+          "price": 670.07,
+          "bb_upper": 684.15,
+          "bb_lower": 626.0
+        },
+        {
+          "time": "12-22",
+          "price": 673.97,
+          "bb_upper": 685.82,
+          "bb_lower": 625.52
+        },
+        {
+          "time": "12-23",
+          "price": 672.9,
+          "bb_upper": 687.77,
+          "bb_lower": 625.67
+        },
+        {
+          "time": "12-24",
+          "price": 673.59,
+          "bb_upper": 689.62,
+          "bb_lower": 626.49
+        },
+        {
+          "time": "12-26",
+          "price": 675.31,
+          "bb_upper": 689.48,
+          "bb_lower": 631.35
+        },
+        {
+          "time": "12-29",
+          "price": 672.91,
+          "bb_upper": 688.91,
+          "bb_lower": 635.93
+        },
+        {
+          "time": "12-30",
+          "price": 668.65,
+          "bb_upper": 686.22,
+          "bb_lower": 642.44
+        },
+        {
+          "time": "12-31",
+          "price": 661.2,
+          "bb_upper": 682.58,
+          "bb_lower": 648.75
+        },
+        {
+          "time": "01-02",
+          "price": 628.3,
+          "bb_upper": 687.09,
+          "bb_lower": 642.42
+        },
+        {
+          "time": "01-05",
+          "price": 632.67,
+          "bb_upper": 689.85,
+          "bb_lower": 636.75
+        },
+        {
+          "time": "01-06",
+          "price": 646.01,
+          "bb_upper": 689.24,
+          "bb_lower": 634.72
+        },
+        {
+          "time": "01-07",
+          "price": 649.95,
+          "bb_upper": 689.35,
+          "bb_lower": 634.1
+        },
+        {
+          "time": "01-08",
+          "price": 651.55,
+          "bb_upper": 689.4,
+          "bb_lower": 633.75
+        },
+        {
+          "time": "01-09",
+          "price": 646.9,
+          "bb_upper": 689.44,
+          "bb_lower": 632.27
+        },
+        {
+          "time": "01-12",
+          "price": 635.44,
+          "bb_upper": 688.83,
+          "bb_lower": 628.96
+        },
+        {
+          "time": "01-13",
+          "price": 605.28,
+          "bb_upper": 693.53,
+          "bb_lower": 617.82
+        },
+        {
+          "time": "01-14",
+          "price": 566.6,
+          "bb_upper": 706.31,
+          "bb_lower": 596.35
+        }
+      ],
+      "news": [
+        {
+          "title": "Goldman Sachs Assumes Coverage of Intuit (INTU) Stock - Yahoo Finance UK",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMzlNMjdfc1hsVzdDM3l1V3VwTmFQeFloMWgta2JnbFJfU05NbmxCLXhpLWpsQ1BYVmt3M2p2VlJuWW16VHItcjJ3SjV1ZmhqR2V4VzNJNnVHRXdxbWZxV3hBaFpLR3FuQjUyNWZPRFlqLVY2UnNPdUtlb0V2ZDNrY1I3dEhmdElTS19xRTVTMA?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Yahoo Finance UK"
+        },
+        {
+          "title": "Intuit (NASDAQ:INTU) Trading Down 4.6% - Here's What Happened - MarketBeat",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnNrOEplXzFUUjhuZGt5eUVtUnFTQTVEQ2haalJlQkhIVzFtbkE5M2gxVmZmYURPdW1yY3RZTjVhLXFzYk9sSnpjYTV3eVdvc2hNRldKck9pcGlCWDc1QUhCVDVheUdLc3ljcnVxYzZjcXQzV0QwZ2s2VjZXR0FqeWFHdDFKbVZUSmtkZW1NR25BZUdnMm9WS1J2RHBFQmlRckRLa3FvYWNUTG8?oc=5",
+          "sentiment": "neutral",
+          "publisher": "MarketBeat"
+        },
+        {
+          "title": "$INTU stock is down 7% today. Here's what we see in our data. - Quiver Quantitative",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQVXpJQVU5OXlyMFhfODBLZE1Hcmp4LXBFYkR0Q044dUk4bnAtbFNrcEZLMHVJME9SYVdYdWMtNVBtNnNhejcwSWdPR2tRbDVvaEdnUFhhd0d4cmFvLUJrdXpydFFhWlhhaW5nRURLdXlHek54cTlwWkROTnRZN015RkxOOEdlYU5nazUtY21ycS1RSXB6Tnhpb0tvTVY0ZTlYMVE?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Quiver Quantitative"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.15697,
+        "rev_growth": 0.41,
+        "per": 21.435026
+      },
+      "sector": "Technology",
+      "rvol": 2.57
+    },
+    {
       "id": "WFC",
-      "rank": 4,
+      "rank": 6,
       "symbol": "WFC",
       "name": "Wells Fargo & Company",
       "market": "US",
@@ -680,172 +1008,336 @@
       "rvol": 2.46
     },
     {
-      "id": "JPM",
-      "rank": 5,
-      "symbol": "JPM",
-      "name": "JP Morgan Chase & Co.",
+      "id": "ADSK",
+      "rank": 7,
+      "symbol": "ADSK",
+      "name": "Autodesk, Inc.",
       "market": "US",
-      "currentPrice": 307.87,
-      "changePercent": -0.97,
-      "buyZoneTop": 314.03,
-      "buyZoneBottom": 301.71,
-      "targetPrice": 338.66,
-      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 거래량 폭발(2.5배) + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 저평가(PER)",
+      "currentPrice": 261.28,
+      "changePercent": -3.45,
+      "buyZoneTop": 266.51,
+      "buyZoneBottom": 256.05,
+      "targetPrice": 287.41,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(1.5배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
       "score": 135,
-      "rsi": 35.27,
+      "rsi": 20.47,
       "history": [
         {
           "time": "12-16",
-          "price": 314.13,
-          "bb_upper": 322.45,
-          "bb_lower": 292.59
+          "price": 293.98,
+          "bb_upper": 312.09,
+          "bb_lower": 285.36
         },
         {
           "time": "12-17",
-          "price": 313.57,
-          "bb_upper": 322.76,
-          "bb_lower": 293.83
+          "price": 292.97,
+          "bb_upper": 312.05,
+          "bb_lower": 285.47
         },
         {
           "time": "12-18",
-          "price": 311.59,
-          "bb_upper": 322.99,
-          "bb_lower": 294.57
+          "price": 299.24,
+          "bb_upper": 311.97,
+          "bb_lower": 286.36
         },
         {
           "time": "12-19",
-          "price": 315.79,
-          "bb_upper": 323.12,
-          "bb_lower": 296.32
+          "price": 300.08,
+          "bb_upper": 311.26,
+          "bb_lower": 288.38
         },
         {
           "time": "12-22",
-          "price": 321.64,
-          "bb_upper": 323.9,
-          "bb_lower": 298.04
+          "price": 300.47,
+          "bb_upper": 310.93,
+          "bb_lower": 289.68
         },
         {
           "time": "12-23",
-          "price": 324.47,
-          "bb_upper": 324.78,
-          "bb_lower": 299.93
+          "price": 297.58,
+          "bb_upper": 310.22,
+          "bb_lower": 291.16
         },
         {
           "time": "12-24",
-          "price": 327.69,
-          "bb_upper": 326.79,
-          "bb_lower": 300.52
+          "price": 298.21,
+          "bb_upper": 310.03,
+          "bb_lower": 291.73
         },
         {
           "time": "12-26",
-          "price": 326.44,
-          "bb_upper": 328.49,
-          "bb_lower": 300.84
+          "price": 300.71,
+          "bb_upper": 309.99,
+          "bb_lower": 291.7
         },
         {
           "time": "12-29",
-          "price": 322.3,
-          "bb_upper": 329.35,
-          "bb_lower": 301.05
+          "price": 301.23,
+          "bb_upper": 309.82,
+          "bb_lower": 291.66
         },
         {
           "time": "12-30",
-          "price": 321.97,
-          "bb_upper": 329.9,
-          "bb_lower": 301.94
+          "price": 299.54,
+          "bb_upper": 309.31,
+          "bb_lower": 291.61
         },
         {
           "time": "12-31",
-          "price": 320.77,
-          "bb_upper": 330.03,
-          "bb_lower": 303.24
+          "price": 296.01,
+          "bb_upper": 307.51,
+          "bb_lower": 291.99
         },
         {
           "time": "01-02",
-          "price": 324.02,
-          "bb_upper": 330.78,
-          "bb_lower": 303.82
+          "price": 286.73,
+          "bb_upper": 307.65,
+          "bb_lower": 289.8
         },
         {
           "time": "01-05",
-          "price": 332.54,
-          "bb_upper": 333.22,
-          "bb_lower": 303.16
+          "price": 288.66,
+          "bb_upper": 307.2,
+          "bb_lower": 288.53
         },
         {
           "time": "01-06",
-          "price": 334.61,
-          "bb_upper": 335.78,
-          "bb_lower": 302.7
+          "price": 293.17,
+          "bb_upper": 305.74,
+          "bb_lower": 288.63
         },
         {
           "time": "01-07",
-          "price": 326.99,
-          "bb_upper": 336.58,
-          "bb_lower": 303.22
+          "price": 293.79,
+          "bb_upper": 305.25,
+          "bb_lower": 288.36
         },
         {
           "time": "01-08",
-          "price": 329.79,
-          "bb_upper": 335.51,
-          "bb_lower": 307.35
+          "price": 276.58,
+          "bb_upper": 307.76,
+          "bb_lower": 283.43
         },
         {
           "time": "01-09",
-          "price": 329.19,
-          "bb_upper": 335.59,
-          "bb_lower": 309.32
+          "price": 276.02,
+          "bb_upper": 309.17,
+          "bb_lower": 279.62
         },
         {
           "time": "01-12",
-          "price": 324.49,
-          "bb_upper": 335.68,
-          "bb_lower": 310.09
+          "price": 277.89,
+          "bb_upper": 309.4,
+          "bb_lower": 277.08
         },
         {
           "time": "01-13",
-          "price": 310.9,
-          "bb_upper": 336.23,
-          "bb_lower": 308.92
+          "price": 270.63,
+          "bb_upper": 310.78,
+          "bb_lower": 273.0
         },
         {
           "time": "01-14",
-          "price": 307.87,
-          "bb_upper": 337.12,
-          "bb_lower": 306.96
+          "price": 261.28,
+          "bb_upper": 313.51,
+          "bb_lower": 266.97
         }
       ],
       "news": [
         {
-          "title": "JPMorgan stock will bounce back, Jim Cramer says - CNBC",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOR0pjc1o1T1hnTGQtMG5iMDNRVHVjbERKN1NYQldtelR2UDdJQ0FPekF6QV9lMVk2VU94NUkzNW91UXl3WGNPOXNaSG5qTDR0MWppbnVqZ0RPd2RBcFptdlpuLVFkbVRfR09KaUFCVXpPYzlUOXYyeDNhdGVmT1d3U0lfSWVFalhOdHZtNNIBkgFBVV95cUxOWFJLOGphaVpRT1hQMnR0dERQT0Jfa1VSNm85U0lJTExRUG5nQ2VMNWZwcWFYOFNHcEZNUGtyVWtIdnlNUnpIUEtpOFRwUXBRcHpUZ25QTTFxbjI2SWIySEZpSW9QZEVVSV9SbHhXTVpRMmVWbjVKem9hMkMwcmZkZ3l2VjJaQlhOOTBZVXlkX3hxUQ?oc=5",
-          "sentiment": "neutral",
-          "publisher": "CNBC"
+          "title": "How Investors Are Reacting To Autodesk (ADSK) Tech-Sector Selling and Renewed Analyst Optimism - simplywall.st",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVnFCVEdUNW5OUllTRm9tNkRVYzZMUVpVV0YxQ21Gc1dmbXQ5VFoyZ19NV2xwTjlqX2NXVGhZQ0FjOTlJaF9qS2l3RXhRcVlpbUtWNjhSLXRRY2NuUnV4ZWJ1OWlPTkRrWG1EOWs2UlQ4T29YalRHWEdaNXFCVklaaW5hWEJxV190bXNXcFl1dDd2UlhpSTBOMHcyVWFiYWt3Rjc1ZVJYVldnX0ZJTmtVdmdHalIxdzAzbVdBQ3JGb3JBSHhZVWfSAcsBQVVfeXFMTkQtNVBOb09Bdlkwd01KVXVPTzNBUlB6OEFtbHU1REd6aC0zTWkwOGR0U3ZtQjZMckc2Tml0bFhRRjN0MTJIb3Z3WU5QQVJ6U0NvZ2l6VFlWZFZNSWMyeVZnNHVkUGdXdGp3MVQ2bHVkWThqcHVsTm1Fem1tRUp1ZlUxMmhTRWc1YWhtbmhzNVI0b1ZkLXYwcXY1TnRyaWdpSTJILTNjUWtxeFR5dTlKX0tjWXJZcGxxY0FrckI0aEFjNUJjSlBoQjhOQTA?oc=5",
+          "sentiment": "negative",
+          "publisher": "simplywall.st"
         },
         {
-          "title": "JPMorgan Chase tops estimates as trading revenue exceeds expectations - CNBC",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBnTXVQTEEtRjVqVGZOSExoX0xMOEZ3NjJDR2tZd3ZaMkxkNHV1bDNBNkpUbEJNamdTZ1Q0aGIyUHR1cU1hdVRMZV9WcWRSdkVjY3BaNTJFS0M1ZFV4RkhvNHRhbkxrOHlQbnVnbVRSQWYycG1oa0k3TFZCcW7SAYIBQVVfeXFMT3BQN3BramhNUWRZRy1ZQUpOYVJBajdLOHlrX01EYkE2cjlNRTRnNlhBdTAzQTNkTVZ6cG5GcXJiUmE0ZXdjNGgtUlFEMFg3b1ZIRVpISG82U1ZQTWU5ekVhZU52N2ZjYnBZMVE4b0lJSExHU0NLcnlJeElpNjQyZFZyZw?oc=5",
-          "sentiment": "neutral",
-          "publisher": "CNBC"
+          "title": "Autodesk (NASDAQ:ADSK) Stock Price Down 5.9% - Time to Sell? - MarketBeat",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZVlQTFZ4MElLTmc2enJhSVV2RHhaeTVZQ29wMHhlakZhaml6LWdZTGEwdmI2NXU2N2VDOWV0cnoxbnJibVBBMWtieXF2akhHX2xVdmFYcVBpbmNCZHJWWlF2UlpwaDI1b3dBYUI4ZzdtQ0ppUmdmOVFTWWRSSDlVakYtSVRHbHJMRDF1UDRsaDVPQkhNMEUzdmNleU1aYXNVZ19oY240bk95UQ?oc=5",
+          "sentiment": "negative",
+          "publisher": "MarketBeat"
         },
         {
-          "title": "JPMorgan Chase: The Economic Conundrum (NYSE:JPM) - Seeking Alpha",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOdEdMYnpFQVVZWENFeU1Udl9maFp1REg4R0RtTWlwdzE1X04zYUJDNFZSeFQ1SmZ3TDA5MU1hU1Bac1AzTWRaSGFnRllzakpqNElnWFNkNWZhWmtvcVBIakRuOE1KLTJfZnh6ckJoTHpjYTR0REo1akdOZVZNX0JFTkhLR3c?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Seeking Alpha"
+          "title": "Elastic, Atlassian, Autodesk, Commerce, and Domo Shares Are Falling, What You Need To Know - Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPek95VGROSkQtcVk2eEZPR3RBQjhwRWxVdHg3RVVmM0tlS2lfYk1ZRUNfekFSdFJGOENPUnNOVy13SnlLMGNQVWhGdUtfYkZLRlM2U1I1cXJyczZENzB2VFBSaWNTYldiaDRXekpTWG5sYUk5X0N4dnFfeTlzeV8wUGE5M01WSUlJaFV1cUtkMA?oc=5",
+          "sentiment": "negative",
+          "publisher": "Yahoo Finance"
         }
       ],
       "financials": {
-        "op_margin": 0.41854,
-        "rev_growth": 0.025,
-        "per": 13.327786
+        "op_margin": 0.25688,
+        "rev_growth": 0.18,
+        "per": 22.500725
+      },
+      "sector": "Technology",
+      "rvol": 1.55
+    },
+    {
+      "id": "HIG",
+      "rank": 8,
+      "symbol": "HIG",
+      "name": "The Hartford Insurance Group, I",
+      "market": "US",
+      "currentPrice": 131.93,
+      "changePercent": 0.06,
+      "buyZoneTop": 134.57,
+      "buyZoneBottom": 129.29,
+      "targetPrice": 145.12,
+      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세 + 이익률 우수 + 저평가(PER)",
+      "score": 135,
+      "rsi": 24.88,
+      "history": [
+        {
+          "time": "12-16",
+          "price": 137.77,
+          "bb_upper": 139.83,
+          "bb_lower": 128.41
+        },
+        {
+          "time": "12-17",
+          "price": 138.36,
+          "bb_upper": 140.37,
+          "bb_lower": 128.45
+        },
+        {
+          "time": "12-18",
+          "price": 138.93,
+          "bb_upper": 140.91,
+          "bb_lower": 128.64
+        },
+        {
+          "time": "12-19",
+          "price": 139.01,
+          "bb_upper": 141.43,
+          "bb_lower": 128.61
+        },
+        {
+          "time": "12-22",
+          "price": 139.55,
+          "bb_upper": 141.92,
+          "bb_lower": 128.49
+        },
+        {
+          "time": "12-23",
+          "price": 139.08,
+          "bb_upper": 142.28,
+          "bb_lower": 128.42
+        },
+        {
+          "time": "12-24",
+          "price": 139.72,
+          "bb_upper": 142.66,
+          "bb_lower": 128.32
+        },
+        {
+          "time": "12-26",
+          "price": 138.67,
+          "bb_upper": 142.88,
+          "bb_lower": 128.3
+        },
+        {
+          "time": "12-29",
+          "price": 138.81,
+          "bb_upper": 143.13,
+          "bb_lower": 128.28
+        },
+        {
+          "time": "12-30",
+          "price": 138.84,
+          "bb_upper": 143.43,
+          "bb_lower": 128.32
+        },
+        {
+          "time": "12-31",
+          "price": 137.8,
+          "bb_upper": 143.6,
+          "bb_lower": 128.41
+        },
+        {
+          "time": "01-02",
+          "price": 137.11,
+          "bb_upper": 143.69,
+          "bb_lower": 128.74
+        },
+        {
+          "time": "01-05",
+          "price": 137.75,
+          "bb_upper": 143.72,
+          "bb_lower": 129.29
+        },
+        {
+          "time": "01-06",
+          "price": 136.93,
+          "bb_upper": 143.28,
+          "bb_lower": 130.48
+        },
+        {
+          "time": "01-07",
+          "price": 135.9,
+          "bb_upper": 142.66,
+          "bb_lower": 131.71
+        },
+        {
+          "time": "01-08",
+          "price": 137.91,
+          "bb_upper": 141.9,
+          "bb_lower": 133.26
+        },
+        {
+          "time": "01-09",
+          "price": 136.26,
+          "bb_upper": 140.59,
+          "bb_lower": 135.18
+        },
+        {
+          "time": "01-12",
+          "price": 135.24,
+          "bb_upper": 140.59,
+          "bb_lower": 135.17
+        },
+        {
+          "time": "01-13",
+          "price": 131.85,
+          "bb_upper": 141.38,
+          "bb_lower": 134.04
+        },
+        {
+          "time": "01-14",
+          "price": 131.93,
+          "bb_upper": 141.83,
+          "bb_lower": 132.92
+        }
+      ],
+      "news": [
+        {
+          "title": "New Analyst Forecast: $HIG Given $160 Price Target - Quiver Quantitative",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaUhUYTVLc3NSdnB3X0E3LTdMaFdWWFdIT0x6Zjg1alhDUU5Uc0tJcDhuS3dOb1VUUUhJaWZERUdldjlGcmttUTc5eFFOdmJTR2t4U1BELVBsU0JBcXIyNkVodHBCRjlfeHlnSTJMOVl4aHJ3NGRKak9WeUlvNmwyYnhEQXBPRFpYNTQ0V3J3SU4ya00?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Quiver Quantitative"
+        },
+        {
+          "title": "HIG: Cantor Fitzgerald Maintains Overweight, Raises PT to $160 | - GuruFocus",
+          "link": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxQOENWY3cwSEpEclVCWHFUNG50SUdhb2FFOTBpS1JNeXZGSllmNXRidUZiWGduTHd0dldVQjRYdThqU1Flc0g5SWUwZjVXWTkwTktaMnVBdzZ6MFlCdGZObnRVbW04bjZXU2JxX0MxN0lPQnhZb0pJWWJNT2MxanRseUU5aFYxemo5MkFvVkVXZ3dWNWxDTFU0bW81RFdPaWlQRGxXbWN3azFlSG5nTWVteFJ4UnF3UzBNT1IyQ1ZMSTZWUzNpVGw2clBZTnZwaUtfTUt4QTBrYlJUVWY4QzRuVzY1UTVQRUpvY0ZydVFPR1QwcTJOUWVodFVIMm13OEc1dnZEeFJMMlNxN3dWSGxnRHdoaF85MTNjQ1lZM2xhMnBVVEppdHpjM0Q3M1FNMUVFRW1lNXh1MDRrQWlaNGZnWnhwQnpBOTJobmxPTllOVFB1aFRNbEE?oc=5",
+          "sentiment": "neutral",
+          "publisher": "GuruFocus"
+        },
+        {
+          "title": "Wells Fargo & Company Issues Positive Forecast for The Hartford Insurance Group (NYSE:HIG) Stock Price - MarketBeat",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQVTUtRURjOU9DWW92VkF2QmxoZFM2YUEyU0NpekFwZGlTT0FiN1VYNml4S0lWc2RhVGc5QXFoYmhSUmpnaERVQjlodVlhY2VyanliWG93Y1p6YUNHOEdjbzZkX01TZXdXY3lIUU9yeENLeGhSYWJzcmFuald6QmdnLTVQZXVUbEN5cEJ2QWc3MTl2emxYb1J2dG93cnhOUDBnTGRkUkEtam1VcVJoMkRkY2NvTkRGbTBvNGZCZHp3M0l4VEMxLXZQdjJhbXBGb2tmeXB3X01vdVRzWlktcE0tVWRzbGx2UQ?oc=5",
+          "sentiment": "neutral",
+          "publisher": "MarketBeat"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.18916,
+        "rev_growth": 0.07,
+        "per": 9.921547
       },
       "sector": "Financial Services",
-      "rvol": 2.46
+      "rvol": 1.05
     },
     {
       "id": "BIIB",
-      "rank": 6,
+      "rank": 9,
       "symbol": "BIIB",
       "name": "Biogen Inc.",
       "market": "US",
@@ -1009,7 +1501,7 @@
     },
     {
       "id": "PTC",
-      "rank": 7,
+      "rank": 10,
       "symbol": "PTC",
       "name": "PTC Inc.",
       "market": "US",
@@ -1170,498 +1662,6 @@
       },
       "sector": "Technology",
       "rvol": 1.55
-    },
-    {
-      "id": "ADSK",
-      "rank": 8,
-      "symbol": "ADSK",
-      "name": "Autodesk, Inc.",
-      "market": "US",
-      "currentPrice": 261.28,
-      "changePercent": -3.45,
-      "buyZoneTop": 266.51,
-      "buyZoneBottom": 256.05,
-      "targetPrice": 287.41,
-      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(1.5배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
-      "score": 135,
-      "rsi": 20.47,
-      "history": [
-        {
-          "time": "12-16",
-          "price": 293.98,
-          "bb_upper": 312.09,
-          "bb_lower": 285.36
-        },
-        {
-          "time": "12-17",
-          "price": 292.97,
-          "bb_upper": 312.05,
-          "bb_lower": 285.47
-        },
-        {
-          "time": "12-18",
-          "price": 299.24,
-          "bb_upper": 311.97,
-          "bb_lower": 286.36
-        },
-        {
-          "time": "12-19",
-          "price": 300.08,
-          "bb_upper": 311.26,
-          "bb_lower": 288.38
-        },
-        {
-          "time": "12-22",
-          "price": 300.47,
-          "bb_upper": 310.93,
-          "bb_lower": 289.68
-        },
-        {
-          "time": "12-23",
-          "price": 297.58,
-          "bb_upper": 310.22,
-          "bb_lower": 291.16
-        },
-        {
-          "time": "12-24",
-          "price": 298.21,
-          "bb_upper": 310.03,
-          "bb_lower": 291.73
-        },
-        {
-          "time": "12-26",
-          "price": 300.71,
-          "bb_upper": 309.99,
-          "bb_lower": 291.7
-        },
-        {
-          "time": "12-29",
-          "price": 301.23,
-          "bb_upper": 309.82,
-          "bb_lower": 291.66
-        },
-        {
-          "time": "12-30",
-          "price": 299.54,
-          "bb_upper": 309.31,
-          "bb_lower": 291.61
-        },
-        {
-          "time": "12-31",
-          "price": 296.01,
-          "bb_upper": 307.51,
-          "bb_lower": 291.99
-        },
-        {
-          "time": "01-02",
-          "price": 286.73,
-          "bb_upper": 307.65,
-          "bb_lower": 289.8
-        },
-        {
-          "time": "01-05",
-          "price": 288.66,
-          "bb_upper": 307.2,
-          "bb_lower": 288.53
-        },
-        {
-          "time": "01-06",
-          "price": 293.17,
-          "bb_upper": 305.74,
-          "bb_lower": 288.63
-        },
-        {
-          "time": "01-07",
-          "price": 293.79,
-          "bb_upper": 305.25,
-          "bb_lower": 288.36
-        },
-        {
-          "time": "01-08",
-          "price": 276.58,
-          "bb_upper": 307.76,
-          "bb_lower": 283.43
-        },
-        {
-          "time": "01-09",
-          "price": 276.02,
-          "bb_upper": 309.17,
-          "bb_lower": 279.62
-        },
-        {
-          "time": "01-12",
-          "price": 277.89,
-          "bb_upper": 309.4,
-          "bb_lower": 277.08
-        },
-        {
-          "time": "01-13",
-          "price": 270.63,
-          "bb_upper": 310.78,
-          "bb_lower": 273.0
-        },
-        {
-          "time": "01-14",
-          "price": 261.28,
-          "bb_upper": 313.51,
-          "bb_lower": 266.97
-        }
-      ],
-      "news": [
-        {
-          "title": "How Investors Are Reacting To Autodesk (ADSK) Tech-Sector Selling and Renewed Analyst Optimism - simplywall.st",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVnFCVEdUNW5OUllTRm9tNkRVYzZMUVpVV0YxQ21Gc1dmbXQ5VFoyZ19NV2xwTjlqX2NXVGhZQ0FjOTlJaF9qS2l3RXhRcVlpbUtWNjhSLXRRY2NuUnV4ZWJ1OWlPTkRrWG1EOWs2UlQ4T29YalRHWEdaNXFCVklaaW5hWEJxV190bXNXcFl1dDd2UlhpSTBOMHcyVWFiYWt3Rjc1ZVJYVldnX0ZJTmtVdmdHalIxdzAzbVdBQ3JGb3JBSHhZVWfSAcsBQVVfeXFMTkQtNVBOb09Bdlkwd01KVXVPTzNBUlB6OEFtbHU1REd6aC0zTWkwOGR0U3ZtQjZMckc2Tml0bFhRRjN0MTJIb3Z3WU5QQVJ6U0NvZ2l6VFlWZFZNSWMyeVZnNHVkUGdXdGp3MVQ2bHVkWThqcHVsTm1Fem1tRUp1ZlUxMmhTRWc1YWhtbmhzNVI0b1ZkLXYwcXY1TnRyaWdpSTJILTNjUWtxeFR5dTlKX0tjWXJZcGxxY0FrckI0aEFjNUJjSlBoQjhOQTA?oc=5",
-          "sentiment": "negative",
-          "publisher": "simplywall.st"
-        },
-        {
-          "title": "Autodesk (NASDAQ:ADSK) Stock Price Down 5.9% - Time to Sell? - MarketBeat",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZVlQTFZ4MElLTmc2enJhSVV2RHhaeTVZQ29wMHhlakZhaml6LWdZTGEwdmI2NXU2N2VDOWV0cnoxbnJibVBBMWtieXF2akhHX2xVdmFYcVBpbmNCZHJWWlF2UlpwaDI1b3dBYUI4ZzdtQ0ppUmdmOVFTWWRSSDlVakYtSVRHbHJMRDF1UDRsaDVPQkhNMEUzdmNleU1aYXNVZ19oY240bk95UQ?oc=5",
-          "sentiment": "negative",
-          "publisher": "MarketBeat"
-        },
-        {
-          "title": "Autodesk and Nutanix Shares Are Falling, What You Need To Know - The Globe and Mail",
-          "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRHdfWEI1QmNub282QnFrYjdOQjRkLXhQWjV2N2RrUG5xSE83emlkMEtfUnpsWHRYd0t6MVp1VFgtQ2w1c3hxVmIybUdWSmhBUmFRQnJHOEVkblg5S2Q5S0w2R2xSNWJYS0JkM1JTa2Q3NzBLNlJ6b3hrRG5vZ3p5VVp3RllveFBIT2Y4U3l2dHVyYTh0X2k4c0J4SVhpM2hJXzlXZHdzNVZwVWtuYURSZFJFRUtFSGphOTdVeUZlMlV6WGlFQlZnWF8xOV9ZeEFmMnd0UGlRMnFZMko5WGpyNQ?oc=5",
-          "sentiment": "negative",
-          "publisher": "The Globe and Mail"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.25688,
-        "rev_growth": 0.18,
-        "per": 22.500725
-      },
-      "sector": "Technology",
-      "rvol": 1.55
-    },
-    {
-      "id": "INTU",
-      "rank": 9,
-      "symbol": "INTU",
-      "name": "Intuit Inc.",
-      "market": "US",
-      "currentPrice": 566.6,
-      "changePercent": -6.39,
-      "buyZoneTop": 577.93,
-      "buyZoneBottom": 555.27,
-      "targetPrice": 623.26,
-      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(2.6배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
-      "score": 135,
-      "rsi": 16.28,
-      "history": [
-        {
-          "time": "12-16",
-          "price": 668.12,
-          "bb_upper": 680.36,
-          "bb_lower": 623.48
-        },
-        {
-          "time": "12-17",
-          "price": 659.57,
-          "bb_upper": 681.06,
-          "bb_lower": 623.88
-        },
-        {
-          "time": "12-18",
-          "price": 667.65,
-          "bb_upper": 682.71,
-          "bb_lower": 624.05
-        },
-        {
-          "time": "12-19",
-          "price": 670.07,
-          "bb_upper": 684.15,
-          "bb_lower": 626.0
-        },
-        {
-          "time": "12-22",
-          "price": 673.97,
-          "bb_upper": 685.82,
-          "bb_lower": 625.52
-        },
-        {
-          "time": "12-23",
-          "price": 672.9,
-          "bb_upper": 687.77,
-          "bb_lower": 625.67
-        },
-        {
-          "time": "12-24",
-          "price": 673.59,
-          "bb_upper": 689.62,
-          "bb_lower": 626.49
-        },
-        {
-          "time": "12-26",
-          "price": 675.31,
-          "bb_upper": 689.48,
-          "bb_lower": 631.35
-        },
-        {
-          "time": "12-29",
-          "price": 672.91,
-          "bb_upper": 688.91,
-          "bb_lower": 635.93
-        },
-        {
-          "time": "12-30",
-          "price": 668.65,
-          "bb_upper": 686.22,
-          "bb_lower": 642.44
-        },
-        {
-          "time": "12-31",
-          "price": 661.2,
-          "bb_upper": 682.58,
-          "bb_lower": 648.75
-        },
-        {
-          "time": "01-02",
-          "price": 628.3,
-          "bb_upper": 687.09,
-          "bb_lower": 642.42
-        },
-        {
-          "time": "01-05",
-          "price": 632.67,
-          "bb_upper": 689.85,
-          "bb_lower": 636.75
-        },
-        {
-          "time": "01-06",
-          "price": 646.01,
-          "bb_upper": 689.24,
-          "bb_lower": 634.72
-        },
-        {
-          "time": "01-07",
-          "price": 649.95,
-          "bb_upper": 689.35,
-          "bb_lower": 634.1
-        },
-        {
-          "time": "01-08",
-          "price": 651.55,
-          "bb_upper": 689.4,
-          "bb_lower": 633.75
-        },
-        {
-          "time": "01-09",
-          "price": 646.9,
-          "bb_upper": 689.44,
-          "bb_lower": 632.27
-        },
-        {
-          "time": "01-12",
-          "price": 635.44,
-          "bb_upper": 688.83,
-          "bb_lower": 628.96
-        },
-        {
-          "time": "01-13",
-          "price": 605.28,
-          "bb_upper": 693.53,
-          "bb_lower": 617.82
-        },
-        {
-          "time": "01-14",
-          "price": 566.6,
-          "bb_upper": 706.31,
-          "bb_lower": 596.35
-        }
-      ],
-      "news": [
-        {
-          "title": "Goldman Sachs Assumes Coverage of Intuit (INTU) Stock - Yahoo Finance UK",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMzlNMjdfc1hsVzdDM3l1V3VwTmFQeFloMWgta2JnbFJfU05NbmxCLXhpLWpsQ1BYVmt3M2p2VlJuWW16VHItcjJ3SjV1ZmhqR2V4VzNJNnVHRXdxbWZxV3hBaFpLR3FuQjUyNWZPRFlqLVY2UnNPdUtlb0V2ZDNrY1I3dEhmdElTS19xRTVTMA?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Yahoo Finance UK"
-        },
-        {
-          "title": "Intuit (NASDAQ:INTU) Trading Down 4.6% - Here's What Happened - MarketBeat",
-          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnNrOEplXzFUUjhuZGt5eUVtUnFTQTVEQ2haalJlQkhIVzFtbkE5M2gxVmZmYURPdW1yY3RZTjVhLXFzYk9sSnpjYTV3eVdvc2hNRldKck9pcGlCWDc1QUhCVDVheUdLc3ljcnVxYzZjcXQzV0QwZ2s2VjZXR0FqeWFHdDFKbVZUSmtkZW1NR25BZUdnMm9WS1J2RHBFQmlRckRLa3FvYWNUTG8?oc=5",
-          "sentiment": "neutral",
-          "publisher": "MarketBeat"
-        },
-        {
-          "title": "$INTU stock is down 7% today. Here's what we see in our data. - Quiver Quantitative",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQVXpJQVU5OXlyMFhfODBLZE1Hcmp4LXBFYkR0Q044dUk4bnAtbFNrcEZLMHVJME9SYVdYdWMtNVBtNnNhejcwSWdPR2tRbDVvaEdnUFhhd0d4cmFvLUJrdXpydFFhWlhhaW5nRURLdXlHek54cTlwWkROTnRZN015RkxOOEdlYU5nazUtY21ycS1RSXB6Tnhpb0tvTVY0ZTlYMVE?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Quiver Quantitative"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.15697,
-        "rev_growth": 0.41,
-        "per": 21.435026
-      },
-      "sector": "Technology",
-      "rvol": 2.57
-    },
-    {
-      "id": "EQT",
-      "rank": 10,
-      "symbol": "EQT",
-      "name": "EQT Corporation",
-      "market": "US",
-      "currentPrice": 50.26,
-      "changePercent": -2.58,
-      "buyZoneTop": 51.27,
-      "buyZoneBottom": 49.25,
-      "targetPrice": 55.29,
-      "aiReason": "RSI 과매도(강력) + 볼린저밴드 하단 근접 + 거래량 폭발(1.6배) + 스토캐스틱 과매도 + 이익률 우수 + 고성장주 + 저평가(PER)",
-      "score": 135,
-      "rsi": 28.99,
-      "history": [
-        {
-          "time": "12-16",
-          "price": 53.32,
-          "bb_upper": 62.27,
-          "bb_lower": 53.81
-        },
-        {
-          "time": "12-17",
-          "price": 54.36,
-          "bb_upper": 62.34,
-          "bb_lower": 53.3
-        },
-        {
-          "time": "12-18",
-          "price": 53.76,
-          "bb_upper": 62.4,
-          "bb_lower": 52.73
-        },
-        {
-          "time": "12-19",
-          "price": 53.87,
-          "bb_upper": 62.53,
-          "bb_lower": 52.35
-        },
-        {
-          "time": "12-22",
-          "price": 53.5,
-          "bb_upper": 62.65,
-          "bb_lower": 51.88
-        },
-        {
-          "time": "12-23",
-          "price": 54.52,
-          "bb_upper": 62.63,
-          "bb_lower": 51.59
-        },
-        {
-          "time": "12-24",
-          "price": 53.89,
-          "bb_upper": 62.67,
-          "bb_lower": 51.27
-        },
-        {
-          "time": "12-26",
-          "price": 53.93,
-          "bb_upper": 62.49,
-          "bb_lower": 50.94
-        },
-        {
-          "time": "12-29",
-          "price": 54.54,
-          "bb_upper": 61.9,
-          "bb_lower": 50.9
-        },
-        {
-          "time": "12-30",
-          "price": 54.63,
-          "bb_upper": 61.3,
-          "bb_lower": 50.91
-        },
-        {
-          "time": "12-31",
-          "price": 53.6,
-          "bb_upper": 61.02,
-          "bb_lower": 50.68
-        },
-        {
-          "time": "01-02",
-          "price": 53.46,
-          "bb_upper": 60.09,
-          "bb_lower": 50.85
-        },
-        {
-          "time": "01-05",
-          "price": 53.35,
-          "bb_upper": 59.3,
-          "bb_lower": 50.96
-        },
-        {
-          "time": "01-06",
-          "price": 53.41,
-          "bb_upper": 58.08,
-          "bb_lower": 51.46
-        },
-        {
-          "time": "01-07",
-          "price": 54.49,
-          "bb_upper": 57.32,
-          "bb_lower": 51.8
-        },
-        {
-          "time": "01-08",
-          "price": 52.2,
-          "bb_upper": 56.5,
-          "bb_lower": 51.99
-        },
-        {
-          "time": "01-09",
-          "price": 51.09,
-          "bb_upper": 56.14,
-          "bb_lower": 51.73
-        },
-        {
-          "time": "01-12",
-          "price": 52.15,
-          "bb_upper": 55.84,
-          "bb_lower": 51.64
-        },
-        {
-          "time": "01-13",
-          "price": 51.59,
-          "bb_upper": 55.67,
-          "bb_lower": 51.42
-        },
-        {
-          "time": "01-14",
-          "price": 50.26,
-          "bb_upper": 55.74,
-          "bb_lower": 50.85
-        }
-      ],
-      "news": [
-        {
-          "title": "Bernstein Raises EQT Corporation (EQT) PT to $73 Maintaining Outperform Rating - Finviz",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUjVzOXJFZWVFQk9IUUxYdlE3bnhHc1pWbzFzeEh5dEUxU0RtWTJlRmRDc2VHMjE4RDhQaDBUYm54SGwyZGYxSGhwX2Vjb0NTajZydnVvTE12bjRIOHRPTGlNcW52VURhNF9uQng0LU0tcmFFaTBsdk1jUTE3TDNCd1BtajVocmFsbDZTNDJzQTR6RkJSVjM2TXE1NkZ5OHFwOS1NMTJDNUV6UQ?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Finviz"
-        },
-        {
-          "title": "Here's Why EQT Corporation (EQT) is a Strong Growth Stock - Yahoo Finance",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYUxyaFRISHI4eGtaVFVTWjNBNkVDazhwQk5ROTNZR3puLVZGWlR0OFhwVkxnZDc3Z3FxemkzRDJWNW9tbVpkc3puWE41U1JKaV9fSG8wTDd6M3g0QmNlUEE0V2xHZUJvX1pNWkZrX05RbnpGeEhBTTZ1RVd2aXRWdA?oc=5",
-          "sentiment": "positive",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "Here Is Why the Hold Strategy Is Apt for EQT Stock Right Now - Zacks Investment Research",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOa3dZZmR6dTRZcHZJT09kZTFneXhHUUZ5ejQ4UkI1SHZpMG1vY2NnUTV5NGhUNkVuVjFjS3dHSVRiVFJjS1BBN20ta1ZKRk52Uy1mLTBnQkVWUmo3XzdON1FaejFWQXdrQnpjR2FiQ2YyN2dtc3ZUX3dqeVNSWERZbXdDWUE4ZVphakk4OG45VV9CTnhIM2dWaC1ZY1FMaEdKbEw4?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Zacks Investment Research"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.34897,
-        "rev_growth": 0.514,
-        "per": 11.622582
-      },
-      "sector": "Energy",
-      "rvol": 1.62
     },
     {
       "id": "316140.KS",
@@ -3308,9 +3308,9 @@
     "Financial Services",
     "Communication Services"
   ],
-  "timestamp": "2026-01-15 04:04:28",
+  "timestamp": "2026-01-15 04:48:14",
   "notification": {
     "title": "🔔 DailyPick10 알림",
-    "body": "오늘의 미국 추천: BIIB 등 (신규 1건)"
+    "body": "오늘의 미국 추천: HIG 등 (신규 1건)"
   }
 }
