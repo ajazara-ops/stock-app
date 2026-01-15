@@ -13,6 +13,15 @@ import argparse
 from collections import Counter
 from datetime import datetime, timedelta
 
+# [추가] Firebase 라이브러리 (여러 사람에게 알림 보내기 위해 필요)
+try:
+    import firebase_admin
+    from firebase_admin import credentials, firestore
+    FIREBASE_AVAILABLE = True
+except ImportError:
+    FIREBASE_AVAILABLE = False
+    print("⚠️ firebase-admin 모듈이 없습니다. DB 연동 기능이 제한됩니다.")
+
 # SSL 인증서 오류 방지
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -29,55 +38,92 @@ def safe_float(val, default=0.0):
         return f
     except: return default
 
-# --- [Git 강제 업로드 함수 (수정됨: 대기 시간 증가)] ---
+# --- [추가] 1. 데이터가 서버에 확실히 올라가도록 돕는 함수 ---
 def git_push_updates(mode_name):
     """
-    데이터가 생성되자마자 알림보다 먼저 서버에 반영되도록 강제로 Push합니다.
-    (Pull -> Commit -> Push 순서로 충돌 방지)
+    알림을 보내기 전에 데이터를 서버(GitHub)에 먼저 올리고, 
+    반영될 때까지 충분히 기다려주는 역할을 합니다.
     """
     try:
-        print(f"\n⬆️ [Git] 데이터 강제 업로드 시도 ({mode_name})...")
+        print(f"\n⬆️ [Git] 데이터 업로드 시작 ({mode_name})...")
         
-        # Git 사용자 설정 (이미 설정되어 있어도 안전함)
+        # 1. 깃 설정
         os.system("git config --global user.name 'GitHub Action'")
         os.system("git config --global user.email 'action@github.com'")
         
-        # 최신 상태 가져오기 (충돌 방지)
-        print("  - Pulling latest changes...")
-        os.system("git pull --rebase origin master || git pull --rebase origin main")
-        
-        # 파일 스테이징
+        # 2. 최신 파일들 장바구니에 담기
         os.system("git add todays_recommendation.json")
         os.system(f"git add {DAILY_DATA_DIR}/*.json")
         os.system(f"git add {WEEKLY_REPORT_DIR}/*.json")
         os.system("git add history_index.json")
         
-        # 커밋
+        # 3. 포장하기 (Commit)
         commit_msg = f"Auto-update stock data ({mode_name}) - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
-        os.system(f"git commit -m '{commit_msg}' || echo 'No changes to commit'")
+        os.system(f"git commit -m '{commit_msg}' || echo '변경 사항 없음'")
         
-        # 푸시 (master 브랜치로 시도, 실패 시 main으로 시도)
-        print("  - Pushing to remote...")
+        # 4. 발송하기 (Push)
+        print("  - 서버로 전송 중...")
         push_result = os.system("git push origin master || git push origin main")
         
         if push_result == 0:
             print("✅ [Git] 업로드 성공!")
-            # [수정] GitHub Pages 반영 대기 시간 대폭 증가 (90초 -> 180초)
-            # 웹 반영이 늦어 앱 알림함에 안 뜨는 문제를 확실히 방지하기 위함
-            print("⏳ 서버 반영 대기 중 (180초)... 알림은 잠시 후에 발송됩니다.")
+            # [중요] 웹사이트에 반영될 때까지 3분(180초) 대기
+            print("⏳ 웹사이트 반영 대기 중 (180초)... 이 시간이 지나야 알림이 갑니다.")
             time.sleep(180) 
         else:
-            print("❌ [Git] 업로드 실패 (Push Error)")
+            print("⚠️ [Git] 업로드 중 문제가 있었거나 이미 최신 상태입니다.")
             
     except Exception as e:
-        print(f"❌ [Git] 실행 중 예외 발생: {e}")
+        print(f"❌ [Git] 업로드 실패: {e}")
 
-# --- [알림 전송 함수] ---
+# --- [추가] 2. DB에서 모든 사용자 토큰 가져오기 ---
+def get_all_user_tokens():
+    if not FIREBASE_AVAILABLE:
+        return []
+    
+    tokens = []
+    try:
+        # Firebase 접속 시도
+        if not firebase_admin._apps:
+            # GitHub Secrets에 등록된 키 사용
+            fb_creds_json = os.environ.get('FIREBASE_CREDENTIALS')
+            if fb_creds_json:
+                cred = credentials.Certificate(json.loads(fb_creds_json))
+                firebase_admin.initialize_app(cred)
+            else:
+                return [] # 키가 없으면 빈 목록 반환
+        
+        # 'users' 목록에서 토큰만 쏙쏙 뽑아오기
+        db = firestore.client()
+        users_ref = db.collection('users')
+        docs = users_ref.stream()
+        
+        for doc in docs:
+            user_data = doc.to_dict()
+            token = user_data.get('pushToken')
+            if token and token.startswith("ExponentPushToken"):
+                tokens.append(token)
+                
+        print(f"🔎 DB에서 사용자 {len(tokens)}명을 찾았습니다.")
+        return tokens
+        
+    except Exception as e:
+        print(f"❌ DB 조회 실패: {e}")
+        return []
+
+# --- [수정] 3. 여러 사람에게 알림 보내기 ---
 def send_push_notification(title, message):
-    user_push_tokens = ["ExponentPushToken[hiUjiJITCNaVruAohWwGtG]"] 
+    # (1) 관리자(나)의 토큰
+    admin_tokens = ["ExponentPushToken[hiUjiJITCNaVruAohWwGtG]"] 
+    
+    # (2) DB에서 가져온 다른 사람들 토큰
+    db_tokens = get_all_user_tokens()
+    
+    # (3) 합치기 (중복 제거)
+    user_push_tokens = list(set(admin_tokens + db_tokens))
 
     if not user_push_tokens:
-        print(f"⚠️ [알림] 전송할 토큰이 없습니다.")
+        print(f"⚠️ 전송할 토큰이 없습니다.")
         return
 
     url = "https://exp.host/--/api/v2/push/send"
@@ -88,19 +134,15 @@ def send_push_notification(title, message):
         "content-type": "application/json"
     }
 
-    print(f"📨 알림 전송 시작: '{title}' (대상: {len(user_push_tokens)}명)")
+    print(f"📨 알림 발송 시작: '{title}' (총 {len(user_push_tokens)}명에게)")
     
+    # 한 명씩 차례대로 전송 (안전하게)
     for token in user_push_tokens:
-        if not token.startswith("ExponentPushToken"):
-            print(f"  ❌ 잘못된 토큰 형식 건너뜀: {token}")
-            continue
-        
-        # [수정] data 필드 추가 (앱이 알림 내용을 더 확실히 받도록 보조)
         payload = {
             "to": token,
             "title": title,
             "body": message,
-            "data": { "title": title, "message": message }, 
+            "data": { "title": title, "message": message }, # 앱이 내용을 읽을 수 있게 데이터 추가
             "sound": "default",
             "priority": "high",
             "channelId": "default", 
@@ -109,17 +151,9 @@ def send_push_notification(title, message):
         }
 
         try:
-            response = requests.post(url, headers=headers, data=json.dumps(payload))
-            if response.status_code == 200:
-                res_json = response.json()
-                if res_json.get('data', {}).get('status') == 'ok':
-                    print(f"  ✅ 전송 성공 ({token})")
-                else:
-                    print(f"  ❌ 전송 오류 ({token}): {res_json}")
-            else:
-                print(f"  ❌ 서버 통신 실패 ({response.status_code}): {response.text}")
+            requests.post(url, headers=headers, data=json.dumps(payload))
         except Exception as e:
-            print(f"  ❌ 전송 중 예외 발생: {e}")
+            print(f"  ❌ 전송 에러 ({token}): {e}")
 
 # --- [어제 추천 종목 가져오기] ---
 def get_latest_recommendation_ids():
@@ -372,7 +406,6 @@ def analyze_stock(ticker, market_type, target_date=None):
                 per = kr_fund['per']
                 pbr = kr_fund['pbr']
         
-        # 필터링
         if market_type == 'KR' and op_margin is not None and op_margin < 0: return None
         if market_type == 'US' and op_margin is not None and op_margin < -0.5: return None
         
@@ -395,7 +428,6 @@ def analyze_stock(ticker, market_type, target_date=None):
         
         score = 0; reasons = [] 
         
-        # Technical Score
         if cur_rsi < 30: score += 40; reasons.append("RSI 과매도(강력)")
         elif cur_rsi < 45: score += 20; reasons.append("단기 과매도")
         elif cur_rsi < 60: score += 5; reasons.append("눌림목 구간")
@@ -408,7 +440,6 @@ def analyze_stock(ticker, market_type, target_date=None):
         if cur_k < 20: score += 15; reasons.append("스토캐스틱 과매도")
         if not pd.isna(ma120) and cur_p >= ma120: score += 10; reasons.append("장기 상승 추세")
 
-        # Fundamental Score
         if market_type == 'US':
             if op_margin and op_margin > 0.15: score += 10; reasons.append("이익률 우수")
             if rev_growth and rev_growth > 0.10: score += 10; reasons.append("고성장주")
@@ -461,7 +492,6 @@ def generate_weekly_report(target_date_str):
     if not os.path.exists(WEEKLY_REPORT_DIR):
         os.makedirs(WEEKLY_REPORT_DIR)
 
-    # daily_files 수집 (날짜순 정렬)
     for f in sorted(os.listdir(DAILY_DATA_DIR)):
         if f.endswith('_daily.json'):
             file_date_str = f.split('_')[0]
@@ -473,7 +503,7 @@ def generate_weekly_report(target_date_str):
             
     print(f"📂 분석 대상 데일리 파일: {len(daily_files)}개")
     
-    # 중복 제거 로직 (딕셔너리 사용)
+    # 중복 제거 로직
     stocks_dict = {} 
     for file in daily_files:
         with open(f"{DAILY_DATA_DIR}/{file}", 'r', encoding='utf-8') as f:
