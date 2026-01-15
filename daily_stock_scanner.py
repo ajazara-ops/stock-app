@@ -31,8 +31,8 @@ def safe_float(val, default=0.0):
 
 # --- [알림 전송 함수] ---
 def send_push_notification(title, message):
-    # ✅ 사용자님의 푸시 토큰 (업데이트됨)
-    user_push_tokens = ["ExponentPushToken[A1pSo_HgzWn_M2-94c5Pr2]"] 
+    # ✅ 사용자님의 푸시 토큰 (업데이트됨: zV04...)
+    user_push_tokens = ["ExponentPushToken[zV04l8MQjkiB7sHav-xJ5D]"] 
 
     if not user_push_tokens:
         print(f"⚠️ [알림 시뮬레이션] 전송할 토큰 없음.\n제목: {title}\n내용: {message}")
@@ -681,15 +681,18 @@ def main():
         
         target_market_stocks = [s for s in final_stocks if s['market'] == args.target] if args.target != 'ALL' else final_stocks
         
-        if target_market_stocks:
+        if not target_market_stocks:
+            print("🔕 추천 종목이 없어서 알림 메시지를 생성하지 않습니다.")
+        else:
             new_stocks = [s['symbol'] for s in target_market_stocks if s['id'] not in prev_stock_ids]
             market_name = "미국" if args.target == 'US' else ("한국" if args.target == 'KR' else "전체")
+            
             if new_stocks:
-                highlight = ", ".join(new_stocks[:2])
-                noti_body = f"오늘의 {market_name} 추천: {highlight} 등 (신규 {len(new_stocks)}건)"
+                highlight_stocks = ", ".join(new_stocks[:2])
+                noti_body = f"오늘의 {market_name} 추천 종목이 도착했습니다! 신규진입: {highlight_stocks} 등 {len(target_market_stocks)}건"
             else:
-                top = ", ".join([s['symbol'] for s in target_market_stocks[:2]])
-                noti_body = f"오늘의 {market_name} 추천: {top} 등 (순위 변동)"
+                top_stocks = ", ".join([s['symbol'] for s in target_market_stocks[:2]])
+                noti_body = f"오늘의 {market_name} 추천 종목이 도착했습니다! 오늘의 추천: {top_stocks} 등 {len(target_market_stocks)}건"
 
         out = {
             "market_status": ms, 
