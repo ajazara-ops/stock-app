@@ -29,35 +29,47 @@ def safe_float(val, default=0.0):
         return f
     except: return default
 
-# --- [Git 강제 업로드 함수] ---
+# --- [Git 강제 업로드 함수 (수정됨: 안정성 강화)] ---
 def git_push_updates(mode_name):
     """
     데이터가 생성되자마자 알림보다 먼저 서버에 반영되도록 강제로 Push합니다.
+    (Pull -> Commit -> Push 순서로 충돌 방지)
     """
     try:
         print(f"\n⬆️ [Git] 데이터 강제 업로드 시도 ({mode_name})...")
+        
+        # Git 사용자 설정 (이미 설정되어 있어도 안전함)
         os.system("git config --global user.name 'GitHub Action'")
         os.system("git config --global user.email 'action@github.com'")
+        
+        # 최신 상태 가져오기 (충돌 방지)
+        print("  - Pulling latest changes...")
+        os.system("git pull --rebase origin master || git pull --rebase origin main")
+        
+        # 파일 스테이징
         os.system("git add todays_recommendation.json")
         os.system(f"git add {DAILY_DATA_DIR}/*.json")
         os.system(f"git add {WEEKLY_REPORT_DIR}/*.json")
         os.system("git add history_index.json")
         
-        # 커밋 및 푸시 (에러 무시)
-        os.system(f"git commit -m 'Auto-update stock data ({mode_name})' || echo 'No changes to commit'")
-        push_result = os.system("git push")
+        # 커밋
+        commit_msg = f"Auto-update stock data ({mode_name}) - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+        os.system(f"git commit -m '{commit_msg}' || echo 'No changes to commit'")
+        
+        # 푸시 (master 브랜치로 시도, 실패 시 main으로 시도)
+        print("  - Pushing to remote...")
+        push_result = os.system("git push origin master || git push origin main")
         
         if push_result == 0:
             print("✅ [Git] 업로드 성공!")
-            # [수정] GitHub Pages 반영 대기 시간 대폭 증가 (15초 -> 90초)
-            # 웹에 반영될 시간을 충분히 주어야 앱에서 알림함에 데이터가 뜹니다.
+            # GitHub Pages 반영 대기 (90초)
             print("⏳ 서버 반영 대기 중 (90초)... 알림은 잠시 후에 발송됩니다.")
             time.sleep(90) 
         else:
-            print("⚠️ [Git] 업로드 중 경고 발생 (이미 최신 상태일 수 있음)")
+            print("❌ [Git] 업로드 실패 (Push Error)")
             
     except Exception as e:
-        print(f"❌ [Git] 업로드 실패: {e}")
+        print(f"❌ [Git] 실행 중 예외 발생: {e}")
 
 # --- [알림 전송 함수] ---
 def send_push_notification(title, message):
