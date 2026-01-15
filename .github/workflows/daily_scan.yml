@@ -53,7 +53,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install yfinance pandas requests lxml
+          # [수정] firebase-admin 라이브러리 추가 설치 (필수!)
+          pip install yfinance pandas requests lxml firebase-admin
 
       - name: Run Scan Logic
         run: |
