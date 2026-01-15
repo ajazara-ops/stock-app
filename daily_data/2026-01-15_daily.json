@@ -16,8 +16,8 @@
     },
     "VIX": {
       "name": "공포지수",
-      "current": 16.16,
-      "change": -3.52,
+      "current": 16.18,
+      "change": -3.4,
       "status": "NEUTRAL",
       "message": "안정적 😌"
     }
@@ -2809,7 +2809,7 @@
         "per": 0.0
       },
       "sector": "Healthcare",
-      "rvol": 0.61
+      "rvol": 0.6
     },
     {
       "id": "035900.KQ",
@@ -3308,7 +3308,7 @@
     "Financial Services",
     "Communication Services"
   ],
-  "timestamp": "2026-01-15 11:08:41",
+  "timestamp": "2026-01-15 11:24:09",
   "notification": {
     "title": "🔔 DailyPick10 알림",
     "body": "오늘의 한국 추천: 000810, 033780 등 (순위 변동)"
