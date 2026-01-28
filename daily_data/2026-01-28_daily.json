@@ -9,8 +9,8 @@
     },
     "KR": {
       "name": "KOSPI",
-      "current": 5084.85,
-      "change": 2.73,
+      "current": 5156.6,
+      "change": 1.41,
       "status": "VERY_GOOD",
       "message": "강한 상승 🔥"
     },
@@ -167,10 +167,10 @@
           "publisher": "Yahoo Finance"
         },
         {
-          "title": "Dow Jones AI Giant Nvidia Set To Hit New Buy Point After This Bullish Move - Investor's Business Daily",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMFBUb3Fjc2QzNmpFWWp0QVY1RlhCVEJmU3VxeGhGUmlRdGtBWE41RXQ5UlRMLUQtaUs4WXl0eF91Ny1HTkd4ejVxN2JzV2xrTDE4TGs1cGhqMURNM205YTJOOVd1WUJsMTVIUEZVZXZoNnc5TndvdExTcnZxVHQ3UVRmd0tkZ1NVQTlScEFUMUJuVDZFal9GNWp4eXNsVmpBSGplZDZB?oc=5",
-          "sentiment": "positive",
-          "publisher": "Investor's Business Daily"
+          "title": "1 Prediction for Nvidia in 2026 - The Globe and Mail",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSXFzUVdUdEVWR3V6QWplSThRb196VjJYMFZzMV96Tng3d1JvUkJ0U1RYTDN6YUJBQ2RzQVprbGNzamZaNHNXVHpPX0RFVHJnM3B5ZGRtR2MwQmplSG1TTFloZnhaS1FhT0FzZl9pOGhmTHhmWUU5YXd5Q1JDSEhzczBHVDVpem9DdWRNNUNVVThDSEpuVUFYVEd1UldhSUxNVUxWczFyNDRmdlBhSklTeFJzY0tyV1pCcFE?oc=5",
+          "sentiment": "neutral",
+          "publisher": "The Globe and Mail"
         },
         {
           "title": "Prediction: Nvidia's Stock Price Will Reach This Level By the End of 2026 - The Motley Fool",
@@ -185,7 +185,7 @@
         "per": 24.598572
       },
       "sector": "Technology",
-      "rvol": 0.89
+      "rvol": 0.92
     },
     {
       "id": "MSFT",
@@ -331,10 +331,10 @@
           "publisher": "TipRanks"
         },
         {
-          "title": "Microsoft Reports Q2 Earnings Jan. 28. Is MSFT Stock a Buy Before Then? - Yahoo Finance",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSGRBdmNPOVZ3NGF0SjFWTUVTYVJNeW9iT19EazJCR1RSQTRmS21GTlA5c3FpT0llRFFtdldLMTFuS0dXRFc2U1Zzc2ZKc2tLWUdmTGJXUHVWZUpKS3hYb2lGZHhmUkRqd2Y3SnZneFlIY1VzZmNCdENFWUVJSU4wb2NJVVgwUQ?oc=5",
-          "sentiment": "positive",
-          "publisher": "Yahoo Finance"
+          "title": "Here's How Much Traders Expect Microsoft Stock to Move After Earnings - Investopedia",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZTFOQlI3SGpaV3BrYUlXbFR2Y05ic0ZPVk1peU8zMDRUYlFFQXhzRWxXTy1jeGRDSUstS3NUUUNpLUNROVY2cFBEbkxpYTNTeFJnWEZUclpKVENnQ1h3SGNKRWRaa21qTEJLb2k1clM5NVVaNXJIbVNoLUdkaTl6YTdjRi14SXNBbXJvU2t4eDAtUDliRHNEN3hOYVFMNlpaRjAwR3BBNzdyb2JtT2NFWlFaVQ?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Investopedia"
         },
         {
           "title": "Earnings week ahead: TSLA, META, MSFT, AAPL, T, BA, V, MA, GM, CVX, XOM, and more - Seeking Alpha",
@@ -349,7 +349,7 @@
         "per": 25.57516
       },
       "sector": "Technology",
-      "rvol": 1.16
+      "rvol": 1.17
     },
     {
       "id": "AMZN",
@@ -495,22 +495,22 @@
           "publisher": "Yahoo Finance"
         },
         {
-          "title": "‘Worth a Shot, But…’ Says Investor on Amazon Stock - TipRanks",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZThFcnRLbnVxX3hVLVZPdDU3bFRzTFBwYmxZenliRHpkTE5OMS1pVktyTDBza0xvQzRUNk4wYWR3QlduSnN4T0NtR1p1Z2pGd1I3ZVRfanUzM2pWbTVKVjlBYnk0R3JvVzZzQkJFc3VPeEhrZFFkdFMtMWtlOEQ5dE9B?oc=5",
+          "title": "Amazon Stock (AMZN) Shrugs Off Layoff Fears – What’s Next - TipRanks",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdkFNVXg4S1Fac2pIQ2ZBSVhiaWh3R3RuWEh4b29NRXBoaW93X3ZrM0F5MTQwQ3o0TnV2VzNyM2tIcVhyZXZSZGp6S2dDQXVrbUl0T1JhV3pUa1dqd1JuS1dvdFJRTTFQdkVNVmhrcHJrRzBoT0FqTDFHTW5jMWYzeWJWUEVqc2QyMlE?oc=5",
           "sentiment": "neutral",
           "publisher": "TipRanks"
         },
         {
-          "title": "Stocks making the biggest moves midday: Amazon, Reddit, Pinterest, Sysco & more - CNBC",
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZVRnTjVBUlVLZWhtWVNEdXNLcXpxZW02UDRtRlRkdzZscFpwcDFaU0M0a29mTG55ZmpDd1c1M1ZUTjU3X2hoYkdFWTFVdEM4XzBtdVJHMlY4MWl1UER5dzRZVmY3Q3ZmcllDcnJrX29Oa1R6NER4Y3p4WWxFeXV2NXFBQjh4aFMxZlpnZGlNemE2UHk4dTNaQndB?oc=5",
+          "title": "Dear Amazon Stock Fans, More Layoffs Are Coming This Week - Barchart.com",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQYkp0ZktSY2c2bkVHNjdPZWZPcS1pRzRuNUZWODYzaHZjWlZDSGpNaFE4bW5mTFlDWjRqU1IybDR4R3lWemJaMmRWY2FSbnd6bEJUdmRPUXBNR1NLWDhVb0hRTkxGYTZDTjhGRGY3RWg2aHE1MlhoWktpcktWdXpXNm9RNkRLT3NqS3FmekF4MTJJV21WUlZyVDFQX204MlhvTVg4?oc=5",
           "sentiment": "neutral",
-          "publisher": "CNBC"
+          "publisher": "Barchart.com"
         }
       ],
       "financials": {
         "op_margin": 0.11057,
         "rev_growth": 0.134,
-        "per": 31.109703
+        "per": 31.089266
       },
       "sector": "Consumer Cyclical",
       "rvol": 0.98
@@ -653,22 +653,22 @@
       ],
       "news": [
         {
-          "title": "“Biggest Bubble…in Stock Market History”: Tesla Stock (NASDAQ:TSLA) Drops With Another Director Lost - TipRanks",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRF8ycGZfYmx2ODRkNzhCNVNvaFBGRGdoZmpLY2lHTTcyMFRvLWQ5b29FdTljYmNqN3IwdXlBT0xWYU5wSFJYNFdJb3BuSWl1RnhyaVM3cE0zUlQzWjFhb3g5R21yUzFaeVUyUnRLV0VSZ2RLbmJqNWpjUWpvYTBCdUtOTlltZEl4c3pGYmtZR3dwRktxRDZFSTFKZlFuY3ZEeHlXSGN3bnhwbVNkaUp5anlvdUhiZ1ZaWnVLN2dCT1ZkUQ?oc=5",
-          "sentiment": "negative",
-          "publisher": "TipRanks"
-        },
-        {
           "title": "Here's How Much Traders Expect Tesla Stock to Move After Earnings This Week - Investopedia",
           "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMW16UG8teXc0ZTJBTHZCQkFWQ0pXVGhsaklUbzAxa3h6S3haZHJXTzhpaWJ2ZFdKOWF6M3owWkliV1JXSWpOYzBwZE1hYnpObFlSV01jQ3FpU2NIYldPYUNUMXl1RFh1VDNQc1VtTFpKTGhFV2tpbDZJcjMzSC05clVsaElvc21EbklWcWcxeExVbUtqMW5RZnJEb2YtekxQUjhUd2pOUFVtQU1sOW9oUGJfQ1V0cDdzX2FV?oc=5",
           "sentiment": "neutral",
           "publisher": "Investopedia"
         },
         {
-          "title": "Tesla: Robotaxi Storm Clouds To Rain On Parade (NASDAQ:TSLA) - Seeking Alpha",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZVB6c0ZJWWpiaGZpZHZzYnpQUHhFWXlvZjdnS3pFeHJtbkhqZU5pUjIyLWVuVmktMGhxS3dJQjZ6aENQcFR2cFFfUlFhVlNEZnBBYl9hT1pPVGlhdVVZSVBobUU2N1l4RTktM3VKeGQ2SkVENnN6RzlmQjU0ZXB2eGhHUTFfUS1xX04wX3NiVzVzdHVVclRz?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Seeking Alpha"
+          "title": "“Biggest Bubble…in Stock Market History”: Tesla Stock (NASDAQ:TSLA) Drops With Another Director Lost - TipRanks",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRF8ycGZfYmx2ODRkNzhCNVNvaFBGRGdoZmpLY2lHTTcyMFRvLWQ5b29FdTljYmNqN3IwdXlBT0xWYU5wSFJYNFdJb3BuSWl1RnhyaVM3cE0zUlQzWjFhb3g5R21yUzFaeVUyUnRLV0VSZ2RLbmJqNWpjUWpvYTBCdUtOTlltZEl4c3pGYmtZR3dwRktxRDZFSTFKZlFuY3ZEeHlXSGN3bnhwbVNkaUp5anlvdUhiZ1ZaWnVLN2dCT1ZkUQ?oc=5",
+          "sentiment": "negative",
+          "publisher": "TipRanks"
+        },
+        {
+          "title": "Tesla Q4 2025 Earnings Preview: Should You Buy or Dump TSLA Stock? - Barchart.com",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNaTRNa29hWkcyZE5wWGVSc1NLS01XdEY3Q3BEWmUxSXpCVnpnMHZFdHpmQzVDUks2Yl81cl8xczU1bFNWOG9TWUpBU202SEV2RkJiWmlwTnhXdGsxcjdzN3ZQaVhQZ3hTblhlYXV4SnJtV2U0YjM0VkF0VXExVmJvQXVhZ1hnbXNydW8wZkVXbzQ1dUx6RWo2N2VHM3VOUTRMLVdmUDJaMzlRMFhJQkE?oc=5",
+          "sentiment": "positive",
+          "publisher": "Barchart.com"
         }
       ],
       "financials": {
@@ -677,7 +677,7 @@
         "per": 198.30733
       },
       "sector": "Consumer Cyclical",
-      "rvol": 0.6
+      "rvol": 0.61
     },
     {
       "id": "AAPL",
@@ -817,8 +817,8 @@
       ],
       "news": [
         {
-          "title": "Apple (AAPL) Stock Trades Up, Here Is Why - Yahoo Finance",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1DaEJza0YyM3Z3Vm51ZDdldEZTUzBNbktKVUlEZF9nVklwN2Vma2toQmdZVHRiS0tSSkR0YnIzRV9PZFR5ME9KcjR3UTRyN2lFYlhmYjdxN0JJQmE2d2lwY1hGeFgxUXNDbnRvclBuOVpFS3BIRXNFTUhjNEpWQQ?oc=5",
+          "title": "Jim Cramer Reveals Why Apple (AAPL) Stock is Struggling - Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1SdFVoRUQ3WjRST21saXpCVkF0QzRuaHFXWE4tdy1KSTdIWWI1aHJLSE56WjljblA4ejJmQXpEQXRBS0JoazFKUmFNVlJaN1V1aUlTaXZRQUF4bFpYOFc4N2txRFFtUFlyelZET3BOVkY4UTBkdzFzRERDRmlZVDg?oc=5",
           "sentiment": "neutral",
           "publisher": "Yahoo Finance"
         },
@@ -829,10 +829,10 @@
           "publisher": "The Motley Fool"
         },
         {
-          "title": "Why Apple’s Sell-Off May Be Overdone Right Before Earnings - MarketBeat",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYU0zQVRWalJkNXdiX29rQW1sWlE5Sk01eW9Mc0xTXzNac0hMZDJhY0lxX0RSUVBmYnNKdlNCLVU4M21hZmZZU2k1dmxIWXU2eHFRNkdXZjJURUZZemNIUm4zVmQ2WDN0XzV3US1WVlVfWFJZT1h0MnU0V05aV1N3SEsyaThvcEZCQzlJb3BUR25nZU9ncHc3WmUtVQ?oc=5",
-          "sentiment": "negative",
-          "publisher": "MarketBeat"
+          "title": "Apple: Rolling Over Into Key Earnings - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdjdUVDFLcENYcEd5R2U2VDl3WE9KVG9PWTg4NG1BZzZLN2JnSkxNZkhIYXc0WV95OGdRaDhXcnVhekhZWFBPV3ZVdkVyM3E1Zi1HOUlHMEpRNkhqWHl0V3JoRmFYblZnQzFmX1FvVzNVZ18yTmViOXAzdGw5MHpobDZUbw?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Seeking Alpha"
         }
       ],
       "financials": {
@@ -841,7 +841,7 @@
         "per": 28.24064
       },
       "sector": "Technology",
-      "rvol": 0.93
+      "rvol": 1.09
     },
     {
       "id": "META",
@@ -981,10 +981,10 @@
       ],
       "news": [
         {
-          "title": "Here's How Much Traders Expect Meta Stock To Move After Wednesday's Earnings - Investopedia",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMThhY2M4OHR3RFR4NUcxa283VEo1NmJoT0o0ZHNQdkxhWUlpbTRfeGFqLWdXbkF5Z25FdmZJU2Z4NnZialJvN1JJXzYxMUFxcDZsdlFHSkYzY2ZKNUVaVGpiSnBJRkI0YTZSVnkwSWdBeUJwN0FzWGhKTkY5VUlaVjZKY2dnUkhMay1RaXlsQmYzVkdaZ0hKZXhvYTViVTh0c2J1Qm9OSjF0QVREbk93TjVqQVY?oc=5",
+          "title": "Bank of America resets Meta stock forecast before earnings - thestreet.com",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTmxVbEVQblVfQW5ZWEZsRXBUY0JzMEhqclV3eHJ1QzJVVl9LZGpxNUwtckw1eXFEOVVtVG9rODB4eC1MZ2VKZXI5Y01fQWxnUTBPeVNfd2Y3OGZISTZjcG5QM28zcDdHMWxnbXZtZWM3T1pMVnIxelM3UDJZYmQ2OE1oY01UUGpQT0dncDZLQ3h3NkRvX294MGlFTXhBOWp6dHZr?oc=5",
           "sentiment": "neutral",
-          "publisher": "Investopedia"
+          "publisher": "thestreet.com"
         },
         {
           "title": "Meta or Netflix: Cathie Wood Cuts Back on One Top Tech Stock While Doubling Down on Another - TipRanks",
@@ -1002,7 +1002,7 @@
       "financials": {
         "op_margin": 0.40075,
         "rev_growth": 0.262,
-        "per": 22.61542
+        "per": 22.617321
       },
       "sector": "Communication Services",
       "rvol": 0.94
@@ -1151,25 +1151,25 @@
           "publisher": "GOBankingRates"
         },
         {
-          "title": "Alphabet (NASDAQ:GOOGL) Stock Acquired Rep. Nancy Pelosi - MarketBeat",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPT3puNzIyNW1DX2wxOVdjcU82UlZHMHhaeC1rZDc0M1NqRUQ4a3FaZHVFLWNPT1VMWmtKZUhHMzM3ZmxJZzRjU2dqdDI3X2NvaUk5bDZOSUlKM0NOU2lDYlBzTWNqek51OWpNUEd6d2xyQUlEejhyQkJ0anNvQzVIV2Z5TlhodnZEUFRRRzZiZEpBeTZ0ZmZ2UHB5QkFaMmxfZ0hpNVMxY2NaQQ?oc=5",
-          "sentiment": "neutral",
-          "publisher": "MarketBeat"
+          "title": "As Nvidia Sets Up, This AI Stock Tickles New Buy Zone While Top Funds Gobble Up Shares - Investor's Business Daily",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeVFiSjdXU1diOVZsVjVxdkE0Tm5VVXV6dEp2djJIQVZQcVE0THNiaG5oRmZjc2NfTEVTcW1PWjdBZE9teWxvdFhsbmdqRTJtQy1TMHE3c1dCdU1QTmpSTlItOU5LQWR4WVdadTI5eWQtQ1NWS0ZHSUV4RVZQUDVIdWxFQ2ViLW9ZNEhIbGJBZUxoc2QyTk5PcnhXR2xrbWFqR3lWaVA5c3dNRVF2VEFrbkVKYmJCZ2ZBczRycWo1X2lrcHI1?oc=5",
+          "sentiment": "positive",
+          "publisher": "Investor's Business Daily"
         },
         {
-          "title": "Google Stock Is Up 65%: What’s Driving This Rally? - Forbes",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeERPSnk5R0luMWh2Y1g3emhueXpySnE4REhjWTdFMFlhWUxGVUd3aldRaURlN3VZS05uZF9wYTN6aUFSczl6aFUtNWJhRlVWckJmWms3QVRUeENZSmxncXRsMkRWZnpteUE0M0IyNkpkNkZjSXZrWkVyODFzU19LY0czbXBJTnF5V1F5SUFVR0FCeUNDLXlIV1Fydnc3eXNhY291S2hZTW8?oc=5",
+          "title": "Options Flow Alert: Institutional Money Loading Up on Google Stock - Barchart.com",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbUhVbmVEZUczUHJpWnpwMHM5VkVjT2tDU3E4N04zOF9sQ18yN3Q0eHZlOFpaX1N1ZWFTSzc4bUMycm1Iei1lTFF5ZDYxZTVGMjdmaHhJLU9LNWR2VXRtTHVMMGs2X1l0S1VrbmlZcTF1ejVjZWluc3lKUWtFZm9ROV9vekZacHdXLWloaVdESEl1T2hOMmsyN1BNNXdQd1JmMXA0eXF1VlFKN3p3X1hn?oc=5",
           "sentiment": "neutral",
-          "publisher": "Forbes"
+          "publisher": "Barchart.com"
         }
       ],
       "financials": {
         "op_margin": 0.30512,
         "rev_growth": 0.159,
-        "per": 29.740631
+        "per": 29.741055
       },
       "sector": "Communication Services",
-      "rvol": 0.69
+      "rvol": 0.75
     },
     {
       "id": "033780.KS",
@@ -2816,9 +2816,9 @@
     "Communication Services",
     "Technology"
   ],
-  "timestamp": "2026-01-28 23:35:10",
+  "timestamp": "2026-01-28 05:11:02",
   "notification": {
     "title": "🔔 DailyPick10 알림",
-    "body": "오늘의 미국 추천: MSFT 등 (신규 1건)"
+    "body": "오늘의 미국 추천: NVDA, MSFT 등 (순위 변동)"
   }
 }
