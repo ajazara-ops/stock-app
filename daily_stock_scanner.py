@@ -661,8 +661,32 @@ def main():
             for i, t in enumerate(us_tickers): 
                 d = analyze_stock(t, 'US', target_date=today_str)
                 if d: usc.append(d)
+            
+            # ✅ [수정] 10개 미만일 때 차순위로 강제 채우기 로직 (미국)
             usc.sort(key=lambda x: x['score'], reverse=True)
-            ust = usc[:10]
+            
+            # 1. 40점 이상인 종목들 먼저 선택
+            high_score_stocks = [s for s in usc if s['score'] >= 40]
+            
+            ust = []
+            if len(high_score_stocks) >= 10:
+                ust = high_score_stocks[:10]
+            else:
+                # 2. 부족하면 40점 미만 종목으로 채우기 (이미 usc는 점수순 정렬됨)
+                ust = high_score_stocks[:] # 40점 이상 복사
+                needed = 10 - len(ust)
+                
+                # 40점 미만인 애들 중에서 needed만큼 가져옴
+                fillers = [s for s in usc if s['score'] < 40][:needed]
+                
+                for f in fillers:
+                    f['aiReason'] = "AI 점수 우수 (매수 조건 근접) + " + f['aiReason']
+                    ust.append(f)
+            
+            # 최종 점수순 재정렬 (혹시 섞였을까봐) 및 10개 자르기
+            ust.sort(key=lambda x: x['score'], reverse=True)
+            ust = ust[:10]
+
             for i, item in enumerate(ust): item['rank'] = i + 1
             process_news_for_list(ust)
             final_stocks.extend(ust)
@@ -677,8 +701,30 @@ def main():
             for i, t in enumerate(kr): 
                 d = analyze_stock(t, 'KR', target_date=today_str)
                 if d: krc.append(d)
+            
+            # ✅ [수정] 10개 미만일 때 차순위로 강제 채우기 로직 (한국)
             krc.sort(key=lambda x: x['score'], reverse=True)
-            krt = krc[:10]
+            
+            # 1. 40점 이상인 종목들 먼저 선택
+            high_score_stocks_kr = [s for s in krc if s['score'] >= 40]
+            
+            krt = []
+            if len(high_score_stocks_kr) >= 10:
+                krt = high_score_stocks_kr[:10]
+            else:
+                # 2. 부족하면 40점 미만 종목으로 채우기
+                krt = high_score_stocks_kr[:] 
+                needed = 10 - len(krt)
+                
+                fillers_kr = [s for s in krc if s['score'] < 40][:needed]
+                
+                for f in fillers_kr:
+                    f['aiReason'] = "AI 점수 우수 (매수 조건 근접) + " + f['aiReason']
+                    krt.append(f)
+            
+            krt.sort(key=lambda x: x['score'], reverse=True)
+            krt = krt[:10]
+
             for i, item in enumerate(krt): item['rank'] = i + 1
             process_news_for_list(krt)
             final_stocks.extend(krt)
