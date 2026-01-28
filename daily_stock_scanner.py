@@ -459,8 +459,9 @@ def analyze_stock(ticker, market_type, target_date=None):
             if pbr and pbr > 0 and pbr < 1.5: score += 5; reasons.append("저PBR")
             if op_margin and op_margin > 0: score += 5; reasons.append("흑자 기업")
         
-        cutoff = 40 
-        if score < cutoff: return None
+        # ✅ [수정] 무조건 10개를 채우기 위해 점수 커트라인(40점 미만 탈락)을 제거합니다.
+        # cutoff = 40 
+        # if score < cutoff: return None
         
         name = info.get('shortName', ticker) if info else ticker
         price_val = safe_float(round(cur_p, 2))
