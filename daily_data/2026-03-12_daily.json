@@ -9,15 +9,15 @@
     },
     "KR": {
       "name": "KOSPI",
-      "current": 5609.95,
-      "change": 1.4,
-      "status": "VERY_GOOD",
-      "message": "강한 상승 🔥"
+      "current": 5583.25,
+      "change": -0.48,
+      "status": "NEUTRAL",
+      "message": "보합세 ➖"
     },
     "VIX": {
       "name": "공포지수",
-      "current": 24.23,
-      "change": -2.81,
+      "current": 25.09,
+      "change": 3.55,
       "status": "BAD",
       "message": "공포 구간 😨"
     }
@@ -1664,846 +1664,20 @@
       "rvol": 0.84
     },
     {
-      "id": "140410.KQ",
-      "rank": 1,
-      "symbol": "140410",
-      "name": "Mezzion Pharma",
-      "market": "KR",
-      "currentPrice": 120300.0,
-      "changePercent": -6.67,
-      "buyZoneTop": 122706.0,
-      "buyZoneBottom": 117894.0,
-      "targetPrice": 132330.0,
-      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세",
-      "score": 95,
-      "rsi": 35.92,
-      "history": [
-        {
-          "time": "02-06",
-          "price": 139000.0,
-          "bb_upper": 192855.32,
-          "bb_lower": 61604.68
-        },
-        {
-          "time": "02-09",
-          "price": 147400.0,
-          "bb_upper": 193983.37,
-          "bb_lower": 66066.63
-        },
-        {
-          "time": "02-10",
-          "price": 151700.0,
-          "bb_upper": 195048.43,
-          "bb_lower": 70961.57
-        },
-        {
-          "time": "02-11",
-          "price": 144800.0,
-          "bb_upper": 194648.01,
-          "bb_lower": 76751.99
-        },
-        {
-          "time": "02-12",
-          "price": 148900.0,
-          "bb_upper": 193684.28,
-          "bb_lower": 83645.72
-        },
-        {
-          "time": "02-13",
-          "price": 145300.0,
-          "bb_upper": 191317.11,
-          "bb_lower": 91642.89
-        },
-        {
-          "time": "02-19",
-          "price": 149000.0,
-          "bb_upper": 188240.72,
-          "bb_lower": 100519.28
-        },
-        {
-          "time": "02-20",
-          "price": 141100.0,
-          "bb_upper": 184279.39,
-          "bb_lower": 108960.61
-        },
-        {
-          "time": "02-23",
-          "price": 134900.0,
-          "bb_upper": 179808.72,
-          "bb_lower": 116851.28
-        },
-        {
-          "time": "02-24",
-          "price": 132700.0,
-          "bb_upper": 175983.43,
-          "bb_lower": 123116.57
-        },
-        {
-          "time": "02-25",
-          "price": 130000.0,
-          "bb_upper": 174008.51,
-          "bb_lower": 126281.49
-        },
-        {
-          "time": "02-26",
-          "price": 133300.0,
-          "bb_upper": 174128.06,
-          "bb_lower": 124191.94
-        },
-        {
-          "time": "02-27",
-          "price": 141500.0,
-          "bb_upper": 173618.46,
-          "bb_lower": 123451.54
-        },
-        {
-          "time": "03-03",
-          "price": 132600.0,
-          "bb_upper": 170881.9,
-          "bb_lower": 122578.1
-        },
-        {
-          "time": "03-04",
-          "price": 115700.0,
-          "bb_upper": 168574.82,
-          "bb_lower": 119185.18
-        },
-        {
-          "time": "03-05",
-          "price": 128600.0,
-          "bb_upper": 163312.98,
-          "bb_lower": 120067.02
-        },
-        {
-          "time": "03-06",
-          "price": 125100.0,
-          "bb_upper": 161470.85,
-          "bb_lower": 118629.15
-        },
-        {
-          "time": "03-09",
-          "price": 127000.0,
-          "bb_upper": 159183.18,
-          "bb_lower": 117926.82
-        },
-        {
-          "time": "03-10",
-          "price": 128900.0,
-          "bb_upper": 157073.15,
-          "bb_lower": 117556.85
-        },
-        {
-          "time": "03-11",
-          "price": 120300.0,
-          "bb_upper": 156261.9,
-          "bb_lower": 115518.1
-        }
-      ],
-      "news": [
-        {
-          "title": "메지온, +1.20% VI 발동 - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSjlPc042QlNyYlBaeTNOVDNDMWY5V1RwemUwWEtRSWFXZ2p1Q29zUXFsbmIyVFNtZ3Z6cU5LWHZCendEa1g3NzduSUlFanNTcmZQS0J2b0JldW9uQ2FqZ3ptMENjbWRBOVFaaVdFc3NJTFJ6bG1uVHN2bFlXb1dPb0hKc9IBlwFBVV95cUxOeDRzamdZUGxlaXFCWVdqNjJ1bVdXYzRFR0trT1lxc1RnaGNtY09zVlhvRXpwcWV4Ni0wVDduWFpwQU0ydWNCbVhrWTAyTXhqSXB2WjNOOE4xTXhyblladFplWUl1cUtQQm1CZ0pka19obDhYa0pJd0NTVkpISm9QVTZkejNfMEVnRklrQmR0ejV6c0RtSXJV?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Chosunbiz"
-        },
-        {
-          "title": "최범진 기타비상무이사, 메지온 주식 보유 보고 의무 해제 - 디지털투데이",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8zT3ducG56Q1dITjBwTUtiMG9KbUtJa3lJUEVsX3BCN0hGcnRsV01KdGVUaVFrT1p3aXBrMzhFOXl2NHpyTWRoaVVZMmpmZWhLVDBzWG14b0lYQlRiU2F5eUg4VVlaT2FVLTNWMWlrZUJBMGs?oc=5",
-          "sentiment": "neutral",
-          "publisher": "디지털투데이"
-        },
-        {
-          "title": "시총 1조원 메지온, 폰탄치료제 기대감이 지속되는 까닭 - 팜이데일리",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9zdEs3SW1ySjVXY2J2eF9DVy1iR3Rnc3pSczFGMFVEZDJKWk0tNkZHazRmRWZnd3R0clFnazVwbE11LTg5Wkh1SnducnBuY2E0TkVyeHBHZ24tUzFFYW12eTdvM0pQcUx5dVU5SXl3?oc=5",
-          "sentiment": "neutral",
-          "publisher": "팜이데일리"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.0,
-        "rev_growth": 0.0,
-        "per": 0.0
-      },
-      "sector": "기타",
-      "rvol": 1.04
-    },
-    {
-      "id": "033780.KS",
-      "rank": 2,
-      "symbol": "033780",
-      "name": "KT&G",
-      "market": "KR",
-      "currentPrice": 154600.0,
-      "changePercent": 0.0,
-      "buyZoneTop": 157692.0,
-      "buyZoneBottom": 151508.0,
-      "targetPrice": 170060.0,
-      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 장기 상승 추세 + 적정 PER + 흑자 기업",
-      "score": 90,
-      "rsi": 33.78,
-      "history": [
-        {
-          "time": "02-06",
-          "price": 159119.81,
-          "bb_upper": 158992.06,
-          "bb_lower": 130317.56
-        },
-        {
-          "time": "02-09",
-          "price": 164186.7,
-          "bb_upper": 162452.38,
-          "bb_lower": 129273.77
-        },
-        {
-          "time": "02-10",
-          "price": 167597.11,
-          "bb_upper": 166148.96,
-          "bb_lower": 128471.16
-        },
-        {
-          "time": "02-11",
-          "price": 166915.03,
-          "bb_upper": 169096.79,
-          "bb_lower": 128154.21
-        },
-        {
-          "time": "02-12",
-          "price": 167791.98,
-          "bb_upper": 171755.89,
-          "bb_lower": 128272.16
-        },
-        {
-          "time": "02-13",
-          "price": 169351.03,
-          "bb_upper": 174228.2,
-          "bb_lower": 128869.22
-        },
-        {
-          "time": "02-19",
-          "price": 170617.75,
-          "bb_upper": 176662.26,
-          "bb_lower": 129387.59
-        },
-        {
-          "time": "02-20",
-          "price": 172566.55,
-          "bb_upper": 179138.23,
-          "bb_lower": 129942.01
-        },
-        {
-          "time": "02-23",
-          "price": 171981.91,
-          "bb_upper": 180941.83,
-          "bb_lower": 131305.21
-        },
-        {
-          "time": "02-24",
-          "price": 168961.27,
-          "bb_upper": 181833.17,
-          "bb_lower": 133278.62
-        },
-        {
-          "time": "02-25",
-          "price": 175100.0,
-          "bb_upper": 183452.58,
-          "bb_lower": 135050.13
-        },
-        {
-          "time": "02-26",
-          "price": 169700.0,
-          "bb_upper": 183323.84,
-          "bb_lower": 138312.36
-        },
-        {
-          "time": "02-27",
-          "price": 163100.0,
-          "bb_upper": 182426.93,
-          "bb_lower": 141409.94
-        },
-        {
-          "time": "03-03",
-          "price": 162300.0,
-          "bb_upper": 180721.64,
-          "bb_lower": 145362.56
-        },
-        {
-          "time": "03-04",
-          "price": 151600.0,
-          "bb_upper": 179174.16,
-          "bb_lower": 147882.75
-        },
-        {
-          "time": "03-05",
-          "price": 156600.0,
-          "bb_upper": 178546.28,
-          "bb_lower": 149174.59
-        },
-        {
-          "time": "03-06",
-          "price": 154700.0,
-          "bb_upper": 178091.74,
-          "bb_lower": 150025.13
-        },
-        {
-          "time": "03-09",
-          "price": 153600.0,
-          "bb_upper": 178098.45,
-          "bb_lower": 150012.1
-        },
-        {
-          "time": "03-10",
-          "price": 154600.0,
-          "bb_upper": 178300.93,
-          "bb_lower": 149503.8
-        },
-        {
-          "time": "03-11",
-          "price": 154600.0,
-          "bb_upper": 178488.17,
-          "bb_lower": 149010.75
-        }
-      ],
-      "news": [
-        {
-          "title": "AI주식상승확률분석 : KT&G(033780) 주가 전망과 상승확률 분석 - Investing.com 한국어",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE12ZmRDbU1xTTNsREgyYlRvNFBiSFNKLVRyQ1M3eWs5WFVRRnYwTUppaWNGOTVOLXVnNFdPbi1MR253N05sZHlaUGV3Mkotb2I4X3BWNnNjNHk1ODJlOWFwVA?oc=5",
-          "sentiment": "positive",
-          "publisher": "Investing.com 한국어"
-        },
-        {
-          "title": "KT&G(033780) 4Q25 _ 재미없는 주식이 가장 무섭다, 가격을 올려도 흔들리지 않는 물량 - 네이버 프리미엄콘텐츠",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNlJZaGp5LXp6OGdvQTlhX25fSnVhRTF6Y2NBVThjT0NBajlKRkZnSjhHVXRnVU5KNFl3dnRUT1F6TUQtc3otNWxqbEZXOTBrRGhzclcybERDU1k1bEhia3RLQzFDWjBzQ2RJN0x5SU9iZlp4bE5HbXozaXFjbl91YzN2VjNLR3MtemhPU2x5cTA?oc=5",
-          "sentiment": "neutral",
-          "publisher": "네이버 프리미엄콘텐츠"
-        },
-        {
-          "title": "[공시속보] 케이티앤지, 주식소각 진행→보통주 수 감소 - 톱스타뉴스",
-          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5wVzgzNHdGcWNOeFlaRDZqM0FsRXJ1Si13ZlJudmxLcG0tM0J3UFBQT2JibWFFVUFiZ0luc2M5WHA4SDZYQ0hrcVZ0a0JCLXRIQlljRnNQZHNRN05GNm1qcVhsYTZQeXRwcmNYNERtak1Ldw?oc=5",
-          "sentiment": "negative",
-          "publisher": "톱스타뉴스"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.25469,
-        "rev_growth": 0.116,
-        "per": 12.395797
-      },
-      "sector": "Consumer Defensive",
-      "rvol": 0.82
-    },
-    {
-      "id": "041510.KQ",
-      "rank": 3,
-      "symbol": "041510",
-      "name": "SME",
-      "market": "KR",
-      "currentPrice": 98700.0,
-      "changePercent": -4.27,
-      "buyZoneTop": 100674.0,
-      "buyZoneBottom": 96726.0,
-      "targetPrice": 108570.0,
-      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 스토캐스틱 과매도 + 적정 PER + 흑자 기업",
-      "score": 75,
-      "rsi": 31.16,
-      "history": [
-        {
-          "time": "02-06",
-          "price": 105400.0,
-          "bb_upper": 120404.29,
-          "bb_lower": 103625.71
-        },
-        {
-          "time": "02-09",
-          "price": 114300.0,
-          "bb_upper": 120197.86,
-          "bb_lower": 103672.14
-        },
-        {
-          "time": "02-10",
-          "price": 114400.0,
-          "bb_upper": 120250.87,
-          "bb_lower": 103669.13
-        },
-        {
-          "time": "02-11",
-          "price": 120200.0,
-          "bb_upper": 121408.33,
-          "bb_lower": 103261.67
-        },
-        {
-          "time": "02-12",
-          "price": 120400.0,
-          "bb_upper": 122475.22,
-          "bb_lower": 102944.78
-        },
-        {
-          "time": "02-13",
-          "price": 116600.0,
-          "bb_upper": 122840.41,
-          "bb_lower": 103009.59
-        },
-        {
-          "time": "02-19",
-          "price": 119300.0,
-          "bb_upper": 123501.75,
-          "bb_lower": 102878.25
-        },
-        {
-          "time": "02-20",
-          "price": 114700.0,
-          "bb_upper": 123588.69,
-          "bb_lower": 102921.31
-        },
-        {
-          "time": "02-23",
-          "price": 115800.0,
-          "bb_upper": 123776.26,
-          "bb_lower": 103433.74
-        },
-        {
-          "time": "02-24",
-          "price": 114800.0,
-          "bb_upper": 123783.92,
-          "bb_lower": 104096.08
-        },
-        {
-          "time": "02-25",
-          "price": 114000.0,
-          "bb_upper": 123773.88,
-          "bb_lower": 104576.12
-        },
-        {
-          "time": "02-26",
-          "price": 114300.0,
-          "bb_upper": 123547.09,
-          "bb_lower": 104532.91
-        },
-        {
-          "time": "02-27",
-          "price": 115500.0,
-          "bb_upper": 123639.54,
-          "bb_lower": 104580.46
-        },
-        {
-          "time": "03-03",
-          "price": 106700.0,
-          "bb_upper": 123421.91,
-          "bb_lower": 103658.09
-        },
-        {
-          "time": "03-04",
-          "price": 95900.0,
-          "bb_upper": 124634.3,
-          "bb_lower": 100105.7
-        },
-        {
-          "time": "03-05",
-          "price": 98600.0,
-          "bb_upper": 125078.31,
-          "bb_lower": 97921.69
-        },
-        {
-          "time": "03-06",
-          "price": 104700.0,
-          "bb_upper": 125129.02,
-          "bb_lower": 97760.98
-        },
-        {
-          "time": "03-09",
-          "price": 102400.0,
-          "bb_upper": 125359.27,
-          "bb_lower": 96900.73
-        },
-        {
-          "time": "03-10",
-          "price": 103100.0,
-          "bb_upper": 125499.97,
-          "bb_lower": 96230.03
-        },
-        {
-          "time": "03-11",
-          "price": 98700.0,
-          "bb_upper": 125987.22,
-          "bb_lower": 94992.78
-        }
-      ],
-      "news": [
-        {
-          "title": "에스엠 주가(041510), 팬덤 규모나 확장세에는 의심의 여지가 없다 : 네이버 블로그 - Naver Blog",
-          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5RQmNETmR3ZEx1TFJ6ekR6UEYtQ3F2QXRvRHhhQ3V2ZmFUUnQ3TzIwcGpEeFdlZFBRU2FJQnpmR09HcXJYeHhUMnRSU1VkN2wzazVOMFh1TDRmSnlmb0FuR1NESXZMaTQ?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Naver Blog"
-        },
-        {
-          "title": "[특징주] 김범수 1심 무죄에 카카오 오름세 - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdzRYTmp5aTN2dU8zTXBtZlVIXzFUTm9GV0hoQTVwbzJwSUd1TmRuaE5KcnlkYXdQcDVCQ0FzUWpJWU5LUk5OWTJVN1BVNmY1ZzZ1T2poS2Y2a2xOVEN4YUhPSEFiYXZxaHgzZi1yVHJPZjUzMGRXRERYbWtvVlZmMXhoc1gyYUtu0gGcAUFVX3lxTE1XOGhjeHBiMWpySjJHcDczNlFXaV9Qd0VjcmlVQ0xXS1lOQzFWLThTdzc0eDViaFF3dGptQUMwLVNYeDFrbktZeExaT2dBVmZNNDJyZi1FZzhoMHR2ckozM2pPVFN1aWZyelpKdXRRb3JxWFhDSWtFeEg0RXhkSktzTmsxYXFIZ2F0OEJWV2duVVMtYmN5TnlOdGtRZA?oc=5",
-          "sentiment": "neutral",
-          "publisher": "Chosunbiz"
-        },
-        {
-          "title": "원아시아 최대 출자자 고려아연 \"SM엔터 시세조종과 무관\" - 마켓인",
-          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE55Q3preEJ3M1ZhbTBJWEJjaHpTSFl0Z0V0U0hHWmFKNEhDQzFBdktQSmF4RWJMb0ZBbmRDcDNFVXI1MGtSUmhFUjk3MThLLVNXTk9ZeWJoRFRVcHJ2Q2F2MGlxbG1fUTJPaW1GdFRMNFBqdw?oc=5",
-          "sentiment": "neutral",
-          "publisher": "마켓인"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.14784999,
-        "rev_growth": 0.328,
-        "per": 13.813414
-      },
-      "sector": "Communication Services",
-      "rvol": 1.13
-    },
-    {
-      "id": "196170.KQ",
-      "rank": 4,
-      "symbol": "196170",
-      "name": "Alteogen",
-      "market": "KR",
-      "currentPrice": 360000.0,
-      "changePercent": -4.13,
-      "buyZoneTop": 367200.0,
-      "buyZoneBottom": 352800.0,
-      "targetPrice": 396000.0,
-      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 거래량 증가 + 흑자 기업",
-      "score": 65,
-      "rsi": 44.61,
-      "history": [
-        {
-          "time": "02-06",
-          "price": 361000.0,
-          "bb_upper": 521702.07,
-          "bb_lower": 332097.93
-        },
-        {
-          "time": "02-09",
-          "price": 386000.0,
-          "bb_upper": 516009.34,
-          "bb_lower": 328840.66
-        },
-        {
-          "time": "02-10",
-          "price": 378000.0,
-          "bb_upper": 509268.99,
-          "bb_lower": 325631.01
-        },
-        {
-          "time": "02-11",
-          "price": 385000.0,
-          "bb_upper": 503153.94,
-          "bb_lower": 323546.06
-        },
-        {
-          "time": "02-12",
-          "price": 390000.0,
-          "bb_upper": 495485.97,
-          "bb_lower": 323164.03
-        },
-        {
-          "time": "02-13",
-          "price": 382000.0,
-          "bb_upper": 472523.85,
-          "bb_lower": 332526.15
-        },
-        {
-          "time": "02-19",
-          "price": 411500.0,
-          "bb_upper": 453091.85,
-          "bb_lower": 343508.15
-        },
-        {
-          "time": "02-20",
-          "price": 402000.0,
-          "bb_upper": 433073.17,
-          "bb_lower": 355626.83
-        },
-        {
-          "time": "02-23",
-          "price": 406000.0,
-          "bb_upper": 433729.71,
-          "bb_lower": 358220.29
-        },
-        {
-          "time": "02-24",
-          "price": 408000.0,
-          "bb_upper": 433911.35,
-          "bb_lower": 361838.65
-        },
-        {
-          "time": "02-25",
-          "price": 402000.0,
-          "bb_upper": 434339.7,
-          "bb_lower": 362860.3
-        },
-        {
-          "time": "02-26",
-          "price": 403000.0,
-          "bb_upper": 434083.96,
-          "bb_lower": 362816.04
-        },
-        {
-          "time": "02-27",
-          "price": 407500.0,
-          "bb_upper": 434031.44,
-          "bb_lower": 362818.56
-        },
-        {
-          "time": "03-03",
-          "price": 383000.0,
-          "bb_upper": 427571.16,
-          "bb_lower": 364078.84
-        },
-        {
-          "time": "03-04",
-          "price": 332000.0,
-          "bb_upper": 429892.29,
-          "bb_lower": 351957.71
-        },
-        {
-          "time": "03-05",
-          "price": 372000.0,
-          "bb_upper": 427262.05,
-          "bb_lower": 350487.95
-        },
-        {
-          "time": "03-06",
-          "price": 373000.0,
-          "bb_upper": 426766.62,
-          "bb_lower": 348883.38
-        },
-        {
-          "time": "03-09",
-          "price": 366500.0,
-          "bb_upper": 425366.03,
-          "bb_lower": 346633.97
-        },
-        {
-          "time": "03-10",
-          "price": 375500.0,
-          "bb_upper": 424418.39,
-          "bb_lower": 345631.61
-        },
-        {
-          "time": "03-11",
-          "price": 360000.0,
-          "bb_upper": 425010.73,
-          "bb_lower": 343389.27
-        }
-      ],
-      "news": [
-        {
-          "title": "\"조 단위 계약 기대했는데\" 알테오젠, 16% 급락…바이오株 '와르르'[핫종목] - 뉴스1",
-          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE03Qnp0WVhwMlVRbmpad1JKSXpVZDBNU1lrdm04dVFxU2FtZ0t6V2lEUzZTNllIMjd2Tkh5N0gtS0ozZjA0VWgzeVBLMTE5UmgxTGk5eGJPWDRJU1VqbExJ?oc=5",
-          "sentiment": "negative",
-          "publisher": "뉴스1"
-        },
-        {
-          "title": "[심층 분석] 알테오젠 주가 급락의 본질…마일스톤·로열티가 만든 ‘신약 가치 착시’ - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcGtRU1JQT1pJVDVEeFd3cHpwUnEzdUhiOFAyZzRjZHpuUjFNZHg4blY3YzBmUzk5LTc4cUdPVFhKRGQ4R2F3R1hETm44clVkNllKUWFsWXRWX2pmcWJoMkNTczhDVlhHYWNYYXNsSDNrLVZOTmI5Y0w2YnNnQ3hMVE9CaTZRM0XSAZsBQVVfeXFMT1RHRVVEdVpHZmRnME9UNVcxajJaZEZNRmU5SmdseHpQa3c3M1IteWJIUkNOLVpzMmoxTzNqSVNpSkN4ZmlVNlZKU1M0Y0JDbWkzc2JyY1BicjlCR2VEV242cUpNWF9NcXQ1OHlaLWlEdEpraTZjbmJxTV8zMXprRFZvTUVyaTVyc0I5b25oV1dQdkhsS25wb2xBeTA?oc=5",
-          "sentiment": "negative",
-          "publisher": "Chosunbiz"
-        },
-        {
-          "title": "AI주식상승확률분석 : 알테오젠(196170) 주가 전망과 상승확률 분석 - Investing.com 한국어",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1kcVRZWVBya0RMUG5sLUljUnM3azN1UVRDMXhaOWQ1M1NZaVQxTmhLbFFlLXBrT3M2Q2RMNXhyNi0zc2pYa1c1RmZlcU45ZmVOMl8ydHRxRm5RUHBVVVVFWQ?oc=5",
-          "sentiment": "positive",
-          "publisher": "Investing.com 한국어"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.54416,
-        "rev_growth": 9.023,
-        "per": 35.497498
-      },
-      "sector": "Healthcare",
-      "rvol": 1.29
-    },
-    {
-      "id": "010140.KS",
-      "rank": 5,
-      "symbol": "010140",
-      "name": "SamsungHvyInd",
-      "market": "KR",
-      "currentPrice": 28800.0,
-      "changePercent": 3.41,
-      "buyZoneTop": 29376.0,
-      "buyZoneBottom": 28224.0,
-      "targetPrice": 31680.0,
-      "aiReason": "눌림목 구간 + 60일선 지지 + 거래량 폭발(1.7배) + 장기 상승 추세 + 적정 PER + 흑자 기업",
-      "score": 65,
-      "rsi": 53.67,
-      "history": [
-        {
-          "time": "02-06",
-          "price": 27500.0,
-          "bb_upper": 31825.75,
-          "bb_lower": 27139.25
-        },
-        {
-          "time": "02-09",
-          "price": 27950.0,
-          "bb_upper": 31841.26,
-          "bb_lower": 27103.74
-        },
-        {
-          "time": "02-10",
-          "price": 27850.0,
-          "bb_upper": 31886.31,
-          "bb_lower": 26948.69
-        },
-        {
-          "time": "02-11",
-          "price": 28000.0,
-          "bb_upper": 31905.36,
-          "bb_lower": 26894.64
-        },
-        {
-          "time": "02-12",
-          "price": 28150.0,
-          "bb_upper": 31838.75,
-          "bb_lower": 26761.25
-        },
-        {
-          "time": "02-13",
-          "price": 27700.0,
-          "bb_upper": 31823.78,
-          "bb_lower": 26571.22
-        },
-        {
-          "time": "02-19",
-          "price": 28900.0,
-          "bb_upper": 31361.53,
-          "bb_lower": 26738.47
-        },
-        {
-          "time": "02-20",
-          "price": 29500.0,
-          "bb_upper": 31146.87,
-          "bb_lower": 26818.13
-        },
-        {
-          "time": "02-23",
-          "price": 29250.0,
-          "bb_upper": 30958.21,
-          "bb_lower": 26876.79
-        },
-        {
-          "time": "02-24",
-          "price": 29000.0,
-          "bb_upper": 30826.89,
-          "bb_lower": 26898.11
-        },
-        {
-          "time": "02-25",
-          "price": 28950.0,
-          "bb_upper": 30617.74,
-          "bb_lower": 26962.26
-        },
-        {
-          "time": "02-26",
-          "price": 28700.0,
-          "bb_upper": 30481.51,
-          "bb_lower": 26978.49
-        },
-        {
-          "time": "02-27",
-          "price": 28950.0,
-          "bb_upper": 30256.2,
-          "bb_lower": 27068.8
-        },
-        {
-          "time": "03-03",
-          "price": 28000.0,
-          "bb_upper": 29995.99,
-          "bb_lower": 27109.01
-        },
-        {
-          "time": "03-04",
-          "price": 23500.0,
-          "bb_upper": 30828.35,
-          "bb_lower": 25646.65
-        },
-        {
-          "time": "03-05",
-          "price": 27200.0,
-          "bb_upper": 30689.43,
-          "bb_lower": 25560.57
-        },
-        {
-          "time": "03-06",
-          "price": 27600.0,
-          "bb_upper": 30689.07,
-          "bb_lower": 25580.93
-        },
-        {
-          "time": "03-09",
-          "price": 28550.0,
-          "bb_upper": 30680.21,
-          "bb_lower": 25579.79
-        },
-        {
-          "time": "03-10",
-          "price": 27850.0,
-          "bb_upper": 30557.07,
-          "bb_lower": 25562.93
-        },
-        {
-          "time": "03-11",
-          "price": 28800.0,
-          "bb_upper": 30613.96,
-          "bb_lower": 25576.04
-        }
-      ],
-      "news": [
-        {
-          "title": "[MK시그널] 삼성중공업, 글로벌 LNG 공급망 재편 최대 수혜 전망 등에 주가 상승세... MK시그널 추천 후 상승률 11.55% 기록 - 매일경제 마켓",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WRVNWbXMxSzAtWEp6Q09GUlhBUlhTQ21MQjl6VS1UZjZnbVhOUnVxdHpzVjZuQVpMcmFDSzBhTjk5dmVuM2gwREVFYk5XYllaYmc?oc=5",
-          "sentiment": "positive",
-          "publisher": "매일경제 마켓"
-        },
-        {
-          "title": "삼성중공업, 주가 6% 급등세...연속이 중요한 국면 - CBC뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5rRWhVcDZmNTZTME91WmU0X21YcmxSSm9lY0JyYTlzS1ZNOERVSDdiQmN2MWlLQ19XRk1mOFJjQnlYUnd5ODdTeUtrbE5SZHJwOTBhMmtvLUZycUM5dEVVb0tiNFc2c0Fk?oc=5",
-          "sentiment": "positive",
-          "publisher": "CBC뉴스"
-        },
-        {
-          "title": "AI주식상승확률분석 : 삼성중공업(010140) 주가 전망과 상승확률 분석 - Investing.com 한국어",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Xc20zd2t3WmlMaFd0UWlzVjlJTkZzM0pMYU9zaWNPVFN1MllXUXBhcmlzSlVMU0NpUURUQUgxR1dWUGhvdTVYWDhTaWRLbnVYcnc0VGNia1U5ZGV4NlBKTw?oc=5",
-          "sentiment": "positive",
-          "publisher": "Investing.com 한국어"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.09036,
-        "rev_growth": 0.134,
-        "per": 15.952692
-      },
-      "sector": "Industrials",
-      "rvol": 1.73
-    },
-    {
       "id": "145020.KQ",
-      "rank": 6,
+      "rank": 1,
       "symbol": "145020",
       "name": "Hugel",
       "market": "KR",
-      "currentPrice": 248000.0,
-      "changePercent": -2.75,
-      "buyZoneTop": 252960.0,
-      "buyZoneBottom": 243040.0,
-      "targetPrice": 272800.0,
-      "aiReason": "눌림목 구간 + 볼린저밴드 하단 근접 + 60일선 지지 + 적정 PER + 흑자 기업",
-      "score": 65,
-      "rsi": 47.96,
+      "currentPrice": 244500.0,
+      "changePercent": -1.41,
+      "buyZoneTop": 249390.0,
+      "buyZoneBottom": 239610.0,
+      "targetPrice": 268950.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 거래량 증가 + 적정 PER + 흑자 기업",
+      "score": 90,
+      "rsi": 39.75,
       "history": [
-        {
-          "time": "02-06",
-          "price": 243500.0,
-          "bb_upper": 296463.66,
-          "bb_lower": 213086.34
-        },
         {
           "time": "02-09",
           "price": 248500.0,
@@ -2617,9 +1791,21 @@
           "price": 248000.0,
           "bb_upper": 281117.37,
           "bb_lower": 236332.63
+        },
+        {
+          "time": "03-12",
+          "price": 244500.0,
+          "bb_upper": 281028.27,
+          "bb_lower": 236521.73
         }
       ],
       "news": [
+        {
+          "title": "휴온스글로벌, +4.59% 상승폭 확대 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTmhzTFZHX3ZLTFczZnplODdOZHludjBETHhoaVVhMkVvMExMZXZRLXZoQWdCejhyeFo5bW02UlBYRGVrREp4Y2lfTkROQU53elVaWVZNbC1WdzNneFhQbG53WkFRUlpXaGFja1VKUFF2QzB3M3JUVU1aRVB2bmlQRW1tTdIBlwFBVV95cUxQNW5tS2txenBDNkpPOF9rQ2k1N29fUVJmdkNaX2dzQU9Ga2lvZXFLdThiMkp1b3k0ellmSmpfMmZndmRPTnU2VDFZa2ZvQWdnX2QybEZrMkJQX053MS1KNWVNREZqa0Zhbi1sdGIybFZvbEtaNmR3N2d1SmRNQkVrX2ltcE1hM1p0cENPemMwb1dkWVd2RTZv?oc=5",
+          "sentiment": "positive",
+          "publisher": "Chosunbiz"
+        },
         {
           "title": "[특징주] 휴젤(145020), 자사주 추가 소각…EPS·주가 상승 주목 - 인천일보",
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBSM2VFMFZvWENObndQZVZ3MzBYZlFod2FEOE01a2Y1RlAzaHIwUnN3MU5uaUd6Z3N5SGZmV2o0ZlBDYXAtZnJtQmNqYXpSSTdITV9Jay0zUnIyRFplNnpwMnlYXzBJVlhBcXVaeW9nbUk?oc=5",
@@ -2631,43 +1817,1179 @@
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MQWRsVW1qWnY1UmViaDduTlc1ZjdndC0xUGU5XzJpemNPTmVMZEIzYzAwaGxGZXA4MThJdHZMYnp1RW1mV3ZZMlhiRWd3NzQ?oc=5",
           "sentiment": "neutral",
           "publisher": "sedaily.com"
-        },
-        {
-          "title": "휴젤, +4.23% 상승폭 확대 - 조선비즈 - Chosunbiz",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPV3NPVGdXaXhTSG84RktMQjY2VkhlRDFXRVF1Tlh5UHBRLUxTUnlBNy1tODhMTHhHaVpPVTdpYnlTM1pyQlhVTE9OX3A0b2JOZXhFZk1STnpMcnNxazROVWQ4bjRENW50TEZTLWd5SExVdVI2RjJYSTdVZkJpeDNBTzNlY9IBlwFBVV95cUxQMGZabEdscmZkcEVfbnZiX0Q1X0stY1Y3UnJHNDljQkRHajY0bEZ0X2ZhamM3ckxwMUdBOE9Tb2lOc1dQak5sNmtoLXhLR3g1SmJKdms5ZFAwVWVTNnhNaW80c2huZGRqN05Jcm5aZlNBTHNLU3o2aDFvampoNnZYLXU0R2dwalNJdU11aVlMaklWM3pEelI0?oc=5",
-          "sentiment": "positive",
-          "publisher": "Chosunbiz"
         }
       ],
       "financials": {
         "op_margin": 0.49202,
         "rev_growth": 0.213,
-        "per": 14.360063
+        "per": 14.157401
       },
       "sector": "Healthcare",
-      "rvol": 0.77
+      "rvol": 1.39
+    },
+    {
+      "id": "033780.KS",
+      "rank": 2,
+      "symbol": "033780",
+      "name": "KT&G",
+      "market": "KR",
+      "currentPrice": 155600.0,
+      "changePercent": 0.65,
+      "buyZoneTop": 158712.0,
+      "buyZoneBottom": 152488.0,
+      "targetPrice": 171160.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 60일선 지지 + 장기 상승 추세 + 적정 PER + 흑자 기업",
+      "score": 90,
+      "rsi": 33.38,
+      "history": [
+        {
+          "time": "02-09",
+          "price": 164186.7,
+          "bb_upper": 162452.38,
+          "bb_lower": 129273.77
+        },
+        {
+          "time": "02-10",
+          "price": 167597.11,
+          "bb_upper": 166148.96,
+          "bb_lower": 128471.16
+        },
+        {
+          "time": "02-11",
+          "price": 166915.03,
+          "bb_upper": 169096.79,
+          "bb_lower": 128154.21
+        },
+        {
+          "time": "02-12",
+          "price": 167791.98,
+          "bb_upper": 171755.89,
+          "bb_lower": 128272.16
+        },
+        {
+          "time": "02-13",
+          "price": 169351.03,
+          "bb_upper": 174228.2,
+          "bb_lower": 128869.22
+        },
+        {
+          "time": "02-19",
+          "price": 170617.75,
+          "bb_upper": 176662.26,
+          "bb_lower": 129387.59
+        },
+        {
+          "time": "02-20",
+          "price": 172566.55,
+          "bb_upper": 179138.23,
+          "bb_lower": 129942.01
+        },
+        {
+          "time": "02-23",
+          "price": 171981.91,
+          "bb_upper": 180941.83,
+          "bb_lower": 131305.21
+        },
+        {
+          "time": "02-24",
+          "price": 168961.27,
+          "bb_upper": 181833.17,
+          "bb_lower": 133278.62
+        },
+        {
+          "time": "02-25",
+          "price": 175100.0,
+          "bb_upper": 183452.58,
+          "bb_lower": 135050.13
+        },
+        {
+          "time": "02-26",
+          "price": 169700.0,
+          "bb_upper": 183323.84,
+          "bb_lower": 138312.36
+        },
+        {
+          "time": "02-27",
+          "price": 163100.0,
+          "bb_upper": 182426.93,
+          "bb_lower": 141409.94
+        },
+        {
+          "time": "03-03",
+          "price": 162300.0,
+          "bb_upper": 180721.64,
+          "bb_lower": 145362.56
+        },
+        {
+          "time": "03-04",
+          "price": 151600.0,
+          "bb_upper": 179174.16,
+          "bb_lower": 147882.75
+        },
+        {
+          "time": "03-05",
+          "price": 156600.0,
+          "bb_upper": 178546.28,
+          "bb_lower": 149174.59
+        },
+        {
+          "time": "03-06",
+          "price": 154700.0,
+          "bb_upper": 178091.74,
+          "bb_lower": 150025.13
+        },
+        {
+          "time": "03-09",
+          "price": 153600.0,
+          "bb_upper": 178098.45,
+          "bb_lower": 150012.1
+        },
+        {
+          "time": "03-10",
+          "price": 154600.0,
+          "bb_upper": 178300.93,
+          "bb_lower": 149503.8
+        },
+        {
+          "time": "03-11",
+          "price": 154600.0,
+          "bb_upper": 178488.17,
+          "bb_lower": 149010.75
+        },
+        {
+          "time": "03-12",
+          "price": 155600.0,
+          "bb_upper": 178625.66,
+          "bb_lower": 148521.27
+        }
+      ],
+      "news": [
+        {
+          "title": "AI주식상승확률분석 : KT&G(033780) 주가 전망과 상승확률 분석 - Investing.com 한국어",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE12ZmRDbU1xTTNsREgyYlRvNFBiSFNKLVRyQ1M3eWs5WFVRRnYwTUppaWNGOTVOLXVnNFdPbi1MR253N05sZHlaUGV3Mkotb2I4X3BWNnNjNHk1ODJlOWFwVA?oc=5",
+          "sentiment": "positive",
+          "publisher": "Investing.com 한국어"
+        },
+        {
+          "title": "KT&G(033780) 4Q25 _ 재미없는 주식이 가장 무섭다, 가격을 올려도 흔들리지 않는 물량 - 네이버 프리미엄콘텐츠",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNlJZaGp5LXp6OGdvQTlhX25fSnVhRTF6Y2NBVThjT0NBajlKRkZnSjhHVXRnVU5KNFl3dnRUT1F6TUQtc3otNWxqbEZXOTBrRGhzclcybERDU1k1bEhia3RLQzFDWjBzQ2RJN0x5SU9iZlp4bE5HbXozaXFjbl91YzN2VjNLR3MtemhPU2x5cTA?oc=5",
+          "sentiment": "neutral",
+          "publisher": "네이버 프리미엄콘텐츠"
+        },
+        {
+          "title": "[공시속보] 케이티앤지, 주식소각 진행→보통주 수 감소 - 톱스타뉴스",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5wVzgzNHdGcWNOeFlaRDZqM0FsRXJ1Si13ZlJudmxLcG0tM0J3UFBQT2JibWFFVUFiZ0luc2M5WHA4SDZYQ0hrcVZ0a0JCLXRIQlljRnNQZHNRN05GNm1qcVhsYTZQeXRwcmNYNERtak1Ldw?oc=5",
+          "sentiment": "negative",
+          "publisher": "톱스타뉴스"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.25469,
+        "rev_growth": 0.116,
+        "per": 12.475976
+      },
+      "sector": "Consumer Defensive",
+      "rvol": 0.59
+    },
+    {
+      "id": "257720.KQ",
+      "rank": 3,
+      "symbol": "257720",
+      "name": "Silicon2",
+      "market": "KR",
+      "currentPrice": 36650.0,
+      "changePercent": -2.66,
+      "buyZoneTop": 37383.0,
+      "buyZoneBottom": 35917.0,
+      "targetPrice": 40315.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + 거래량 증가 + 스토캐스틱 과매도 + 적정 PER + 흑자 기업",
+      "score": 85,
+      "rsi": 35.89,
+      "history": [
+        {
+          "time": "02-09",
+          "price": 44250.0,
+          "bb_upper": 55661.02,
+          "bb_lower": 37653.98
+        },
+        {
+          "time": "02-10",
+          "price": 43500.0,
+          "bb_upper": 55580.15,
+          "bb_lower": 37909.85
+        },
+        {
+          "time": "02-11",
+          "price": 43050.0,
+          "bb_upper": 55593.31,
+          "bb_lower": 37856.69
+        },
+        {
+          "time": "02-12",
+          "price": 43100.0,
+          "bb_upper": 55589.57,
+          "bb_lower": 37870.43
+        },
+        {
+          "time": "02-13",
+          "price": 43000.0,
+          "bb_upper": 55541.09,
+          "bb_lower": 38013.91
+        },
+        {
+          "time": "02-19",
+          "price": 44200.0,
+          "bb_upper": 55248.05,
+          "bb_lower": 38731.95
+        },
+        {
+          "time": "02-20",
+          "price": 43500.0,
+          "bb_upper": 55255.29,
+          "bb_lower": 38704.71
+        },
+        {
+          "time": "02-23",
+          "price": 45000.0,
+          "bb_upper": 55162.39,
+          "bb_lower": 38532.61
+        },
+        {
+          "time": "02-24",
+          "price": 45050.0,
+          "bb_upper": 54978.93,
+          "bb_lower": 38361.07
+        },
+        {
+          "time": "02-25",
+          "price": 43850.0,
+          "bb_upper": 54700.73,
+          "bb_lower": 38094.27
+        },
+        {
+          "time": "02-26",
+          "price": 42200.0,
+          "bb_upper": 53863.48,
+          "bb_lower": 37901.52
+        },
+        {
+          "time": "02-27",
+          "price": 43850.0,
+          "bb_upper": 53154.23,
+          "bb_lower": 37885.77
+        },
+        {
+          "time": "03-03",
+          "price": 41250.0,
+          "bb_upper": 52367.56,
+          "bb_lower": 37667.44
+        },
+        {
+          "time": "03-04",
+          "price": 35950.0,
+          "bb_upper": 51181.42,
+          "bb_lower": 37028.58
+        },
+        {
+          "time": "03-05",
+          "price": 38750.0,
+          "bb_upper": 49501.36,
+          "bb_lower": 37283.64
+        },
+        {
+          "time": "03-06",
+          "price": 40050.0,
+          "bb_upper": 47545.72,
+          "bb_lower": 38044.28
+        },
+        {
+          "time": "03-09",
+          "price": 36150.0,
+          "bb_upper": 47686.81,
+          "bb_lower": 36933.19
+        },
+        {
+          "time": "03-10",
+          "price": 38450.0,
+          "bb_upper": 47482.65,
+          "bb_lower": 36492.35
+        },
+        {
+          "time": "03-11",
+          "price": 37650.0,
+          "bb_upper": 47489.36,
+          "bb_lower": 35920.64
+        },
+        {
+          "time": "03-12",
+          "price": 36650.0,
+          "bb_upper": 47683.48,
+          "bb_lower": 35261.52
+        }
+      ],
+      "news": [
+        {
+          "title": "[생생한 주식쇼 생쇼] 실리콘투 (257720) - 매일경제TV",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9YXy1MMlhQcERUWnBmREtJdTB4QTk5TjRUd2pYOGdzZ2RUeG4zdjN5NG1WVUh5SGhyWTQycTFxSWlVYjllV0E5VUQzcENUZ1pEN1UwSlNfWTV0YzhQOXlIZ2daWXBCcWox?oc=5",
+          "sentiment": "neutral",
+          "publisher": "매일경제TV"
+        },
+        {
+          "title": "실리콘투, 성장 스토리 여전한데…주가 흔든 오버행 - IB토마토",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8yNU9GNTVsNk1PQWRJWHN1MEJpTmtoZXQzQnNZbGJVdWlDQ1JaVndQQ3Q5bzA1d010ZjNfdVlLWHdoWmptMEZKb2ZCVkZDNEFLX0RuZC1UODByUlpEOVJRaEJLdnRTWl9ZN0dsaVNub2Y2MVRm?oc=5",
+          "sentiment": "positive",
+          "publisher": "IB토마토"
+        },
+        {
+          "title": "AI주식상승확률분석 : 실리콘투(257720) 주가 전망과 상승확률 분석 - Investing.com 한국어",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE11MnFzZHJKMjg3eFMxUENmempOT1hyQ2MxbkZoX1E1MUtzalR1ektBOUMyd3pJc2tiZklNN1I1U2ZFSUNYMEh4dlJXYUNjcUNaMzZ6Uy1KeHFKVXRHRGNiXw?oc=5",
+          "sentiment": "positive",
+          "publisher": "Investing.com 한국어"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.21068001,
+        "rev_growth": 0.604,
+        "per": 8.186285
+      },
+      "sector": "Consumer Defensive",
+      "rvol": 1.45
+    },
+    {
+      "id": "024110.KS",
+      "rank": 4,
+      "symbol": "024110",
+      "name": "IBK",
+      "market": "KR",
+      "currentPrice": 23450.0,
+      "changePercent": -0.64,
+      "buyZoneTop": 23919.0,
+      "buyZoneBottom": 22981.0,
+      "targetPrice": 25795.0,
+      "aiReason": "단기 과매도 + 60일선 지지 + 스토캐스틱 과매도 + 장기 상승 추세 + 적정 PER + 흑자 기업",
+      "score": 75,
+      "rsi": 36.82,
+      "history": [
+        {
+          "time": "02-09",
+          "price": 23500.0,
+          "bb_upper": 23522.87,
+          "bb_lower": 19587.13
+        },
+        {
+          "time": "02-10",
+          "price": 24150.0,
+          "bb_upper": 23954.63,
+          "bb_lower": 19520.37
+        },
+        {
+          "time": "02-11",
+          "price": 25000.0,
+          "bb_upper": 24547.73,
+          "bb_lower": 19357.27
+        },
+        {
+          "time": "02-12",
+          "price": 26150.0,
+          "bb_upper": 25355.75,
+          "bb_lower": 19094.25
+        },
+        {
+          "time": "02-13",
+          "price": 26150.0,
+          "bb_upper": 25983.47,
+          "bb_lower": 19031.53
+        },
+        {
+          "time": "02-19",
+          "price": 26600.0,
+          "bb_upper": 26586.1,
+          "bb_lower": 19058.9
+        },
+        {
+          "time": "02-20",
+          "price": 28550.0,
+          "bb_upper": 27631.34,
+          "bb_lower": 18793.66
+        },
+        {
+          "time": "02-23",
+          "price": 27150.0,
+          "bb_upper": 28124.06,
+          "bb_lower": 18940.94
+        },
+        {
+          "time": "02-24",
+          "price": 26350.0,
+          "bb_upper": 28393.7,
+          "bb_lower": 19206.3
+        },
+        {
+          "time": "02-25",
+          "price": 26600.0,
+          "bb_upper": 28642.18,
+          "bb_lower": 19512.82
+        },
+        {
+          "time": "02-26",
+          "price": 26500.0,
+          "bb_upper": 28786.5,
+          "bb_lower": 19928.5
+        },
+        {
+          "time": "02-27",
+          "price": 25750.0,
+          "bb_upper": 28836.09,
+          "bb_lower": 20293.91
+        },
+        {
+          "time": "03-03",
+          "price": 25100.0,
+          "bb_upper": 28796.5,
+          "bb_lower": 20668.5
+        },
+        {
+          "time": "03-04",
+          "price": 22400.0,
+          "bb_upper": 28763.47,
+          "bb_lower": 20741.53
+        },
+        {
+          "time": "03-05",
+          "price": 23800.0,
+          "bb_upper": 28685.24,
+          "bb_lower": 20984.76
+        },
+        {
+          "time": "03-06",
+          "price": 23650.0,
+          "bb_upper": 28553.06,
+          "bb_lower": 21301.94
+        },
+        {
+          "time": "03-09",
+          "price": 22800.0,
+          "bb_upper": 28508.0,
+          "bb_lower": 21397.0
+        },
+        {
+          "time": "03-10",
+          "price": 23100.0,
+          "bb_upper": 28491.01,
+          "bb_lower": 21438.99
+        },
+        {
+          "time": "03-11",
+          "price": 23600.0,
+          "bb_upper": 28460.3,
+          "bb_lower": 21529.7
+        },
+        {
+          "time": "03-12",
+          "price": 23450.0,
+          "bb_upper": 28433.76,
+          "bb_lower": 21601.24
+        }
+      ],
+      "news": [
+        {
+          "title": "지난주 한국산업은행(KRX:024110)의 시가총액이 2.5조 원 상승한 후 기관이 이익을 얻었지만 국가 또는 정부가 가장 많은 이익을 얻었습니다. - simplywall.st",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNVNpREMzaHkwX1ZmbzVqR2h2YjUzeTVXb1Fyd3FRMUxzRGV1aGtmeFRIOVMxekNIeE1qMm9MWDZNZzhlUlg5NnpNdzY4c1FHZGUzVzFOME1hb3NfZFRWWVppV2JETEJsWFA0S0oyU3J4am91elhuTWdTc0xaRTJXaGdqdS1ta3JyaFVvaHNkamRIT2NkSjktVmpDX2RGa243RVVXUEpad0lOSWfSAbABQVVfeXFMT28zOXpyOGNrc011eGFwWG41SXFaX0VYM0xMSWZDMWZPZUtTX1ZoeklTQWpRd1doQUZLRTVINHdOZW5zRXhqdXlMMHVnaTB5MzNnbG5SY2V6RDhJOXZtV0IzNzVROTNxakVRQmxEYjFwNm95Y2lodGRVZGhMTC1POWdHcUk5OUp4cjVBSFF6UWxtd0xVQV9UbUVEU0pQcURyb2JsYlREVlRNV1ZnTjhWWmU?oc=5",
+          "sentiment": "positive",
+          "publisher": "simplywall.st"
+        },
+        {
+          "title": "기업은행, +2.29% 52주 신고가 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUThtZTJZRGMtejFpLUN3clRjR05DR0Q3dUtZLXU2Vmt5Qm5IZlhudU5qV1lVNEtmWjB5WS15cFhNRllYZXh0d3FreWdORlJyY3hnZjZ3VXhZa0xkQWxHai1zUGxYSjhQcVJtUjhJdG55WWd4cjBDTW8yb3k1Y2Z5NFVnRdIBlwFBVV95cUxObHVTeXU4Mzl5N1FRamtfNWwwS1ZzTkRpX0YtVDZ3T3kybzlTTmgxZS1lc0F0eldxbWFYekJKakpsYTU0dXpXSC0yT212d19xQVF1ZW5zbGFmakVtaERwRzhpU09CUGM4cjBlcTMxdVpUMzdRWjdSNVBCNEl5RzBDeDJjc0JneDdjclFNOGpEaWpScUZIcG9R?oc=5",
+          "sentiment": "neutral",
+          "publisher": "Chosunbiz"
+        },
+        {
+          "title": "기업은행 \"IBK저축은행 주식 1천200억원에 추가취득\" - 연합뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nWnBTUWVOamo2dUc2ZWl4VVAxS0s2MzRWTHF5ZWpZdWo1Y3lFNzBhTVd2eVBoOFlvVzZuVFRsOGNiNGVxNGVkREw4ZGU5U1BLZlpEdTEzNjMxOU3SAWBBVV95cUxNSGpsVTRDZkc4d2hVTmpnbWxMYmM3ZzRtZi1YRW1PN3p4YS1fM2Q0N0hXcXBvd2kxQUxLZWhZLXZuSnNCOVdDazRWMklLLVFFekpIR0t0d2VQcjJKV0x3VHA?oc=5",
+          "sentiment": "neutral",
+          "publisher": "연합뉴스"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.47147998,
+        "rev_growth": 0.023,
+        "per": 6.4732943
+      },
+      "sector": "Financial Services",
+      "rvol": 0.69
+    },
+    {
+      "id": "214450.KQ",
+      "rank": 5,
+      "symbol": "214450",
+      "name": "PharmaResearch",
+      "market": "KR",
+      "currentPrice": 313500.0,
+      "changePercent": -1.26,
+      "buyZoneTop": 319770.0,
+      "buyZoneBottom": 307230.0,
+      "targetPrice": 344850.0,
+      "aiReason": "단기 과매도 + 볼린저밴드 하단 근접 + MACD 상승신호 + 적정 PER + 흑자 기업",
+      "score": 75,
+      "rsi": 37.54,
+      "history": [
+        {
+          "time": "02-09",
+          "price": 337000.0,
+          "bb_upper": 546904.88,
+          "bb_lower": 328895.12
+        },
+        {
+          "time": "02-10",
+          "price": 336500.0,
+          "bb_upper": 551299.23,
+          "bb_lower": 315150.77
+        },
+        {
+          "time": "02-11",
+          "price": 343500.0,
+          "bb_upper": 552943.7,
+          "bb_lower": 303756.3
+        },
+        {
+          "time": "02-12",
+          "price": 348500.0,
+          "bb_upper": 554121.72,
+          "bb_lower": 294878.28
+        },
+        {
+          "time": "02-13",
+          "price": 345000.0,
+          "bb_upper": 555145.97,
+          "bb_lower": 286304.03
+        },
+        {
+          "time": "02-19",
+          "price": 353000.0,
+          "bb_upper": 555222.44,
+          "bb_lower": 279627.56
+        },
+        {
+          "time": "02-20",
+          "price": 349000.0,
+          "bb_upper": 554728.96,
+          "bb_lower": 272571.04
+        },
+        {
+          "time": "02-23",
+          "price": 355500.0,
+          "bb_upper": 553260.72,
+          "bb_lower": 266789.28
+        },
+        {
+          "time": "02-24",
+          "price": 356500.0,
+          "bb_upper": 548473.88,
+          "bb_lower": 261626.12
+        },
+        {
+          "time": "02-25",
+          "price": 347500.0,
+          "bb_upper": 540574.39,
+          "bb_lower": 256925.61
+        },
+        {
+          "time": "02-26",
+          "price": 349500.0,
+          "bb_upper": 526016.14,
+          "bb_lower": 256333.86
+        },
+        {
+          "time": "02-27",
+          "price": 349500.0,
+          "bb_upper": 511532.79,
+          "bb_lower": 256667.21
+        },
+        {
+          "time": "03-03",
+          "price": 328500.0,
+          "bb_upper": 488425.65,
+          "bb_lower": 261124.35
+        },
+        {
+          "time": "03-04",
+          "price": 288000.0,
+          "bb_upper": 454818.45,
+          "bb_lower": 270131.55
+        },
+        {
+          "time": "03-05",
+          "price": 317000.0,
+          "bb_upper": 432815.21,
+          "bb_lower": 276484.79
+        },
+        {
+          "time": "03-06",
+          "price": 333000.0,
+          "bb_upper": 421973.16,
+          "bb_lower": 278376.84
+        },
+        {
+          "time": "03-09",
+          "price": 315500.0,
+          "bb_upper": 399304.98,
+          "bb_lower": 287595.02
+        },
+        {
+          "time": "03-10",
+          "price": 320500.0,
+          "bb_upper": 371254.53,
+          "bb_lower": 303745.47
+        },
+        {
+          "time": "03-11",
+          "price": 317500.0,
+          "bb_upper": 371472.32,
+          "bb_lower": 301627.68
+        },
+        {
+          "time": "03-12",
+          "price": 313500.0,
+          "bb_upper": 371577.77,
+          "bb_lower": 298872.23
+        }
+      ],
+      "news": [
+        {
+          "title": "파마리서치, 예상 밑돈 실적에 목표주가 줄하향…주가 ‘뚝’ - sedaily.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1GdkJNSTZyWmZBd2hLLUpGZ0YzTng3SXd6SlpMMktDam1lak14OUNISjdfUEdCcVNMM3lsRHhQQjlUOU5jc01pMU9DelV0RG8?oc=5",
+          "sentiment": "neutral",
+          "publisher": "sedaily.com"
+        },
+        {
+          "title": "[특징주] ‘어닝쇼크’에 파마리서치 15%대 급락 - 조선비즈 - Chosunbiz",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMXh6c2dzS2tUZ2tLcWxhaTdFNks1MlJFWlNOSE1yRWt1WkxWcld4RExBcGtlY00wN1NoSGY3LWRMY1dCS21JUGtNa0lCaUFWVG5FOG5MUHJpOEFxM3JtdTc4V0NFaUFaMjJmVnJzbUdyRGs2czZhMHI3TnZwYnpUWTMzOXhNcDVa0gGcAUFVX3lxTFBacFgzaEN6Z2QzeG5TV2hQMUFJYWdzS055RTZjUmRrMENZRkZiSThaaW9haUpkRzVMdWdqMEZJNHV6T2Q5UTMyVkRpSXNPa0dGU1g4YW1VS0dXTE4yMWt0VjM4cnZNRkRESlo5SFJlMnA0cnRGdjZYWkJrYzlGNTQ2dUJWbTZxNXptcnBFN28tTjlJelFhRG8teW9CbA?oc=5",
+          "sentiment": "negative",
+          "publisher": "Chosunbiz"
+        },
+        {
+          "title": "[특징주] 파마리서치(214450), 전공의·유통 변수 걷히고 성장 가능성 재점화 - 인천일보",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0wZ2dCMkJYWFRRQjFNdzAtUnRTSUVRWmpLR2QxN2ZBODJwMG9DYzdTSFRSRjluVFpZU1IyS3lWY2Nfb2s3S0paSEp3SWl2MmFfV1gyTmk3eEJrVXRTYWtxQmRIVDFJa01ybm9iM1F0TVI?oc=5",
+          "sentiment": "positive",
+          "publisher": "인천일보"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.45686,
+        "rev_growth": 0.518,
+        "per": 12.740141
+      },
+      "sector": "Healthcare",
+      "rvol": 0.83
+    },
+    {
+      "id": "068270.KS",
+      "rank": 6,
+      "symbol": "068270",
+      "name": "Celltrion",
+      "market": "KR",
+      "currentPrice": 206000.0,
+      "changePercent": -1.44,
+      "buyZoneTop": 210120.0,
+      "buyZoneBottom": 201880.0,
+      "targetPrice": 226600.0,
+      "aiReason": "RSI 과매도(강력) + 스토캐스틱 과매도 + 장기 상승 추세 + 흑자 기업",
+      "score": 70,
+      "rsi": 29.01,
+      "history": [
+        {
+          "time": "02-09",
+          "price": 230000.0,
+          "bb_upper": 225622.58,
+          "bb_lower": 199527.42
+        },
+        {
+          "time": "02-10",
+          "price": 227500.0,
+          "bb_upper": 227103.78,
+          "bb_lower": 198696.22
+        },
+        {
+          "time": "02-11",
+          "price": 239500.0,
+          "bb_upper": 232794.38,
+          "bb_lower": 195805.62
+        },
+        {
+          "time": "02-12",
+          "price": 238500.0,
+          "bb_upper": 237008.26,
+          "bb_lower": 194391.74
+        },
+        {
+          "time": "02-13",
+          "price": 238000.0,
+          "bb_upper": 240397.18,
+          "bb_lower": 193902.82
+        },
+        {
+          "time": "02-19",
+          "price": 244500.0,
+          "bb_upper": 244717.71,
+          "bb_lower": 193382.29
+        },
+        {
+          "time": "02-20",
+          "price": 242000.0,
+          "bb_upper": 247749.07,
+          "bb_lower": 193850.93
+        },
+        {
+          "time": "02-23",
+          "price": 243000.0,
+          "bb_upper": 250219.6,
+          "bb_lower": 195280.4
+        },
+        {
+          "time": "02-24",
+          "price": 248500.0,
+          "bb_upper": 253603.85,
+          "bb_lower": 195946.15
+        },
+        {
+          "time": "02-25",
+          "price": 244500.0,
+          "bb_upper": 255853.98,
+          "bb_lower": 196946.02
+        },
+        {
+          "time": "02-26",
+          "price": 242000.0,
+          "bb_upper": 257477.71,
+          "bb_lower": 198022.29
+        },
+        {
+          "time": "02-27",
+          "price": 238500.0,
+          "bb_upper": 258165.44,
+          "bb_lower": 200034.56
+        },
+        {
+          "time": "03-03",
+          "price": 225000.0,
+          "bb_upper": 258134.57,
+          "bb_lower": 200715.43
+        },
+        {
+          "time": "03-04",
+          "price": 197400.0,
+          "bb_upper": 260037.15,
+          "bb_lower": 197102.85
+        },
+        {
+          "time": "03-05",
+          "price": 211500.0,
+          "bb_upper": 259932.43,
+          "bb_lower": 197357.57
+        },
+        {
+          "time": "03-06",
+          "price": 212500.0,
+          "bb_upper": 259026.07,
+          "bb_lower": 199213.93
+        },
+        {
+          "time": "03-09",
+          "price": 204000.0,
+          "bb_upper": 259419.32,
+          "bb_lower": 198470.68
+        },
+        {
+          "time": "03-10",
+          "price": 206000.0,
+          "bb_upper": 260060.96,
+          "bb_lower": 196979.04
+        },
+        {
+          "time": "03-11",
+          "price": 209000.0,
+          "bb_upper": 260478.98,
+          "bb_lower": 195711.02
+        },
+        {
+          "time": "03-12",
+          "price": 206000.0,
+          "bb_upper": 261094.26,
+          "bb_lower": 193695.74
+        }
+      ],
+      "news": [
+        {
+          "title": "AI주식상승확률분석 : 셀트리온(068270) 주가 전망과 상승확률 분석 - Investing.com 한국어",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9selBjWmM3RU1RSm1RVlJjcnMzSjFFb0tyemx6QWtlRzlEay1SYlFGV2tRYlg1alFWTGwzcDBSb0FGM3FTWEw3RmlpUUdMWnF1SG1LeHpQNkZ6SEI1N0ZjZA?oc=5",
+          "sentiment": "positive",
+          "publisher": "Investing.com 한국어"
+        },
+        {
+          "title": "[생생한 주식쇼 생쇼] 셀트리온 (068270) - 매일경제TV",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE82ZDhSQ2J4UlFxWTQ3czlQQXR5UTgyQnRVWmVvQWVrdVgwbVJic2JVRlMwWUktVHVZeFd3WE9fTTJvZDRiaGxHLTZaeGxiSW1fb1k4Rkg1VFVGeHF3U2ZwdGFYTl9tRTdm?oc=5",
+          "sentiment": "neutral",
+          "publisher": "매일경제TV"
+        },
+        {
+          "title": "\"이게 얼마 만이야\" 셀트리온 7% 급등…1년 10개월 만에 최고가[핫종목] - 뉴스1",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4wQzExRkE2QVhodE51UnhOV0NYOE02NENxMEFab1ZtZmNBVHZ5MW4wZGxoeEFGay12X2RKYlVOVnBEUWNybVRPVTJad1BhdGF5V041N0haUGdlMVhILUhr?oc=5",
+          "sentiment": "positive",
+          "publisher": "뉴스1"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.29293,
+        "rev_growth": 0.167,
+        "per": 29.708694
+      },
+      "sector": "Healthcare",
+      "rvol": 0.64
+    },
+    {
+      "id": "000810.KS",
+      "rank": 7,
+      "symbol": "000810",
+      "name": "SamsungF&MIns",
+      "market": "KR",
+      "currentPrice": 490000.0,
+      "changePercent": -1.51,
+      "buyZoneTop": 499800.0,
+      "buyZoneBottom": 480200.0,
+      "targetPrice": 539000.0,
+      "aiReason": "단기 과매도 + 거래량 증가 + 스토캐스틱 과매도 + 장기 상승 추세 + 적정 PER + 흑자 기업",
+      "score": 65,
+      "rsi": 35.66,
+      "history": [
+        {
+          "time": "02-09",
+          "price": 531000.0,
+          "bb_upper": 524414.69,
+          "bb_lower": 466085.31
+        },
+        {
+          "time": "02-10",
+          "price": 534000.0,
+          "bb_upper": 530650.09,
+          "bb_lower": 465599.91
+        },
+        {
+          "time": "02-11",
+          "price": 549000.0,
+          "bb_upper": 540056.54,
+          "bb_lower": 463143.46
+        },
+        {
+          "time": "02-12",
+          "price": 581000.0,
+          "bb_upper": 557328.6,
+          "bb_lower": 456421.4
+        },
+        {
+          "time": "02-13",
+          "price": 559000.0,
+          "bb_upper": 565042.11,
+          "bb_lower": 455957.89
+        },
+        {
+          "time": "02-19",
+          "price": 570000.0,
+          "bb_upper": 573680.76,
+          "bb_lower": 456269.24
+        },
+        {
+          "time": "02-20",
+          "price": 618000.0,
+          "bb_upper": 594958.08,
+          "bb_lower": 446691.92
+        },
+        {
+          "time": "02-23",
+          "price": 565000.0,
+          "bb_upper": 600012.13,
+          "bb_lower": 448287.87
+        },
+        {
+          "time": "02-24",
+          "price": 553000.0,
+          "bb_upper": 602392.18,
+          "bb_lower": 452257.82
+        },
+        {
+          "time": "02-25",
+          "price": 548000.0,
+          "bb_upper": 603809.16,
+          "bb_lower": 456440.84
+        },
+        {
+          "time": "02-26",
+          "price": 548000.0,
+          "bb_upper": 604632.84,
+          "bb_lower": 461367.16
+        },
+        {
+          "time": "02-27",
+          "price": 530000.0,
+          "bb_upper": 604561.17,
+          "bb_lower": 464238.83
+        },
+        {
+          "time": "03-03",
+          "price": 522000.0,
+          "bb_upper": 603391.12,
+          "bb_lower": 468508.88
+        },
+        {
+          "time": "03-04",
+          "price": 468000.0,
+          "bb_upper": 606668.94,
+          "bb_lower": 462131.06
+        },
+        {
+          "time": "03-05",
+          "price": 491500.0,
+          "bb_upper": 607235.64,
+          "bb_lower": 460614.36
+        },
+        {
+          "time": "03-06",
+          "price": 496500.0,
+          "bb_upper": 606007.63,
+          "bb_lower": 463342.37
+        },
+        {
+          "time": "03-09",
+          "price": 474500.0,
+          "bb_upper": 607684.24,
+          "bb_lower": 459965.76
+        },
+        {
+          "time": "03-10",
+          "price": 488500.0,
+          "bb_upper": 608691.93,
+          "bb_lower": 456208.07
+        },
+        {
+          "time": "03-11",
+          "price": 497500.0,
+          "bb_upper": 608902.32,
+          "bb_lower": 455447.68
+        },
+        {
+          "time": "03-12",
+          "price": 490000.0,
+          "bb_upper": 609567.6,
+          "bb_lower": 451882.4
+        }
+      ],
+      "news": [
+        {
+          "title": "[특징주] 삼성생명·화재, 전자 소각 계획 수혜주 평가에 상승(종합) - 연합뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9hQ1lybEFuRzdXdEtjVE5ld2hETV9ONENQQ0FfWEp4WE1lRjJ6eXh0V3gwMVhreXdfSXI0bnVuem1aZjBrTzQzektDNHktb01aLXBsaGxqX25jNEnSAWBBVV95cUxQLXBPZkFvUk93ejM2cnR3WlBRS0JhTjFiWVcxT2pvaFVGLUR6VEZFWlkzMVlxTUI5NEkzbUZVMU9jcW5JQjd0aEZoQ1Blem1hQmtRTzRnd3FnZjlQcTdRdjY?oc=5",
+          "sentiment": "positive",
+          "publisher": "연합뉴스"
+        },
+        {
+          "title": "\"삼성생명·화재, 삼성전자 자사주 소각에 하방 압력 제한\" - 뉴스투데이",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5IZHVDNVUxMGpGY2JKSDJ3Q1pNUEI5VzJpeFZUTWRJWmgtX2JTUXhUSDdQa25fUmJiUXJNTXdoaGJ4SXk2QmFhaVBjVFY0b3ZkMVhTUHp4bUxaTXJVTWc?oc=5",
+          "sentiment": "neutral",
+          "publisher": "뉴스투데이"
+        },
+        {
+          "title": "삼성화재, 장 막판 28% 급등…주문 실수인가 리밸런싱인가 - sedaily.com",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43b0V1VEYyS01YYUYwUl8wTUdDbUJtMlBFdG1ieHZmY29kcU1BZk1rM2ROeC1FWUF5MUZyUU5MMzVYYlhfS2E3SHB3Z0tGVnpMSk1wVE1R?oc=5",
+          "sentiment": "positive",
+          "publisher": "sedaily.com"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.0863,
+        "rev_growth": -0.025,
+        "per": 8.696371
+      },
+      "sector": "Financial Services",
+      "rvol": 1.31
+    },
+    {
+      "id": "015760.KS",
+      "rank": 8,
+      "symbol": "015760",
+      "name": "KEPCO",
+      "market": "KR",
+      "currentPrice": 47600.0,
+      "changePercent": -0.73,
+      "buyZoneTop": 48552.0,
+      "buyZoneBottom": 46648.0,
+      "targetPrice": 52360.0,
+      "aiReason": "RSI 과매도(강력) + 스토캐스틱 과매도 + 적정 PER + 흑자 기업",
+      "score": 65,
+      "rsi": 27.55,
+      "history": [
+        {
+          "time": "02-09",
+          "price": 62600.0,
+          "bb_upper": 67878.53,
+          "bb_lower": 52011.47
+        },
+        {
+          "time": "02-10",
+          "price": 60800.0,
+          "bb_upper": 67882.93,
+          "bb_lower": 52517.07
+        },
+        {
+          "time": "02-11",
+          "price": 61000.0,
+          "bb_upper": 67599.59,
+          "bb_lower": 53540.41
+        },
+        {
+          "time": "02-12",
+          "price": 60100.0,
+          "bb_upper": 67161.53,
+          "bb_lower": 54608.47
+        },
+        {
+          "time": "02-13",
+          "price": 59800.0,
+          "bb_upper": 66736.01,
+          "bb_lower": 55543.99
+        },
+        {
+          "time": "02-19",
+          "price": 62100.0,
+          "bb_upper": 66550.9,
+          "bb_lower": 56309.1
+        },
+        {
+          "time": "02-20",
+          "price": 63000.0,
+          "bb_upper": 66143.61,
+          "bb_lower": 56476.39
+        },
+        {
+          "time": "02-23",
+          "price": 62700.0,
+          "bb_upper": 64837.24,
+          "bb_lower": 57262.76
+        },
+        {
+          "time": "02-24",
+          "price": 62800.0,
+          "bb_upper": 64007.96,
+          "bb_lower": 57772.04
+        },
+        {
+          "time": "02-25",
+          "price": 64300.0,
+          "bb_upper": 64516.07,
+          "bb_lower": 57573.93
+        },
+        {
+          "time": "02-26",
+          "price": 63300.0,
+          "bb_upper": 64787.6,
+          "bb_lower": 57592.4
+        },
+        {
+          "time": "02-27",
+          "price": 58500.0,
+          "bb_upper": 64874.68,
+          "bb_lower": 57305.32
+        },
+        {
+          "time": "03-03",
+          "price": 50900.0,
+          "bb_upper": 66566.03,
+          "bb_lower": 54763.97
+        },
+        {
+          "time": "03-04",
+          "price": 45550.0,
+          "bb_upper": 68858.18,
+          "bb_lower": 50926.82
+        },
+        {
+          "time": "03-05",
+          "price": 48200.0,
+          "bb_upper": 69758.51,
+          "bb_lower": 49016.49
+        },
+        {
+          "time": "03-06",
+          "price": 48800.0,
+          "bb_upper": 70341.38,
+          "bb_lower": 47583.62
+        },
+        {
+          "time": "03-09",
+          "price": 44800.0,
+          "bb_upper": 71241.72,
+          "bb_lower": 45213.28
+        },
+        {
+          "time": "03-10",
+          "price": 47600.0,
+          "bb_upper": 71130.33,
+          "bb_lower": 43814.67
+        },
+        {
+          "time": "03-11",
+          "price": 47950.0,
+          "bb_upper": 70897.71,
+          "bb_lower": 42652.29
+        },
+        {
+          "time": "03-12",
+          "price": 47600.0,
+          "bb_upper": 70684.46,
+          "bb_lower": 41555.54
+        }
+      ],
+      "news": [
+        {
+          "title": "[특징주] 한전, 유가 상승세·어닝쇼크 속 장초반 6% 급락 - 연합뉴스",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0wdjFFWFhtTEM1b2tOYlNPbTB6Yml5T2wyb3VUMVdicWdFVHN0dzMzY2NHSlBnTGgyclNkVVNSblVzbERoajVTME1yTFV3NFpOcTJsbEhKSG1MY2fSAWBBVV95cUxNalp5WFN1bkd5WDl2YmQ2dzFMWUpRSzlMX3lGVjF5c2FjRDMzLXJiU3pHcUZ6VDVBRW9KRWdscnByNVZfOU0wTm9NNE9BMlFjR3BOYnJCRWtrRW53MTM4WUY?oc=5",
+          "sentiment": "neutral",
+          "publisher": "연합뉴스"
+        },
+        {
+          "title": "한국전력, 증권사 목표가 상향에 강세…3.5% - 매일경제 마켓",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5GZVdGc1I2MzJGS1RoUnJLak5NUzBndzQxRGxvWHFoRzU2QU9rcjFnV0dTNUx5NkhDclo0VHo1bFF4NlREaGt0TmZoQXhXWUM3eVE?oc=5",
+          "sentiment": "neutral",
+          "publisher": "매일경제 마켓"
+        },
+        {
+          "title": "한국전력, 실적 부진·유가 부담에 7%대 급락 - 파이낸스투데이",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41U1JYUmFGQmZEay04a2RRU2Y2QWxQNUdCN1pKcVZsYTkyaFd3aXpnZVpzRG0yMmE4Qkl3UWtrVlpqdWNraFZ5MFVacTZVMUluX2tSbGxXX2ZNalI4NEdzanBkeW14QmZkeVV3eg?oc=5",
+          "sentiment": "negative",
+          "publisher": "파이낸스투데이"
+        }
+      ],
+      "financials": {
+        "op_margin": 0.08371,
+        "rev_growth": 0.007,
+        "per": 2.6080928
+      },
+      "sector": "Utilities",
+      "rvol": 0.5
     },
     {
       "id": "138040.KS",
-      "rank": 7,
+      "rank": 9,
       "symbol": "138040",
       "name": "Meritz Financial",
       "market": "KR",
-      "currentPrice": 114900.0,
-      "changePercent": 1.68,
-      "buyZoneTop": 117198.0,
-      "buyZoneBottom": 112602.0,
-      "targetPrice": 126390.0,
+      "currentPrice": 112900.0,
+      "changePercent": -1.74,
+      "buyZoneTop": 115158.0,
+      "buyZoneBottom": 110642.0,
+      "targetPrice": 124190.0,
       "aiReason": "단기 과매도 + 60일선 지지 + 스토캐스틱 과매도 + 적정 PER + 흑자 기업",
       "score": 65,
-      "rsi": 32.23,
+      "rsi": 31.24,
       "history": [
-        {
-          "time": "02-06",
-          "price": 122600.0,
-          "bb_upper": 124612.78,
-          "bb_lower": 96767.22
-        },
         {
           "time": "02-09",
           "price": 120800.0,
@@ -2781,6 +3103,12 @@
           "price": 114900.0,
           "bb_upper": 147315.89,
           "bb_lower": 104404.11
+        },
+        {
+          "time": "03-12",
+          "price": 112900.0,
+          "bb_upper": 147567.07,
+          "bb_lower": 103182.93
         }
       ],
       "news": [
@@ -2806,511 +3134,183 @@
       "financials": {
         "op_margin": 0.38236,
         "rev_growth": 0.185,
-        "per": 6.5136003
+        "per": 6.400222
       },
       "sector": "Financial Services",
-      "rvol": 0.71
+      "rvol": 0.6
     },
     {
-      "id": "042660.KS",
-      "rank": 8,
-      "symbol": "042660",
-      "name": "Hanwha Ocean",
-      "market": "KR",
-      "currentPrice": 133600.0,
-      "changePercent": 7.4,
-      "buyZoneTop": 136272.0,
-      "buyZoneBottom": 130928.0,
-      "targetPrice": 146960.0,
-      "aiReason": "눌림목 구간 + 60일선 지지 + 거래량 폭발(2.0배) + 장기 상승 추세 + 흑자 기업",
-      "score": 60,
-      "rsi": 52.0,
-      "history": [
-        {
-          "time": "02-06",
-          "price": 130600.0,
-          "bb_upper": 152267.59,
-          "bb_lower": 131552.41
-        },
-        {
-          "time": "02-09",
-          "price": 133200.0,
-          "bb_upper": 152174.55,
-          "bb_lower": 130395.45
-        },
-        {
-          "time": "02-10",
-          "price": 130900.0,
-          "bb_upper": 151374.12,
-          "bb_lower": 129295.88
-        },
-        {
-          "time": "02-11",
-          "price": 129700.0,
-          "bb_upper": 151699.03,
-          "bb_lower": 127740.97
-        },
-        {
-          "time": "02-12",
-          "price": 131800.0,
-          "bb_upper": 150521.9,
-          "bb_lower": 127208.1
-        },
-        {
-          "time": "02-13",
-          "price": 129800.0,
-          "bb_upper": 149672.76,
-          "bb_lower": 126337.24
-        },
-        {
-          "time": "02-19",
-          "price": 140600.0,
-          "bb_upper": 148192.81,
-          "bb_lower": 126997.19
-        },
-        {
-          "time": "02-20",
-          "price": 149900.0,
-          "bb_upper": 148919.25,
-          "bb_lower": 126550.75
-        },
-        {
-          "time": "02-23",
-          "price": 147200.0,
-          "bb_upper": 149878.39,
-          "bb_lower": 126161.61
-        },
-        {
-          "time": "02-24",
-          "price": 143100.0,
-          "bb_upper": 150361.7,
-          "bb_lower": 126218.3
-        },
-        {
-          "time": "02-25",
-          "price": 142000.0,
-          "bb_upper": 150529.94,
-          "bb_lower": 126220.06
-        },
-        {
-          "time": "02-26",
-          "price": 140000.0,
-          "bb_upper": 150545.21,
-          "bb_lower": 126224.79
-        },
-        {
-          "time": "02-27",
-          "price": 141200.0,
-          "bb_upper": 150609.83,
-          "bb_lower": 126230.17
-        },
-        {
-          "time": "03-03",
-          "price": 135400.0,
-          "bb_upper": 150045.69,
-          "bb_lower": 125994.31
-        },
-        {
-          "time": "03-04",
-          "price": 108500.0,
-          "bb_upper": 154046.45,
-          "bb_lower": 118653.55
-        },
-        {
-          "time": "03-05",
-          "price": 122100.0,
-          "bb_upper": 154294.59,
-          "bb_lower": 116765.41
-        },
-        {
-          "time": "03-06",
-          "price": 126700.0,
-          "bb_upper": 154348.48,
-          "bb_lower": 116021.52
-        },
-        {
-          "time": "03-09",
-          "price": 123700.0,
-          "bb_upper": 153885.17,
-          "bb_lower": 114714.83
-        },
-        {
-          "time": "03-10",
-          "price": 124400.0,
-          "bb_upper": 152822.83,
-          "bb_lower": 113817.17
-        },
-        {
-          "time": "03-11",
-          "price": 133600.0,
-          "bb_upper": 152694.1,
-          "bb_lower": 113745.9
-        }
-      ],
-      "news": [
-        {
-          "title": "나신평 \"한화시스템 1.7조 한화오션 지분 매각, 신용도 영향 제한적\" - KB Think",
-          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1hS1d2TUt2UXI1cmw2Z3F0S2NaSERuVnA2N3RJS0tGX0tZandNYkVZOERSY3QzQlE1Qk5vQTVyZDNxV3NORHRzYjJlTVpZQnQwME0zX3hpcTJFWDVXRl8wSlVHamNwbk96V1JONE5ySy1yQQ?oc=5",
-          "sentiment": "neutral",
-          "publisher": "KB Think"
-        },
-        {
-          "title": "[마켓인]나신평 “한화시스템 1.7조 PRS, 신용도 영향 제한적” - edaily.co.kr",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPN2NtNTFvUzBoUjRyT2cxRVdQNUpyVUNKbldKTWZWUGJ3S2dZM3owcWl4MjlnOWgwNENJT1U1eU81d2dWdGpCUGNoTTFOeHp0V3JWQUc4VXA4cFpfbk9VdnpIWW16NHdvUXRZaGVkR3lHc0xvRmFkYzFIQVZCOGczSQ?oc=5",
-          "sentiment": "neutral",
-          "publisher": "edaily.co.kr"
-        },
-        {
-          "title": "[한화오션] 한화오션 1조 영업이익 달성… 조선 슈퍼사이클 최대 수혜주 될까(2025년_4Q) - 네이버 프리미엄콘텐츠",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOHRZMkcwN1dTck55RThIb0xCd0NuNGh2OUY2S1c1SkY3cVJLTGRHcC0yT2ZyN3QwZVphSVdGR3VYM1lQbEtGX1VUMUR5M3gtanhOY0JXYU5mamxsZjU3M3Znblc0TGhOckt4Tms5c19mS2VKcUNfNDNjcTF5UmEyakFwZmxBS2Jp?oc=5",
-          "sentiment": "neutral",
-          "publisher": "네이버 프리미엄콘텐츠"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.09584,
-        "rev_growth": 0.118,
-        "per": 22.90042
-      },
-      "sector": "Industrials",
-      "rvol": 1.97
-    },
-    {
-      "id": "028260.KS",
-      "rank": 9,
-      "symbol": "028260",
-      "name": "SAMSUNG C&T",
-      "market": "KR",
-      "currentPrice": 283500.0,
-      "changePercent": 3.85,
-      "buyZoneTop": 289170.0,
-      "buyZoneBottom": 277830.0,
-      "targetPrice": 311850.0,
-      "aiReason": "단기 과매도 + 60일선 지지 + 장기 상승 추세 + 적정 PER + 흑자 기업",
-      "score": 60,
-      "rsi": 40.75,
-      "history": [
-        {
-          "time": "02-06",
-          "price": 289500.0,
-          "bb_upper": 319755.48,
-          "bb_lower": 270994.52
-        },
-        {
-          "time": "02-09",
-          "price": 312500.0,
-          "bb_upper": 319333.29,
-          "bb_lower": 275916.71
-        },
-        {
-          "time": "02-10",
-          "price": 317000.0,
-          "bb_upper": 319994.84,
-          "bb_lower": 279605.16
-        },
-        {
-          "time": "02-11",
-          "price": 316500.0,
-          "bb_upper": 321428.67,
-          "bb_lower": 281471.33
-        },
-        {
-          "time": "02-12",
-          "price": 334000.0,
-          "bb_upper": 327252.88,
-          "bb_lower": 280447.12
-        },
-        {
-          "time": "02-13",
-          "price": 318000.0,
-          "bb_upper": 328513.93,
-          "bb_lower": 281986.07
-        },
-        {
-          "time": "02-19",
-          "price": 319500.0,
-          "bb_upper": 329547.27,
-          "bb_lower": 284002.73
-        },
-        {
-          "time": "02-20",
-          "price": 331000.0,
-          "bb_upper": 333117.41,
-          "bb_lower": 283932.59
-        },
-        {
-          "time": "02-23",
-          "price": 332000.0,
-          "bb_upper": 336447.41,
-          "bb_lower": 283902.59
-        },
-        {
-          "time": "02-24",
-          "price": 338000.0,
-          "bb_upper": 340522.21,
-          "bb_lower": 283877.79
-        },
-        {
-          "time": "02-25",
-          "price": 347000.0,
-          "bb_upper": 346361.19,
-          "bb_lower": 282188.81
-        },
-        {
-          "time": "02-26",
-          "price": 360000.0,
-          "bb_upper": 354404.41,
-          "bb_lower": 280395.59
-        },
-        {
-          "time": "02-27",
-          "price": 350500.0,
-          "bb_upper": 358647.98,
-          "bb_lower": 281402.02
-        },
-        {
-          "time": "03-03",
-          "price": 317000.0,
-          "bb_upper": 358496.24,
-          "bb_lower": 283053.76
-        },
-        {
-          "time": "03-04",
-          "price": 272000.0,
-          "bb_upper": 362202.93,
-          "bb_lower": 276247.07
-        },
-        {
-          "time": "03-05",
-          "price": 293000.0,
-          "bb_upper": 362674.7,
-          "bb_lower": 274925.3
-        },
-        {
-          "time": "03-06",
-          "price": 283500.0,
-          "bb_upper": 363414.21,
-          "bb_lower": 273435.79
-        },
-        {
-          "time": "03-09",
-          "price": 270500.0,
-          "bb_upper": 366042.28,
-          "bb_lower": 266357.72
-        },
-        {
-          "time": "03-10",
-          "price": 273000.0,
-          "bb_upper": 367477.86,
-          "bb_lower": 260572.14
-        },
-        {
-          "time": "03-11",
-          "price": 283500.0,
-          "bb_upper": 367986.15,
-          "bb_lower": 257813.85
-        }
-      ],
-      "news": [
-        {
-          "title": "트러스톤운용, KCC에 주주서한…'삼성물산 주식 유동화해야' - 뉴스통",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA2VVVKa0NGR0JuRHRFQmZjaEd5Vk5pNzZoZGUyLThzSUZTbWg3bThlbHlkVFZZTVJSR3Q1NjJxU1I4cnZrU2Y4V29OU3JRXzRJdjl6UmY2NjkxNF8zQjRQaVZWY2VrSHBaVFkwN3dxMUJRN3M?oc=5",
-          "sentiment": "neutral",
-          "publisher": "뉴스통"
-        },
-        {
-          "title": "삼성물산, 에너지 부문 사업 확대 긍정적-유진 - 인포스탁데일리",
-          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93RUtRcVJSaGRlcmQtRHVSSjktYkkzX2FBQ1JIbkJnNk1EUHFyT1kyU0pmVV9YTXVxbE5sVjBxMy1LcWpKOHEyVzhzczYxd3h0Yzdoa1NlcHlmZFB2VDFZeUtBTENwSWxzTTNpYnRqVWliOFQtd2c?oc=5",
-          "sentiment": "neutral",
-          "publisher": "인포스탁데일리"
-        },
-        {
-          "title": "변동성 장세에도 안정적인 '형님' 지주사…증권가 \"비중확대\" - 연합뉴스",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5idVV0ZXVNbzlTSFo2RHRDeFp6bE14UGtXb3hDb1BsejhpZ3VQWFNsRnQ0NWNMYTFMUm95clFCUVZHWHhTd0EwYjhiS3N2T08xUHV4cWV0X2tRWXPSAWBBVV95cUxObDIyQ2JWMHN1OF9PUmUwa0x1VEZlXzJPRHpuYk1SbDBUa2xmN19NOXNsX2lOSDQ2WkZlaTh2TXhVejAxQnQxV2F0YzdNbVliYk5sZVRSS2pBWVRvNG90NmM?oc=5",
-          "sentiment": "neutral",
-          "publisher": "연합뉴스"
-        }
-      ],
-      "financials": {
-        "op_margin": 0.097600006,
-        "rev_growth": -0.015,
-        "per": 16.550346
-      },
-      "sector": "Industrials",
-      "rvol": 0.77
-    },
-    {
-      "id": "329180.KS",
+      "id": "041510.KQ",
       "rank": 10,
-      "symbol": "329180",
-      "name": "HD HYUNDAI HEAVY INDUSTRIES",
+      "symbol": "041510",
+      "name": "SME",
       "market": "KR",
-      "currentPrice": 590000.0,
-      "changePercent": 1.2,
-      "buyZoneTop": 601800.0,
-      "buyZoneBottom": 578200.0,
-      "targetPrice": 649000.0,
-      "aiReason": "눌림목 구간 + 60일선 지지 + MACD 상승신호 + 장기 상승 추세 + 적정 PER + 흑자 기업",
-      "score": 60,
-      "rsi": 59.36,
+      "currentPrice": 99000.0,
+      "changePercent": 0.3,
+      "buyZoneTop": 100980.0,
+      "buyZoneBottom": 97020.0,
+      "targetPrice": 108900.0,
+      "aiReason": "RSI 과매도(강력) + 스토캐스틱 과매도 + 적정 PER + 흑자 기업",
+      "score": 65,
+      "rsi": 27.49,
       "history": [
         {
-          "time": "02-06",
-          "price": 535379.44,
-          "bb_upper": 661675.65,
-          "bb_lower": 532449.0
-        },
-        {
           "time": "02-09",
-          "price": 536372.75,
-          "bb_upper": 663926.75,
-          "bb_lower": 523840.89
+          "price": 114300.0,
+          "bb_upper": 120197.86,
+          "bb_lower": 103672.14
         },
         {
           "time": "02-10",
-          "price": 530413.06,
-          "bb_upper": 660241.72,
-          "bb_lower": 516500.48
+          "price": 114400.0,
+          "bb_upper": 120250.87,
+          "bb_lower": 103669.13
         },
         {
           "time": "02-11",
-          "price": 533392.88,
-          "bb_upper": 659543.82,
-          "bb_lower": 509450.77
+          "price": 120200.0,
+          "bb_upper": 121408.33,
+          "bb_lower": 103261.67
         },
         {
           "time": "02-12",
-          "price": 535379.44,
-          "bb_upper": 655266.98,
-          "bb_lower": 504589.41
+          "price": 120400.0,
+          "bb_upper": 122475.22,
+          "bb_lower": 102944.78
         },
         {
           "time": "02-13",
-          "price": 539352.56,
-          "bb_upper": 651207.26,
-          "bb_lower": 500802.19
+          "price": 116600.0,
+          "bb_upper": 122840.41,
+          "bb_lower": 103009.59
         },
         {
           "time": "02-19",
-          "price": 570144.38,
-          "bb_upper": 640465.58,
-          "bb_lower": 504193.58
+          "price": 119300.0,
+          "bb_upper": 123501.75,
+          "bb_lower": 102878.25
         },
         {
           "time": "02-20",
-          "price": 597956.25,
-          "bb_upper": 632785.01,
-          "bb_lower": 508000.34
+          "price": 114700.0,
+          "bb_upper": 123588.69,
+          "bb_lower": 102921.31
         },
         {
           "time": "02-23",
-          "price": 602922.69,
-          "bb_upper": 627857.92,
-          "bb_lower": 510543.55
+          "price": 115800.0,
+          "bb_upper": 123776.26,
+          "bb_lower": 103433.74
         },
         {
           "time": "02-24",
-          "price": 591996.56,
-          "bb_upper": 625062.37,
-          "bb_lower": 511650.52
+          "price": 114800.0,
+          "bb_upper": 123783.92,
+          "bb_lower": 104096.08
         },
         {
           "time": "02-25",
-          "price": 590010.0,
-          "bb_upper": 618478.6,
-          "bb_lower": 514956.45
+          "price": 114000.0,
+          "bb_upper": 123773.88,
+          "bb_lower": 104576.12
         },
         {
           "time": "02-26",
-          "price": 592000.0,
-          "bb_upper": 616930.66,
-          "bb_lower": 515610.78
+          "price": 114300.0,
+          "bb_upper": 123547.09,
+          "bb_lower": 104532.91
         },
         {
           "time": "02-27",
-          "price": 603000.0,
-          "bb_upper": 619944.93,
-          "bb_lower": 514491.48
+          "price": 115500.0,
+          "bb_upper": 123639.54,
+          "bb_lower": 104580.46
         },
         {
           "time": "03-03",
-          "price": 590000.0,
-          "bb_upper": 620928.35,
-          "bb_lower": 514301.68
+          "price": 106700.0,
+          "bb_upper": 123421.91,
+          "bb_lower": 103658.09
         },
         {
           "time": "03-04",
-          "price": 511000.0,
-          "bb_upper": 622306.86,
-          "bb_lower": 505618.14
+          "price": 95900.0,
+          "bb_upper": 124634.3,
+          "bb_lower": 100105.7
         },
         {
           "time": "03-05",
-          "price": 559000.0,
-          "bb_upper": 621638.2,
-          "bb_lower": 505073.03
+          "price": 98600.0,
+          "bb_upper": 125078.31,
+          "bb_lower": 97921.69
         },
         {
           "time": "03-06",
-          "price": 554000.0,
-          "bb_upper": 621634.22,
-          "bb_lower": 505945.79
+          "price": 104700.0,
+          "bb_upper": 125129.02,
+          "bb_lower": 97760.98
         },
         {
           "time": "03-09",
-          "price": 576000.0,
-          "bb_upper": 621428.34,
-          "bb_lower": 505942.6
+          "price": 102400.0,
+          "bb_upper": 125359.27,
+          "bb_lower": 96900.73
         },
         {
           "time": "03-10",
-          "price": 583000.0,
-          "bb_upper": 621870.04,
-          "bb_lower": 505892.52
+          "price": 103100.0,
+          "bb_upper": 125499.97,
+          "bb_lower": 96230.03
         },
         {
           "time": "03-11",
-          "price": 590000.0,
-          "bb_upper": 624556.9,
-          "bb_lower": 507575.1
+          "price": 98700.0,
+          "bb_upper": 125987.22,
+          "bb_lower": 94992.78
+        },
+        {
+          "time": "03-12",
+          "price": 99000.0,
+          "bb_upper": 126358.64,
+          "bb_lower": 93981.36
         }
       ],
       "news": [
         {
-          "title": "HD현대중공업 수주공시 - LNGC 4척 1.49조 (매출액대비 10.27 %) - 한국경제",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1mVFBIa0VhUWdxNkZUUjBaTExHUWRKS0dwQnB3NlhpdkpaN3BXbXExSnk4V3ZpRnRERUxyT1FzZG9Rd1lMZG8zU3ZLM2VtdENqRWoxU200RlFMZ9IBVEFVX3lxTE1Sb2IzSUY3SG9FX0NVcy11MWx6RVZNTEE4b0l1ZFBUejVOcFlpNmVzNDNDQTc1VDRFd3dZN0dEUGladTItSGRUWVlyb0tLTW9wVzM5Tw?oc=5",
-          "sentiment": "neutral",
-          "publisher": "한국경제"
-        },
-        {
-          "title": "AI주식상승확률분석 : HD현대중공업(329180) 주가 전망과 상승확률 분석 - Investing.com 한국어",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWcFNfcEFIMF93SWVMRTBtbnEwR0UzVFB4RHZSdkJjZU9haFZ0dUZPMlM4bjFnXzlnZjhTUEVhTDZJYUJIVnBEUHVtVmVkMEM5NzNNT3Nwb1A3NWFIUnV3eQ?oc=5",
+          "title": "장철혁 공동대표이사, 에스엠 주식 2000주 매수로 지분율 0.01% 증가 - 디지털투데이",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ZQ3hRTUxIWlFDXzRHdHhwQmdxRkljUHpvOXlfTno4Z2dNZlVRb2lxQXFqMmxHXzJRSEtUcUFfa3FJZnhJVU4yeF9IVmxWUTBWbTdpYTJFaklBdlhhWmQtOUpNNGxNSy1xdDItTVdiQk9XYkE?oc=5",
           "sentiment": "positive",
-          "publisher": "Investing.com 한국어"
+          "publisher": "디지털투데이"
         },
         {
-          "title": "HD현대중공업 수주공시 - 컨테이너선 6척 3,724억원 (매출액대비 2.57 %) - 한국경제",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4xN05jZkNzM2FEd3lXb0c0bkU2NXZzWUZRZ09idG1kemR0a3N6RHFlTGFVRlRVc2l6bHVTcXhwcGd5Q1VWWlgtbGVGU0x1Q3hjLVl0aTlBRmRWd9IBVEFVX3lxTE8wT09DTmljWHpxNmd2eE9jRXRpNUEyazlQYVh4UzlmRWJOSTJ2TjBMUW9vcmFtekFTdkhVQV9xLXVPOGlkQmdseDRoR2FVRVVRd0pSVg?oc=5",
+          "title": "이성수 이사, 에스엠 주식 2000주 매수로 지분율 0.01% 증가 - 디지털투데이",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9haFFNb2RUY0h1MDVDMGVmdXRUazIyNjNET1E4MVJsOHhsaVpNS1c5N3VwYS1JemlrSS1sSEVNOFFua3pxOGc4MUgxc1poUEIyMEUwVXhsSTlnWDduczVFakppN28xc2s2VFFUbHBCa19vUGs?oc=5",
+          "sentiment": "positive",
+          "publisher": "디지털투데이"
+        },
+        {
+          "title": "에스엠 주가(041510), 팬덤 규모나 확장세에는 의심의 여지가 없다 : 네이버 블로그 - Naver Blog",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5RQmNETmR3ZEx1TFJ6ekR6UEYtQ3F2QXRvRHhhQ3V2ZmFUUnQ3TzIwcGpEeFdlZFBRU2FJQnpmR09HcXJYeHhUMnRSU1VkN2wzazVOMFh1TDRmSnlmb0FuR1NESXZMaTQ?oc=5",
           "sentiment": "neutral",
-          "publisher": "한국경제"
+          "publisher": "Naver Blog"
         }
       ],
       "financials": {
-        "op_margin": 0.12599,
-        "rev_growth": 0.224,
-        "per": 18.643303
+        "op_margin": 0.14784999,
+        "rev_growth": 0.328,
+        "per": 13.8554
       },
-      "sector": "Industrials",
-      "rvol": 0.9
+      "sector": "Communication Services",
+      "rvol": 1.16
     }
   ],
   "dominant_sectors": [
     "Industrials",
-    "Healthcare"
+    "Financial Services"
   ],
-  "timestamp": "2026-03-12 23:47:37",
+  "timestamp": "2026-03-12 10:07:39",
   "notification": {
     "title": "🔔 DailyPick10 알림",
-    "body": "오늘의 미국 추천: VICI, IEX 등 (신규 7건)"
+    "body": "오늘의 한국 추천: 257720, 024110 등 (신규 6건)"
   }
 }
